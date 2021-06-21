@@ -1,5 +1,5 @@
 ﻿
-namespace Proyect_POO
+namespace Project_POO
 {
     partial class seguimiento
     {
@@ -38,7 +38,7 @@ namespace Proyect_POO
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Proyect_POO.Properties.Resources.logo_covid;
+            this.pictureBox1.Image = global::Project_POO.Properties.Resources.logo_covid;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(166, 113);

@@ -1,5 +1,5 @@
 ﻿
-namespace Project_POO
+namespace Proyect_POO
 {
     partial class Create
     {
@@ -29,7 +29,6 @@ namespace Project_POO
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_nombre = new System.Windows.Forms.TextBox();
             this.txt_docu = new System.Windows.Forms.TextBox();
@@ -50,26 +49,15 @@ namespace Project_POO
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Project_POO.Properties.Resources.logo_covid;
-            this.pictureBox1.Location = new System.Drawing.Point(383, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(166, 116);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label1.Location = new System.Drawing.Point(147, 223);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(189, 22);
+            this.label1.Size = new System.Drawing.Size(249, 30);
             this.label1.TabIndex = 1;
             this.label1.Text = "Nombre Completo*";
             // 
@@ -77,14 +65,14 @@ namespace Project_POO
             // 
             this.txt_nombre.Location = new System.Drawing.Point(147, 258);
             this.txt_nombre.Name = "txt_nombre";
-            this.txt_nombre.Size = new System.Drawing.Size(317, 31);
+            this.txt_nombre.Size = new System.Drawing.Size(317, 37);
             this.txt_nombre.TabIndex = 2;
             // 
             // txt_docu
             // 
             this.txt_docu.Location = new System.Drawing.Point(541, 348);
             this.txt_docu.Name = "txt_docu";
-            this.txt_docu.Size = new System.Drawing.Size(256, 31);
+            this.txt_docu.Size = new System.Drawing.Size(256, 37);
             this.txt_docu.TabIndex = 4;
             this.txt_docu.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -95,7 +83,7 @@ namespace Project_POO
             this.label2.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label2.Location = new System.Drawing.Point(541, 313);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(148, 22);
+            this.label2.Size = new System.Drawing.Size(191, 30);
             this.label2.TabIndex = 3;
             this.label2.Text = "# Documento*";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -107,7 +95,7 @@ namespace Project_POO
             this.label3.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label3.Location = new System.Drawing.Point(541, 223);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(199, 22);
+            this.label3.Size = new System.Drawing.Size(260, 30);
             this.label3.TabIndex = 5;
             this.label3.Text = "Tipo de documento*";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -123,14 +111,14 @@ namespace Project_POO
             "Otro"});
             this.cmb_doc.Location = new System.Drawing.Point(541, 258);
             this.cmb_doc.Name = "cmb_doc";
-            this.cmb_doc.Size = new System.Drawing.Size(256, 30);
+            this.cmb_doc.Size = new System.Drawing.Size(256, 38);
             this.cmb_doc.TabIndex = 6;
             // 
             // txt_correo
             // 
             this.txt_correo.Location = new System.Drawing.Point(147, 348);
             this.txt_correo.Name = "txt_correo";
-            this.txt_correo.Size = new System.Drawing.Size(317, 31);
+            this.txt_correo.Size = new System.Drawing.Size(317, 37);
             this.txt_correo.TabIndex = 8;
             // 
             // label4
@@ -140,7 +128,7 @@ namespace Project_POO
             this.label4.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label4.Location = new System.Drawing.Point(147, 313);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 22);
+            this.label4.Size = new System.Drawing.Size(105, 30);
             this.label4.TabIndex = 7;
             this.label4.Text = "Correo*";
             // 
@@ -148,7 +136,7 @@ namespace Project_POO
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(147, 438);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(317, 31);
+            this.dateTimePicker1.Size = new System.Drawing.Size(317, 37);
             this.dateTimePicker1.TabIndex = 9;
             // 
             // label5
@@ -158,7 +146,7 @@ namespace Project_POO
             this.label5.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label5.Location = new System.Drawing.Point(147, 401);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(206, 22);
+            this.label5.Size = new System.Drawing.Size(272, 30);
             this.label5.TabIndex = 10;
             this.label5.Text = "Fecha de nacimiento";
             // 
@@ -182,7 +170,7 @@ namespace Project_POO
             "Usulután"});
             this.comboBox1.Location = new System.Drawing.Point(541, 441);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(256, 30);
+            this.comboBox1.Size = new System.Drawing.Size(256, 38);
             this.comboBox1.TabIndex = 11;
             // 
             // label6
@@ -192,7 +180,7 @@ namespace Project_POO
             this.label6.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label6.Location = new System.Drawing.Point(541, 401);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(106, 22);
+            this.label6.Size = new System.Drawing.Size(142, 30);
             this.label6.TabIndex = 12;
             this.label6.Text = "Municipio*";
             // 
@@ -219,7 +207,7 @@ namespace Project_POO
             this.list_enf.Location = new System.Drawing.Point(149, 612);
             this.list_enf.MultiColumn = true;
             this.list_enf.Name = "list_enf";
-            this.list_enf.Size = new System.Drawing.Size(648, 104);
+            this.list_enf.Size = new System.Drawing.Size(648, 96);
             this.list_enf.TabIndex = 3;
             this.list_enf.SelectedIndexChanged += new System.EventHandler(this.list_enf_SelectedIndexChanged);
             // 
@@ -230,7 +218,7 @@ namespace Project_POO
             this.label7.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label7.Location = new System.Drawing.Point(235, 145);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(470, 32);
+            this.label7.Size = new System.Drawing.Size(591, 40);
             this.label7.TabIndex = 13;
             this.label7.Text = "Creacion de cita para vacunacion";
             // 
@@ -241,7 +229,7 @@ namespace Project_POO
             this.label8.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label8.Location = new System.Drawing.Point(147, 572);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(348, 22);
+            this.label8.Size = new System.Drawing.Size(461, 30);
             this.label8.TabIndex = 14;
             this.label8.Text = "Seleccionar enfermedades cronicas :";
             // 
@@ -261,7 +249,7 @@ namespace Project_POO
             this.label9.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label9.Location = new System.Drawing.Point(149, 490);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(232, 22);
+            this.label9.Size = new System.Drawing.Size(297, 30);
             this.label9.TabIndex = 17;
             this.label9.Text = "Centro de vacunacion*";
             // 
@@ -275,7 +263,7 @@ namespace Project_POO
             "Unidad de Salud Barrios "});
             this.comboBox2.Location = new System.Drawing.Point(149, 530);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(256, 30);
+            this.comboBox2.Size = new System.Drawing.Size(256, 38);
             this.comboBox2.TabIndex = 16;
             // 
             // label10
@@ -285,7 +273,7 @@ namespace Project_POO
             this.label10.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label10.Location = new System.Drawing.Point(541, 490);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(124, 22);
+            this.label10.Size = new System.Drawing.Size(160, 30);
             this.label10.TabIndex = 19;
             this.label10.Text = "Hora de cita";
             // 
@@ -304,12 +292,12 @@ namespace Project_POO
             "15:00"});
             this.comboBox3.Location = new System.Drawing.Point(541, 530);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(256, 30);
+            this.comboBox3.Size = new System.Drawing.Size(256, 38);
             this.comboBox3.TabIndex = 18;
             // 
             // Create
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(953, 813);
@@ -333,12 +321,11 @@ namespace Project_POO
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_nombre);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "Create";
             this.Text = "Crear cita";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.Create_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -346,7 +333,7 @@ namespace Project_POO
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        // private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_nombre;
         private System.Windows.Forms.TextBox txt_docu;

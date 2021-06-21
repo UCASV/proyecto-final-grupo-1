@@ -169,11 +169,10 @@ namespace Project_POO
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Project_POO.Properties.Resources.logo_covid;
-            this.pictureBox1.Location = new System.Drawing.Point(303, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(382, 47);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(166, 116);
-            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.TabIndex = 39;
             this.pictureBox1.TabStop = false;
             // 
             // Seguimiento

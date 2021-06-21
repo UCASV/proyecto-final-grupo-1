@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Project_POO
+namespace Proyect_POO
 {
     public partial class Create : Form
     {
@@ -31,6 +31,11 @@ namespace Project_POO
         }
 
         private void list_enf_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Create_Load(object sender, EventArgs e)
         {
 
         }
