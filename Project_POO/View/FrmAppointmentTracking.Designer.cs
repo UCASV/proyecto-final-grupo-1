@@ -29,7 +29,6 @@ namespace Project_POO.View
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAppointmentTracking));
             this.tlp_AT = new System.Windows.Forms.TableLayoutPanel();
             this.dgv_Appointments = new System.Windows.Forms.DataGridView();
             this.lbl_Title_Appointment = new System.Windows.Forms.Label();
@@ -56,8 +55,8 @@ namespace Project_POO.View
             this.lbl_NameSE = new System.Windows.Forms.Label();
             this.lbl_DurationSE = new System.Windows.Forms.Label();
             this.txt_NameSE = new System.Windows.Forms.TextBox();
-            this.lbl_SE = new System.Windows.Forms.Label();
             this.nud_DurationSE = new System.Windows.Forms.NumericUpDown();
+            this.lbl_SE = new System.Windows.Forms.Label();
             this.tbp_InfoForPrint = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
@@ -220,7 +219,7 @@ namespace Project_POO.View
             // 
             this.btn_Search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_Search.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Search.BackgroundImage")));
+            this.btn_Search.BackgroundImage = global::Project_POO.Properties.Resources.Search;
             this.btn_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Search.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Search.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -547,6 +546,18 @@ namespace Project_POO.View
             this.txt_NameSE.Size = new System.Drawing.Size(359, 27);
             this.txt_NameSE.TabIndex = 2;
             // 
+            // nud_DurationSE
+            // 
+            this.nud_DurationSE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.nud_DurationSE.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nud_DurationSE.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.nud_DurationSE.Location = new System.Drawing.Point(169, 44);
+            this.nud_DurationSE.Name = "nud_DurationSE";
+            this.nud_DurationSE.Size = new System.Drawing.Size(359, 27);
+            this.nud_DurationSE.TabIndex = 3;
+            // 
             // lbl_SE
             // 
             this.lbl_SE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -565,18 +576,6 @@ namespace Project_POO.View
             this.lbl_SE.TabIndex = 8;
             this.lbl_SE.Text = "Efectos secundarios reportados";
             this.lbl_SE.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // nud_DurationSE
-            // 
-            this.nud_DurationSE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.nud_DurationSE.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nud_DurationSE.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.nud_DurationSE.Location = new System.Drawing.Point(169, 44);
-            this.nud_DurationSE.Name = "nud_DurationSE";
-            this.nud_DurationSE.Size = new System.Drawing.Size(359, 27);
-            this.nud_DurationSE.TabIndex = 3;
             // 
             // tbp_InfoForPrint
             // 
@@ -840,7 +839,6 @@ namespace Project_POO.View
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_Print;
     }
 }
