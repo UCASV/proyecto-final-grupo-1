@@ -226,15 +226,16 @@ INSERT INTO INSTITUTION (i_name) VALUES ('Periodismo');
 
 -- DISEASES
 INSERT INTO CHRONIC_DISEASE (ch_name) VALUES ('Diabetes');
-INSERT INTO CHRONIC_DISEASE (ch_name) VALUES ('Asma - moderada a grave');
-INSERT INTO CHRONIC_DISEASE (ch_name) VALUES ('hipertensión pulmonar');
+INSERT INTO CHRONIC_DISEASE (ch_name) VALUES ('Asma');
 INSERT INTO CHRONIC_DISEASE (ch_name) VALUES ('EPOC');
-INSERT INTO CHRONIC_DISEASE (ch_name) VALUES ('Sobrepeso y obesidad');
-INSERT INTO CHRONIC_DISEASE (ch_name) VALUES ('Insuficiencia cardiaca');
-INSERT INTO CHRONIC_DISEASE (ch_name) VALUES ('Hipertensión');
-INSERT INTO CHRONIC_DISEASE (ch_name) VALUES ('Síndrome de Down');
-INSERT INTO CHRONIC_DISEASE (ch_name) VALUES ('VIH');
+INSERT INTO CHRONIC_DISEASE (ch_name) VALUES ('Obesidad');
+INSERT INTO CHRONIC_DISEASE (ch_name) VALUES ('Enfermedad cardio vascular');
+INSERT INTO CHRONIC_DISEASE (ch_name) VALUES ('Hipertensión arterial');
+INSERT INTO CHRONIC_DISEASE (ch_name) VALUES ('Hepatopatías crónicas');
 INSERT INTO CHRONIC_DISEASE (ch_name) VALUES ('Enfermedad renal crónica');
+INSERT INTO CHRONIC_DISEASE (ch_name) VALUES ('VIH');
+INSERT INTO CHRONIC_DISEASE (ch_name) VALUES ('Cáncer');
+INSERT INTO CHRONIC_DISEASE (ch_name) VALUES ('Trasplante de órganos');
 
 -- SECONDARY EFFECTS
 INSERT INTO SECONDARY_EFFECT (se_name) VALUES ('Hinchazón');
