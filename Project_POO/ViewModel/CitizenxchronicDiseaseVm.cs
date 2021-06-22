@@ -8,6 +8,6 @@ namespace Project_POO.ViewModel
 {
     public class CitizenxchronicDiseaseVm
     {
-        public string ChronicDiseaseName { get; set; }
+        public string Enfermedad_cronica { get; set; }
     }
 }

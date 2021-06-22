@@ -18,6 +18,7 @@ namespace Project_POO
     {
         public Form1()
         {
+            // FORM 1 US JUST FOR TESTING
             InitializeComponent();
         }
 
@@ -163,7 +164,7 @@ namespace Project_POO
 
                 foreach (var item in MapedAppointments)
                 {
-                    Console.WriteLine($"Cita {item.Id}, estado: {item.Status}, tipo {item.TypeAppointment}, centro: {item.VaccinationCenter}");
+                    Console.WriteLine($"Cita {item.Id}, estado: {item.Estado}, tipo {item.Tipo_cita}, centro: {item.Centro_vacunacion}");
                 }
 
             }

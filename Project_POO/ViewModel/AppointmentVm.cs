@@ -9,14 +9,15 @@ namespace Project_POO.ViewModel
     public class AppointmentVm
     {
         public int Id { get; set; }
-        public DateTime ADatetime { get; set; }
-        public string Status { get; set; }
-        public TimeSpan? StartTime { get; set; }
-        public TimeSpan? FinalTime { get; set; }
-        public string TypeAppointment { get; set; }
-        public string CitizenName { get; set; }
+        public string Nombre_ciudadano { get; set; }
+        public string Tipo_cita { get; set; }
+        public string Centro_vacunacion { get; set; }
+        public DateTime Fecha_Hora { get; set; }
+        public TimeSpan? Hora_asistencia { get; set; }
+        public TimeSpan? Hora_vacunacion { get; set; }
+        public string Estado { get; set; }
+       
         // public string EmployeeName { get; set; }
         // public string Cabin { get; set; }
-        public string VaccinationCenter { get; set; }
     }
 }

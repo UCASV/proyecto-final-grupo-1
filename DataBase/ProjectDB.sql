@@ -1,4 +1,4 @@
--- Conection string
+-- Connection string
 /* 
 dotnet ef dbcontext scaffold "Server=localhost\SQLEXPRESS;Database=GestorVaccination;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -o ProjectPOOContext -f
 */

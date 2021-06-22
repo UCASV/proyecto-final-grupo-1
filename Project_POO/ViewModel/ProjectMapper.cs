@@ -14,13 +14,13 @@ namespace Project_POO.ViewModel
             return new AppointmentVm
             {
                 Id = a.Id,
-                ADatetime = a.ADatetime,
-                Status = (a.AStatus is false) ? "Pendiente" : "Finalizada",
-                StartTime = a.StartTime,
-                FinalTime = a.FinalTime,
-                TypeAppointment = a.IdTypeAppointmentNavigation.TaName,
-                CitizenName = a.IdCitizenNavigation.CName,
-                VaccinationCenter = a.IdVaccinationCenterNavigation.CenterAddress
+                Nombre_ciudadano = a.IdCitizenNavigation.CName,
+                Tipo_cita = a.IdTypeAppointmentNavigation.TaName,
+                Centro_vacunacion = a.IdVaccinationCenterNavigation.CenterAddress,
+                Fecha_Hora = a.ADatetime,
+                Hora_asistencia = a.StartTime,
+                Hora_vacunacion = a.FinalTime,
+                Estado = (a.AStatus is false) ? "Pendiente" : "Finalizada"
             };
         }
 
@@ -28,13 +28,13 @@ namespace Project_POO.ViewModel
         {
             return new CitizenVm
             {
-                Dui = c.Dui,
-                CName = c.CName,
-                CAddress = c.CAddress,
-                Tel = c.Tel,
-                Email = c.Email,
-                Age = c.Age,
-                Institution = (c.IdInstitutionNavigation is null) ? "No disponible" : c.IdInstitutionNavigation.IName
+                DUI = c.Dui,
+                Nombre = c.CName,
+                Edad = c.Age,
+                Direccion = c.CAddress,
+                Telelefono = c.Tel,
+                Correo = c.Email,
+                Institucion = (c.IdInstitutionNavigation is null) ? "No disponible" : c.IdInstitutionNavigation.IName
             };
         }
 
@@ -42,7 +42,7 @@ namespace Project_POO.ViewModel
         {
             return new CitizenxchronicDiseaseVm
             {
-                ChronicDiseaseName = c.IdChronicDiseaseNavigation.ChName
+                Enfermedad_cronica = c.IdChronicDiseaseNavigation.ChName
             };
         }
 
@@ -50,8 +50,8 @@ namespace Project_POO.ViewModel
         {
             return new AppointmentxsecondaryEffectVm
             {
-                SecondaryEffect = a.IdSecondaryEffectNavigation.SeName,
-                Duration = a.Duration
+                Efecto_secundario = a.IdSecondaryEffectNavigation.SeName,
+                Duracion = a.Duration
             };
         }
     }

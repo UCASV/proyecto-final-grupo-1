@@ -8,7 +8,7 @@ namespace Project_POO.ViewModel
 {
     public class AppointmentxsecondaryEffectVm
     {
-        public string SecondaryEffect { get; set; }
-        public int Duration { get; set; }
+        public string Efecto_secundario { get; set; }
+        public int Duracion { get; set; }
     }
 }
