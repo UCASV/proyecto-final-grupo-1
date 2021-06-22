@@ -8,14 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Project_POO
+namespace Project_POO.View
 {
-    public partial class login : Form
+    public partial class FrmAppointmentTracking : Form
     {
-        public login()
+        public FrmAppointmentTracking()
         {
             InitializeComponent();
         }
 
+        private void dgv_SE_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
