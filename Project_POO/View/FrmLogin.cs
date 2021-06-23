@@ -10,12 +10,16 @@ using System.Windows.Forms;
 
 namespace Project_POO
 {
-    public partial class login : Form
+    public partial class FrmLogin : Form
     {
-        public login()
+        public FrmLogin()
         {
             InitializeComponent();
         }
 
+        private void btn_Clean_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
