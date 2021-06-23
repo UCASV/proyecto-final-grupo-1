@@ -156,7 +156,7 @@ namespace Project_POO
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.ClientSize = new System.Drawing.Size(583, 588);
+            this.ClientSize = new System.Drawing.Size(574, 588);
             this.Controls.Add(this.btn_Clean);
             this.Controls.Add(this.btn_Create_Appointment);
             this.Controls.Add(this.cmb_Center);
@@ -168,6 +168,7 @@ namespace Project_POO
             this.Controls.Add(this.txt_Email);
             this.Controls.Add(this.lbl_Email);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FrmLogin";
             this.Text = "Limpiar";
             ((System.ComponentModel.ISupportInitialize)(this.img_LogoLogin)).EndInit();

@@ -48,7 +48,9 @@ namespace Proyect_POO
             this.txt_Tel = new System.Windows.Forms.TextBox();
             this.gpb_CD = new System.Windows.Forms.GroupBox();
             this.btn_Clean = new System.Windows.Forms.Button();
+            this.img_Logo_CreateAppointment = new System.Windows.Forms.PictureBox();
             this.gpb_CD.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.img_Logo_CreateAppointment)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_TitleCreate
@@ -279,12 +281,26 @@ namespace Proyect_POO
             this.btn_Clean.Text = "Limpiar";
             this.btn_Clean.UseVisualStyleBackColor = false;
             // 
+            // img_Logo_CreateAppointment
+            // 
+            this.img_Logo_CreateAppointment.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.img_Logo_CreateAppointment.Image = global::Project_POO.Properties.Resources.IMG_4042;
+            this.img_Logo_CreateAppointment.Location = new System.Drawing.Point(12, 8);
+            this.img_Logo_CreateAppointment.Name = "img_Logo_CreateAppointment";
+            this.img_Logo_CreateAppointment.Size = new System.Drawing.Size(126, 111);
+            this.img_Logo_CreateAppointment.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.img_Logo_CreateAppointment.TabIndex = 25;
+            this.img_Logo_CreateAppointment.TabStop = false;
+            // 
             // FrmCreateAppointment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(1006, 694);
+            this.Controls.Add(this.img_Logo_CreateAppointment);
             this.Controls.Add(this.btn_Clean);
             this.Controls.Add(this.gpb_CD);
             this.Controls.Add(this.txt_Tel);
@@ -312,6 +328,7 @@ namespace Proyect_POO
             this.Text = "Crear cita";
             this.Load += new System.EventHandler(this.Create_Load);
             this.gpb_CD.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.img_Logo_CreateAppointment)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -337,5 +354,6 @@ namespace Proyect_POO
         private System.Windows.Forms.TextBox txt_Tel;
         internal System.Windows.Forms.GroupBox gpb_CD;
         private System.Windows.Forms.Button btn_Clean;
+        private System.Windows.Forms.PictureBox img_Logo_CreateAppointment;
     }
 }

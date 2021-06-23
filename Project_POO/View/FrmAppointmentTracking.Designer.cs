@@ -37,10 +37,18 @@ namespace Project_POO.View
             this.txt_Search = new System.Windows.Forms.TextBox();
             this.btn_Add = new System.Windows.Forms.Button();
             this.btn_Search = new System.Windows.Forms.Button();
+            this.sts_Employee = new System.Windows.Forms.StatusStrip();
+            this.lbl_WelcomeEmployee = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lbl_EmployeeName = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lbl_TypeEmployee = new System.Windows.Forms.ToolStripStatusLabel();
             this.tbc_AT = new System.Windows.Forms.TabControl();
             this.tbp_Appointment = new System.Windows.Forms.TabPage();
             this.tbp_Info = new System.Windows.Forms.TabPage();
             this.tlp_Info = new System.Windows.Forms.TableLayoutPanel();
+            this.sts_WelcomeVaccinationEmployee = new System.Windows.Forms.StatusStrip();
+            this.lbl_Welcome = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lbl_VaccinationEmployeeName = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lbl_VaccinationEmployeeType = new System.Windows.Forms.ToolStripStatusLabel();
             this.dgv_SE = new System.Windows.Forms.DataGridView();
             this.lbl_Title_InfoUser = new System.Windows.Forms.Label();
             this.lbl_TitleCD = new System.Windows.Forms.Label();
@@ -82,6 +90,10 @@ namespace Project_POO.View
             this.lbl_SE = new System.Windows.Forms.Label();
             this.tbp_InfoForPrint = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.sts_WelcomeCabinEmployee = new System.Windows.Forms.StatusStrip();
+            this.lbl_WelcomeCabinEmployee = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lbl_CabinEmployee_Name = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lbl_CabinEmployee_Type = new System.Windows.Forms.ToolStripStatusLabel();
             this.lbl_TitleCD_Print = new System.Windows.Forms.Label();
             this.dgv_ = new System.Windows.Forms.DataGridView();
             this.gpb_InfoPrintAppointment = new System.Windows.Forms.GroupBox();
@@ -120,10 +132,12 @@ namespace Project_POO.View
             this.label2 = new System.Windows.Forms.Label();
             this.tlp_AT.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Appointments)).BeginInit();
+            this.sts_Employee.SuspendLayout();
             this.tbc_AT.SuspendLayout();
             this.tbp_Appointment.SuspendLayout();
             this.tbp_Info.SuspendLayout();
             this.tlp_Info.SuspendLayout();
+            this.sts_WelcomeVaccinationEmployee.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_SE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_CD)).BeginInit();
             this.gpb_CitizenInfo.SuspendLayout();
@@ -134,6 +148,7 @@ namespace Project_POO.View
             ((System.ComponentModel.ISupportInitialize)(this.nud_DurationSE)).BeginInit();
             this.tbp_InfoForPrint.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.sts_WelcomeCabinEmployee.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_)).BeginInit();
             this.gpb_InfoPrintAppointment.SuspendLayout();
             this.gpb_InfoAppointment_Print.SuspendLayout();
@@ -160,6 +175,7 @@ namespace Project_POO.View
             this.tlp_AT.Controls.Add(this.txt_Search, 5, 1);
             this.tlp_AT.Controls.Add(this.btn_Add, 4, 7);
             this.tlp_AT.Controls.Add(this.btn_Search, 7, 1);
+            this.tlp_AT.Controls.Add(this.sts_Employee, 0, 8);
             this.tlp_AT.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlp_AT.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tlp_AT.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -175,6 +191,9 @@ namespace Project_POO.View
             this.tlp_AT.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.95868F));
             this.tlp_AT.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.821887F));
             this.tlp_AT.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.281407F));
+            this.tlp_AT.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
+            this.tlp_AT.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlp_AT.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlp_AT.Size = new System.Drawing.Size(1356, 715);
             this.tlp_AT.TabIndex = 0;
             // 
@@ -285,6 +304,46 @@ namespace Project_POO.View
             this.btn_Search.TabIndex = 5;
             this.btn_Search.UseVisualStyleBackColor = true;
             // 
+            // sts_Employee
+            // 
+            this.sts_Employee.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.tlp_AT.SetColumnSpan(this.sts_Employee, 9);
+            this.sts_Employee.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.sts_Employee.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
+            this.sts_Employee.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lbl_WelcomeEmployee,
+            this.lbl_EmployeeName,
+            this.lbl_TypeEmployee});
+            this.sts_Employee.Location = new System.Drawing.Point(0, 687);
+            this.sts_Employee.Name = "sts_Employee";
+            this.sts_Employee.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.sts_Employee.Size = new System.Drawing.Size(1356, 28);
+            this.sts_Employee.TabIndex = 38;
+            this.sts_Employee.Text = "Bienvenido:";
+            // 
+            // lbl_WelcomeEmployee
+            // 
+            this.lbl_WelcomeEmployee.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_WelcomeEmployee.ForeColor = System.Drawing.Color.White;
+            this.lbl_WelcomeEmployee.Name = "lbl_WelcomeEmployee";
+            this.lbl_WelcomeEmployee.Size = new System.Drawing.Size(123, 23);
+            this.lbl_WelcomeEmployee.Text = "Bienvenido: ";
+            // 
+            // lbl_EmployeeName
+            // 
+            this.lbl_EmployeeName.ForeColor = System.Drawing.Color.White;
+            this.lbl_EmployeeName.Name = "lbl_EmployeeName";
+            this.lbl_EmployeeName.Size = new System.Drawing.Size(217, 23);
+            this.lbl_EmployeeName.Text = "Nombre del empleado";
+            // 
+            // lbl_TypeEmployee
+            // 
+            this.lbl_TypeEmployee.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_TypeEmployee.ForeColor = System.Drawing.Color.White;
+            this.lbl_TypeEmployee.Name = "lbl_TypeEmployee";
+            this.lbl_TypeEmployee.Size = new System.Drawing.Size(164, 23);
+            this.lbl_TypeEmployee.Text = "-Usuario de Cabina-";
+            // 
             // tbc_AT
             // 
             this.tbc_AT.Controls.Add(this.tbp_Appointment);
@@ -334,6 +393,7 @@ namespace Project_POO.View
             this.tlp_Info.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.37972F));
             this.tlp_Info.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.37972F));
             this.tlp_Info.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.170993F));
+            this.tlp_Info.Controls.Add(this.sts_WelcomeVaccinationEmployee, 0, 9);
             this.tlp_Info.Controls.Add(this.dgv_SE, 5, 7);
             this.tlp_Info.Controls.Add(this.lbl_Title_InfoUser, 1, 1);
             this.tlp_Info.Controls.Add(this.lbl_TitleCD, 5, 1);
@@ -363,11 +423,52 @@ namespace Project_POO.View
             this.tlp_Info.Size = new System.Drawing.Size(1356, 715);
             this.tlp_Info.TabIndex = 1;
             // 
+            // sts_WelcomeVaccinationEmployee
+            // 
+            this.sts_WelcomeVaccinationEmployee.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.tlp_Info.SetColumnSpan(this.sts_WelcomeVaccinationEmployee, 9);
+            this.sts_WelcomeVaccinationEmployee.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.sts_WelcomeVaccinationEmployee.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
+            this.sts_WelcomeVaccinationEmployee.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lbl_Welcome,
+            this.lbl_VaccinationEmployeeName,
+            this.lbl_VaccinationEmployeeType});
+            this.sts_WelcomeVaccinationEmployee.Location = new System.Drawing.Point(0, 687);
+            this.sts_WelcomeVaccinationEmployee.Name = "sts_WelcomeVaccinationEmployee";
+            this.sts_WelcomeVaccinationEmployee.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.sts_WelcomeVaccinationEmployee.Size = new System.Drawing.Size(1356, 28);
+            this.sts_WelcomeVaccinationEmployee.TabIndex = 39;
+            this.sts_WelcomeVaccinationEmployee.Text = "Bienvenido:";
+            // 
+            // lbl_Welcome
+            // 
+            this.lbl_Welcome.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_Welcome.ForeColor = System.Drawing.Color.White;
+            this.lbl_Welcome.Name = "lbl_Welcome";
+            this.lbl_Welcome.Size = new System.Drawing.Size(123, 23);
+            this.lbl_Welcome.Text = "Bienvenido: ";
+            // 
+            // lbl_VaccinationEmployeeName
+            // 
+            this.lbl_VaccinationEmployeeName.ForeColor = System.Drawing.Color.White;
+            this.lbl_VaccinationEmployeeName.Name = "lbl_VaccinationEmployeeName";
+            this.lbl_VaccinationEmployeeName.Size = new System.Drawing.Size(217, 23);
+            this.lbl_VaccinationEmployeeName.Text = "Nombre del empleado";
+            // 
+            // lbl_VaccinationEmployeeType
+            // 
+            this.lbl_VaccinationEmployeeType.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_VaccinationEmployeeType.ForeColor = System.Drawing.Color.White;
+            this.lbl_VaccinationEmployeeType.Name = "lbl_VaccinationEmployeeType";
+            this.lbl_VaccinationEmployeeType.Size = new System.Drawing.Size(285, 23);
+            this.lbl_VaccinationEmployeeType.Text = "-Usuario de Centro de Vacunación-";
+            // 
             // dgv_SE
             // 
             this.dgv_SE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_SE.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_SE.BackgroundColor = System.Drawing.SystemColors.HotTrack;
             this.dgv_SE.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
             this.dgv_SE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -424,6 +525,7 @@ namespace Project_POO.View
             this.dgv_CD.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_CD.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_CD.BackgroundColor = System.Drawing.SystemColors.HotTrack;
             this.dgv_CD.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
             this.dgv_CD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -850,7 +952,7 @@ namespace Project_POO.View
             this.tlp_ReportSE.ColumnCount = 3;
             this.tlp_ReportSE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.26177F));
             this.tlp_ReportSE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 68.73823F));
-            this.tlp_ReportSE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 167F));
+            this.tlp_ReportSE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 171F));
             this.tlp_ReportSE.Controls.Add(this.btn_Create_Appointment, 2, 0);
             this.tlp_ReportSE.Controls.Add(this.lbl_NameSE, 0, 0);
             this.tlp_ReportSE.Controls.Add(this.lbl_DurationSE, 0, 1);
@@ -875,10 +977,10 @@ namespace Project_POO.View
             this.btn_Create_Appointment.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Create_Appointment.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Create_Appointment.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_Create_Appointment.Location = new System.Drawing.Point(547, 3);
+            this.btn_Create_Appointment.Location = new System.Drawing.Point(543, 3);
             this.btn_Create_Appointment.Name = "btn_Create_Appointment";
             this.tlp_ReportSE.SetRowSpan(this.btn_Create_Appointment, 2);
-            this.btn_Create_Appointment.Size = new System.Drawing.Size(162, 64);
+            this.btn_Create_Appointment.Size = new System.Drawing.Size(166, 64);
             this.btn_Create_Appointment.TabIndex = 17;
             this.btn_Create_Appointment.Text = "Reportar";
             this.btn_Create_Appointment.UseVisualStyleBackColor = false;
@@ -892,7 +994,7 @@ namespace Project_POO.View
             this.lbl_NameSE.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.lbl_NameSE.Location = new System.Drawing.Point(3, 0);
             this.lbl_NameSE.Name = "lbl_NameSE";
-            this.lbl_NameSE.Size = new System.Drawing.Size(164, 35);
+            this.lbl_NameSE.Size = new System.Drawing.Size(163, 35);
             this.lbl_NameSE.TabIndex = 0;
             this.lbl_NameSE.Text = "Efecto generado";
             this.lbl_NameSE.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -906,7 +1008,7 @@ namespace Project_POO.View
             this.lbl_DurationSE.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.lbl_DurationSE.Location = new System.Drawing.Point(3, 35);
             this.lbl_DurationSE.Name = "lbl_DurationSE";
-            this.lbl_DurationSE.Size = new System.Drawing.Size(164, 35);
+            this.lbl_DurationSE.Size = new System.Drawing.Size(163, 35);
             this.lbl_DurationSE.TabIndex = 1;
             this.lbl_DurationSE.Text = "Duración";
             this.lbl_DurationSE.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -917,10 +1019,10 @@ namespace Project_POO.View
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_NameSE.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_NameSE.Location = new System.Drawing.Point(173, 3);
+            this.txt_NameSE.Location = new System.Drawing.Point(172, 3);
             this.txt_NameSE.MaxLength = 50;
             this.txt_NameSE.Name = "txt_NameSE";
-            this.txt_NameSE.Size = new System.Drawing.Size(368, 27);
+            this.txt_NameSE.Size = new System.Drawing.Size(365, 27);
             this.txt_NameSE.TabIndex = 2;
             // 
             // nud_DurationSE
@@ -930,9 +1032,9 @@ namespace Project_POO.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.nud_DurationSE.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nud_DurationSE.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.nud_DurationSE.Location = new System.Drawing.Point(173, 38);
+            this.nud_DurationSE.Location = new System.Drawing.Point(172, 38);
             this.nud_DurationSE.Name = "nud_DurationSE";
-            this.nud_DurationSE.Size = new System.Drawing.Size(368, 27);
+            this.nud_DurationSE.Size = new System.Drawing.Size(365, 27);
             this.nud_DurationSE.TabIndex = 3;
             // 
             // lbl_SE
@@ -976,6 +1078,7 @@ namespace Project_POO.View
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.37972F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.37972F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.170993F));
+            this.tableLayoutPanel2.Controls.Add(this.sts_WelcomeCabinEmployee, 0, 9);
             this.tableLayoutPanel2.Controls.Add(this.lbl_TitleCD_Print, 5, 1);
             this.tableLayoutPanel2.Controls.Add(this.dgv_, 5, 2);
             this.tableLayoutPanel2.Controls.Add(this.gpb_InfoPrintAppointment, 1, 5);
@@ -1002,6 +1105,46 @@ namespace Project_POO.View
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1362, 721);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
+            // sts_WelcomeCabinEmployee
+            // 
+            this.sts_WelcomeCabinEmployee.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.tableLayoutPanel2.SetColumnSpan(this.sts_WelcomeCabinEmployee, 9);
+            this.sts_WelcomeCabinEmployee.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.sts_WelcomeCabinEmployee.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
+            this.sts_WelcomeCabinEmployee.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lbl_WelcomeCabinEmployee,
+            this.lbl_CabinEmployee_Name,
+            this.lbl_CabinEmployee_Type});
+            this.sts_WelcomeCabinEmployee.Location = new System.Drawing.Point(0, 693);
+            this.sts_WelcomeCabinEmployee.Name = "sts_WelcomeCabinEmployee";
+            this.sts_WelcomeCabinEmployee.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.sts_WelcomeCabinEmployee.Size = new System.Drawing.Size(1362, 28);
+            this.sts_WelcomeCabinEmployee.TabIndex = 40;
+            this.sts_WelcomeCabinEmployee.Text = "Bienvenido:";
+            // 
+            // lbl_WelcomeCabinEmployee
+            // 
+            this.lbl_WelcomeCabinEmployee.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_WelcomeCabinEmployee.ForeColor = System.Drawing.Color.White;
+            this.lbl_WelcomeCabinEmployee.Name = "lbl_WelcomeCabinEmployee";
+            this.lbl_WelcomeCabinEmployee.Size = new System.Drawing.Size(123, 23);
+            this.lbl_WelcomeCabinEmployee.Text = "Bienvenido: ";
+            // 
+            // lbl_CabinEmployee_Name
+            // 
+            this.lbl_CabinEmployee_Name.ForeColor = System.Drawing.Color.White;
+            this.lbl_CabinEmployee_Name.Name = "lbl_CabinEmployee_Name";
+            this.lbl_CabinEmployee_Name.Size = new System.Drawing.Size(217, 23);
+            this.lbl_CabinEmployee_Name.Text = "Nombre del empleado";
+            // 
+            // lbl_CabinEmployee_Type
+            // 
+            this.lbl_CabinEmployee_Type.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_CabinEmployee_Type.ForeColor = System.Drawing.Color.White;
+            this.lbl_CabinEmployee_Type.Name = "lbl_CabinEmployee_Type";
+            this.lbl_CabinEmployee_Type.Size = new System.Drawing.Size(164, 23);
+            this.lbl_CabinEmployee_Type.Text = "-Usuario de Cabina-";
+            // 
             // lbl_TitleCD_Print
             // 
             this.lbl_TitleCD_Print.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1026,6 +1169,7 @@ namespace Project_POO.View
             this.dgv_.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_.BackgroundColor = System.Drawing.SystemColors.HotTrack;
             this.dgv_.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
             this.dgv_.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -1518,7 +1662,7 @@ namespace Project_POO.View
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.tbc_AT);
-            this.MinimizeBox = false;
+            this.MaximizeBox = false;
             this.Name = "FrmAppointmentTracking";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Seguimiento de Citas";
@@ -1526,11 +1670,15 @@ namespace Project_POO.View
             this.tlp_AT.ResumeLayout(false);
             this.tlp_AT.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Appointments)).EndInit();
+            this.sts_Employee.ResumeLayout(false);
+            this.sts_Employee.PerformLayout();
             this.tbc_AT.ResumeLayout(false);
             this.tbp_Appointment.ResumeLayout(false);
             this.tbp_Info.ResumeLayout(false);
             this.tlp_Info.ResumeLayout(false);
             this.tlp_Info.PerformLayout();
+            this.sts_WelcomeVaccinationEmployee.ResumeLayout(false);
+            this.sts_WelcomeVaccinationEmployee.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_SE)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_CD)).EndInit();
             this.gpb_CitizenInfo.ResumeLayout(false);
@@ -1545,6 +1693,8 @@ namespace Project_POO.View
             this.tbp_InfoForPrint.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            this.sts_WelcomeCabinEmployee.ResumeLayout(false);
+            this.sts_WelcomeCabinEmployee.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_)).EndInit();
             this.gpb_InfoPrintAppointment.ResumeLayout(false);
             this.gpb_InfoPrintAppointment.PerformLayout();
@@ -1600,7 +1750,6 @@ namespace Project_POO.View
         private System.Windows.Forms.Label lbl_Citizen_Name;
         private System.Windows.Forms.Label lbl_TitleEmail;
         private System.Windows.Forms.Label lbl_Title_CitizenAge;
-        private System.Windows.Forms.Label lbl_Citizen_Age;
         private System.Windows.Forms.Label lbl_Title_CitizenTel;
         private System.Windows.Forms.Label lbl_Title_CitizenInstitution;
         private System.Windows.Forms.Label lbl_CitizenAddress;
@@ -1614,7 +1763,6 @@ namespace Project_POO.View
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox x;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Label lbl_CInstitution;
         private System.Windows.Forms.Label lbl_CTel;
@@ -1650,5 +1798,17 @@ namespace Project_POO.View
         private System.Windows.Forms.Label lbl_CenterAsigned;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.StatusStrip sts_Employee;
+        private System.Windows.Forms.ToolStripStatusLabel lbl_WelcomeEmployee;
+        private System.Windows.Forms.ToolStripStatusLabel lbl_EmployeeName;
+        private System.Windows.Forms.ToolStripStatusLabel lbl_TypeEmployee;
+        private System.Windows.Forms.StatusStrip sts_WelcomeVaccinationEmployee;
+        private System.Windows.Forms.ToolStripStatusLabel lbl_Welcome;
+        private System.Windows.Forms.ToolStripStatusLabel lbl_CabinEmployee_Name;
+        private System.Windows.Forms.ToolStripStatusLabel lbl_CabinEmployee_Type;
+        private System.Windows.Forms.ToolStripStatusLabel lbl_VaccinationEmployeeName;
+        private System.Windows.Forms.ToolStripStatusLabel lbl_VaccinationEmployeeType;
+        private System.Windows.Forms.StatusStrip sts_WelcomeCabinEmployee;
+        private System.Windows.Forms.ToolStripStatusLabel lbl_WelcomeCabinEmployee;
     }
 }
