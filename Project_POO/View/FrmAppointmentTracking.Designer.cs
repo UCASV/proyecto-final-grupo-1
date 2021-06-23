@@ -62,10 +62,19 @@ namespace Project_POO.View
             this.lbl_CitizenAddress = new System.Windows.Forms.Label();
             this.lbl_Title_CitizenAddress = new System.Windows.Forms.Label();
             this.gpb_InfoAppointment = new System.Windows.Forms.GroupBox();
+            this.cbx_Vaccinated = new System.Windows.Forms.CheckBox();
+            this.cbx_Arrived = new System.Windows.Forms.CheckBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lbl_Appointment_Time = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_TitleCabin_Name = new System.Windows.Forms.Label();
+            this.lbl_Name_Employee = new System.Windows.Forms.Label();
+            this.lbl_Cabin_Name = new System.Windows.Forms.Label();
             this.lbl_Title_InfoAppointment = new System.Windows.Forms.Label();
             this.lbl_ReportSE = new System.Windows.Forms.Label();
             this.gpb_ReportSE = new System.Windows.Forms.GroupBox();
             this.tlp_ReportSE = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_Create_Appointment = new System.Windows.Forms.Button();
             this.lbl_NameSE = new System.Windows.Forms.Label();
             this.lbl_DurationSE = new System.Windows.Forms.Label();
             this.txt_NameSE = new System.Windows.Forms.TextBox();
@@ -76,6 +85,16 @@ namespace Project_POO.View
             this.lbl_TitleCD_Print = new System.Windows.Forms.Label();
             this.dgv_ = new System.Windows.Forms.DataGridView();
             this.gpb_InfoPrintAppointment = new System.Windows.Forms.GroupBox();
+            this.lbl_CenterAsigned = new System.Windows.Forms.Label();
+            this.lbl_Title_CenterAsigned = new System.Windows.Forms.Label();
+            this.lbl_Time_Appointment_Print = new System.Windows.Forms.Label();
+            this.lbl_TitleHour = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lbl_Cabin_Name_Print = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lbl_Title_Cabin = new System.Windows.Forms.Label();
+            this.lbl_Employee_Name_Print = new System.Windows.Forms.Label();
+            this.lbl_Title_Employee = new System.Windows.Forms.Label();
             this.lbl_InfoAppointment_Print = new System.Windows.Forms.Label();
             this.btn_Print = new System.Windows.Forms.Button();
             this.lbl_InfoCitizenPrint = new System.Windows.Forms.Label();
@@ -99,7 +118,6 @@ namespace Project_POO.View
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_Create_Appointment = new System.Windows.Forms.Button();
             this.tlp_AT.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Appointments)).BeginInit();
             this.tbc_AT.SuspendLayout();
@@ -110,12 +128,14 @@ namespace Project_POO.View
             ((System.ComponentModel.ISupportInitialize)(this.dgv_CD)).BeginInit();
             this.gpb_CitizenInfo.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.gpb_InfoAppointment.SuspendLayout();
             this.gpb_ReportSE.SuspendLayout();
             this.tlp_ReportSE.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_DurationSE)).BeginInit();
             this.tbp_InfoForPrint.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_)).BeginInit();
+            this.gpb_InfoPrintAppointment.SuspendLayout();
             this.gpb_InfoAppointment_Print.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -674,6 +694,14 @@ namespace Project_POO.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gpb_InfoAppointment.BackColor = System.Drawing.Color.LightCyan;
             this.tlp_Info.SetColumnSpan(this.gpb_InfoAppointment, 7);
+            this.gpb_InfoAppointment.Controls.Add(this.cbx_Vaccinated);
+            this.gpb_InfoAppointment.Controls.Add(this.cbx_Arrived);
+            this.gpb_InfoAppointment.Controls.Add(this.label8);
+            this.gpb_InfoAppointment.Controls.Add(this.lbl_Appointment_Time);
+            this.gpb_InfoAppointment.Controls.Add(this.label3);
+            this.gpb_InfoAppointment.Controls.Add(this.lbl_TitleCabin_Name);
+            this.gpb_InfoAppointment.Controls.Add(this.lbl_Name_Employee);
+            this.gpb_InfoAppointment.Controls.Add(this.lbl_Cabin_Name);
             this.gpb_InfoAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.gpb_InfoAppointment.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.gpb_InfoAppointment.Location = new System.Drawing.Point(45, 391);
@@ -681,6 +709,86 @@ namespace Project_POO.View
             this.gpb_InfoAppointment.Size = new System.Drawing.Size(1261, 120);
             this.gpb_InfoAppointment.TabIndex = 5;
             this.gpb_InfoAppointment.TabStop = false;
+            // 
+            // cbx_Vaccinated
+            // 
+            this.cbx_Vaccinated.AutoSize = true;
+            this.cbx_Vaccinated.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.cbx_Vaccinated.Location = new System.Drawing.Point(1035, 65);
+            this.cbx_Vaccinated.Name = "cbx_Vaccinated";
+            this.cbx_Vaccinated.Size = new System.Drawing.Size(112, 25);
+            this.cbx_Vaccinated.TabIndex = 7;
+            this.cbx_Vaccinated.Text = "Se vacunó";
+            this.cbx_Vaccinated.UseVisualStyleBackColor = true;
+            this.cbx_Vaccinated.Visible = false;
+            // 
+            // cbx_Arrived
+            // 
+            this.cbx_Arrived.AutoSize = true;
+            this.cbx_Arrived.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.cbx_Arrived.Location = new System.Drawing.Point(1035, 22);
+            this.cbx_Arrived.Name = "cbx_Arrived";
+            this.cbx_Arrived.Size = new System.Drawing.Size(178, 25);
+            this.cbx_Arrived.TabIndex = 6;
+            this.cbx_Arrived.Text = "Llegó el ciudadano";
+            this.cbx_Arrived.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(724, 34);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(59, 21);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "Hora...";
+            // 
+            // lbl_Appointment_Time
+            // 
+            this.lbl_Appointment_Time.AutoSize = true;
+            this.lbl_Appointment_Time.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lbl_Appointment_Time.Location = new System.Drawing.Point(590, 34);
+            this.lbl_Appointment_Time.Name = "lbl_Appointment_Time";
+            this.lbl_Appointment_Time.Size = new System.Drawing.Size(128, 21);
+            this.lbl_Appointment_Time.TabIndex = 4;
+            this.lbl_Appointment_Time.Text = "Hora de la Cita";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(225, 69);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(81, 21);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Cabina...";
+            // 
+            // lbl_TitleCabin_Name
+            // 
+            this.lbl_TitleCabin_Name.AutoSize = true;
+            this.lbl_TitleCabin_Name.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lbl_TitleCabin_Name.Location = new System.Drawing.Point(19, 69);
+            this.lbl_TitleCabin_Name.Name = "lbl_TitleCabin_Name";
+            this.lbl_TitleCabin_Name.Size = new System.Drawing.Size(200, 21);
+            this.lbl_TitleCabin_Name.TabIndex = 2;
+            this.lbl_TitleCabin_Name.Text = "Registrado en la cabina:";
+            // 
+            // lbl_Name_Employee
+            // 
+            this.lbl_Name_Employee.AutoSize = true;
+            this.lbl_Name_Employee.Location = new System.Drawing.Point(154, 23);
+            this.lbl_Name_Employee.Name = "lbl_Name_Employee";
+            this.lbl_Name_Employee.Size = new System.Drawing.Size(90, 21);
+            this.lbl_Name_Employee.TabIndex = 1;
+            this.lbl_Name_Employee.Text = "Empleado";
+            // 
+            // lbl_Cabin_Name
+            // 
+            this.lbl_Cabin_Name.AutoSize = true;
+            this.lbl_Cabin_Name.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lbl_Cabin_Name.Location = new System.Drawing.Point(19, 23);
+            this.lbl_Cabin_Name.Name = "lbl_Cabin_Name";
+            this.lbl_Cabin_Name.Size = new System.Drawing.Size(129, 21);
+            this.lbl_Cabin_Name.TabIndex = 0;
+            this.lbl_Cabin_Name.Text = "Registrada por:";
             // 
             // lbl_Title_InfoAppointment
             // 
@@ -742,7 +850,7 @@ namespace Project_POO.View
             this.tlp_ReportSE.ColumnCount = 3;
             this.tlp_ReportSE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.26177F));
             this.tlp_ReportSE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 68.73823F));
-            this.tlp_ReportSE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 164F));
+            this.tlp_ReportSE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 167F));
             this.tlp_ReportSE.Controls.Add(this.btn_Create_Appointment, 2, 0);
             this.tlp_ReportSE.Controls.Add(this.lbl_NameSE, 0, 0);
             this.tlp_ReportSE.Controls.Add(this.lbl_DurationSE, 0, 1);
@@ -758,6 +866,23 @@ namespace Project_POO.View
             this.tlp_ReportSE.Size = new System.Drawing.Size(712, 70);
             this.tlp_ReportSE.TabIndex = 1;
             // 
+            // btn_Create_Appointment
+            // 
+            this.btn_Create_Appointment.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Create_Appointment.BackColor = System.Drawing.Color.SandyBrown;
+            this.btn_Create_Appointment.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Create_Appointment.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_Create_Appointment.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_Create_Appointment.Location = new System.Drawing.Point(547, 3);
+            this.btn_Create_Appointment.Name = "btn_Create_Appointment";
+            this.tlp_ReportSE.SetRowSpan(this.btn_Create_Appointment, 2);
+            this.btn_Create_Appointment.Size = new System.Drawing.Size(162, 64);
+            this.btn_Create_Appointment.TabIndex = 17;
+            this.btn_Create_Appointment.Text = "Reportar";
+            this.btn_Create_Appointment.UseVisualStyleBackColor = false;
+            // 
             // lbl_NameSE
             // 
             this.lbl_NameSE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -767,7 +892,7 @@ namespace Project_POO.View
             this.lbl_NameSE.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.lbl_NameSE.Location = new System.Drawing.Point(3, 0);
             this.lbl_NameSE.Name = "lbl_NameSE";
-            this.lbl_NameSE.Size = new System.Drawing.Size(165, 35);
+            this.lbl_NameSE.Size = new System.Drawing.Size(164, 35);
             this.lbl_NameSE.TabIndex = 0;
             this.lbl_NameSE.Text = "Efecto generado";
             this.lbl_NameSE.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -781,7 +906,7 @@ namespace Project_POO.View
             this.lbl_DurationSE.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.lbl_DurationSE.Location = new System.Drawing.Point(3, 35);
             this.lbl_DurationSE.Name = "lbl_DurationSE";
-            this.lbl_DurationSE.Size = new System.Drawing.Size(165, 35);
+            this.lbl_DurationSE.Size = new System.Drawing.Size(164, 35);
             this.lbl_DurationSE.TabIndex = 1;
             this.lbl_DurationSE.Text = "Duración";
             this.lbl_DurationSE.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -792,10 +917,10 @@ namespace Project_POO.View
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_NameSE.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_NameSE.Location = new System.Drawing.Point(174, 3);
+            this.txt_NameSE.Location = new System.Drawing.Point(173, 3);
             this.txt_NameSE.MaxLength = 50;
             this.txt_NameSE.Name = "txt_NameSE";
-            this.txt_NameSE.Size = new System.Drawing.Size(370, 27);
+            this.txt_NameSE.Size = new System.Drawing.Size(368, 27);
             this.txt_NameSE.TabIndex = 2;
             // 
             // nud_DurationSE
@@ -805,9 +930,9 @@ namespace Project_POO.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.nud_DurationSE.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nud_DurationSE.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.nud_DurationSE.Location = new System.Drawing.Point(174, 38);
+            this.nud_DurationSE.Location = new System.Drawing.Point(173, 38);
             this.nud_DurationSE.Name = "nud_DurationSE";
-            this.nud_DurationSE.Size = new System.Drawing.Size(370, 27);
+            this.nud_DurationSE.Size = new System.Drawing.Size(368, 27);
             this.nud_DurationSE.TabIndex = 3;
             // 
             // lbl_SE
@@ -921,6 +1046,16 @@ namespace Project_POO.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gpb_InfoPrintAppointment.BackColor = System.Drawing.Color.LightCyan;
             this.tableLayoutPanel2.SetColumnSpan(this.gpb_InfoPrintAppointment, 7);
+            this.gpb_InfoPrintAppointment.Controls.Add(this.lbl_CenterAsigned);
+            this.gpb_InfoPrintAppointment.Controls.Add(this.lbl_Title_CenterAsigned);
+            this.gpb_InfoPrintAppointment.Controls.Add(this.lbl_Time_Appointment_Print);
+            this.gpb_InfoPrintAppointment.Controls.Add(this.lbl_TitleHour);
+            this.gpb_InfoPrintAppointment.Controls.Add(this.label5);
+            this.gpb_InfoPrintAppointment.Controls.Add(this.lbl_Cabin_Name_Print);
+            this.gpb_InfoPrintAppointment.Controls.Add(this.label4);
+            this.gpb_InfoPrintAppointment.Controls.Add(this.lbl_Title_Cabin);
+            this.gpb_InfoPrintAppointment.Controls.Add(this.lbl_Employee_Name_Print);
+            this.gpb_InfoPrintAppointment.Controls.Add(this.lbl_Title_Employee);
             this.gpb_InfoPrintAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.gpb_InfoPrintAppointment.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.gpb_InfoPrintAppointment.Location = new System.Drawing.Point(46, 395);
@@ -928,6 +1063,101 @@ namespace Project_POO.View
             this.gpb_InfoPrintAppointment.Size = new System.Drawing.Size(1268, 122);
             this.gpb_InfoPrintAppointment.TabIndex = 5;
             this.gpb_InfoPrintAppointment.TabStop = false;
+            // 
+            // lbl_CenterAsigned
+            // 
+            this.lbl_CenterAsigned.AutoSize = true;
+            this.lbl_CenterAsigned.Location = new System.Drawing.Point(862, 69);
+            this.lbl_CenterAsigned.Name = "lbl_CenterAsigned";
+            this.lbl_CenterAsigned.Size = new System.Drawing.Size(77, 21);
+            this.lbl_CenterAsigned.TabIndex = 11;
+            this.lbl_CenterAsigned.Text = "Centro...";
+            // 
+            // lbl_Title_CenterAsigned
+            // 
+            this.lbl_Title_CenterAsigned.AutoSize = true;
+            this.lbl_Title_CenterAsigned.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lbl_Title_CenterAsigned.Location = new System.Drawing.Point(586, 69);
+            this.lbl_Title_CenterAsigned.Name = "lbl_Title_CenterAsigned";
+            this.lbl_Title_CenterAsigned.Size = new System.Drawing.Size(270, 21);
+            this.lbl_Title_CenterAsigned.TabIndex = 10;
+            this.lbl_Title_CenterAsigned.Text = "Centro de vacunación asignado:";
+            // 
+            // lbl_Time_Appointment_Print
+            // 
+            this.lbl_Time_Appointment_Print.AutoSize = true;
+            this.lbl_Time_Appointment_Print.Location = new System.Drawing.Point(862, 23);
+            this.lbl_Time_Appointment_Print.Name = "lbl_Time_Appointment_Print";
+            this.lbl_Time_Appointment_Print.Size = new System.Drawing.Size(59, 21);
+            this.lbl_Time_Appointment_Print.TabIndex = 9;
+            this.lbl_Time_Appointment_Print.Text = "Hora...";
+            // 
+            // lbl_TitleHour
+            // 
+            this.lbl_TitleHour.AutoSize = true;
+            this.lbl_TitleHour.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lbl_TitleHour.Location = new System.Drawing.Point(727, 23);
+            this.lbl_TitleHour.Name = "lbl_TitleHour";
+            this.lbl_TitleHour.Size = new System.Drawing.Size(129, 21);
+            this.lbl_TitleHour.TabIndex = 8;
+            this.lbl_TitleHour.Text = "Hora de la cita:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(253, 69);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(81, 21);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Cabina...";
+            // 
+            // lbl_Cabin_Name_Print
+            // 
+            this.lbl_Cabin_Name_Print.AutoSize = true;
+            this.lbl_Cabin_Name_Print.Location = new System.Drawing.Point(253, 69);
+            this.lbl_Cabin_Name_Print.Name = "lbl_Cabin_Name_Print";
+            this.lbl_Cabin_Name_Print.Size = new System.Drawing.Size(81, 21);
+            this.lbl_Cabin_Name_Print.TabIndex = 7;
+            this.lbl_Cabin_Name_Print.Text = "Cabina...";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label4.Location = new System.Drawing.Point(47, 69);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(200, 21);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Registrado en la cabina:";
+            // 
+            // lbl_Title_Cabin
+            // 
+            this.lbl_Title_Cabin.AutoSize = true;
+            this.lbl_Title_Cabin.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lbl_Title_Cabin.Location = new System.Drawing.Point(47, 69);
+            this.lbl_Title_Cabin.Name = "lbl_Title_Cabin";
+            this.lbl_Title_Cabin.Size = new System.Drawing.Size(200, 21);
+            this.lbl_Title_Cabin.TabIndex = 6;
+            this.lbl_Title_Cabin.Text = "Registrado en la cabina:";
+            // 
+            // lbl_Employee_Name_Print
+            // 
+            this.lbl_Employee_Name_Print.AutoSize = true;
+            this.lbl_Employee_Name_Print.Location = new System.Drawing.Point(182, 23);
+            this.lbl_Employee_Name_Print.Name = "lbl_Employee_Name_Print";
+            this.lbl_Employee_Name_Print.Size = new System.Drawing.Size(90, 21);
+            this.lbl_Employee_Name_Print.TabIndex = 5;
+            this.lbl_Employee_Name_Print.Text = "Empleado";
+            // 
+            // lbl_Title_Employee
+            // 
+            this.lbl_Title_Employee.AutoSize = true;
+            this.lbl_Title_Employee.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lbl_Title_Employee.Location = new System.Drawing.Point(47, 23);
+            this.lbl_Title_Employee.Name = "lbl_Title_Employee";
+            this.lbl_Title_Employee.Size = new System.Drawing.Size(129, 21);
+            this.lbl_Title_Employee.TabIndex = 4;
+            this.lbl_Title_Employee.Text = "Registrada por:";
             // 
             // lbl_InfoAppointment_Print
             // 
@@ -1281,23 +1511,6 @@ namespace Project_POO.View
             this.label2.Text = "Tel";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // btn_Create_Appointment
-            // 
-            this.btn_Create_Appointment.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Create_Appointment.BackColor = System.Drawing.Color.SandyBrown;
-            this.btn_Create_Appointment.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Create_Appointment.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_Create_Appointment.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_Create_Appointment.Location = new System.Drawing.Point(550, 3);
-            this.btn_Create_Appointment.Name = "btn_Create_Appointment";
-            this.tlp_ReportSE.SetRowSpan(this.btn_Create_Appointment, 2);
-            this.btn_Create_Appointment.Size = new System.Drawing.Size(159, 64);
-            this.btn_Create_Appointment.TabIndex = 17;
-            this.btn_Create_Appointment.Text = "Reportar";
-            this.btn_Create_Appointment.UseVisualStyleBackColor = false;
-            // 
             // FrmAppointmentTracking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1323,6 +1536,8 @@ namespace Project_POO.View
             this.gpb_CitizenInfo.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.gpb_InfoAppointment.ResumeLayout(false);
+            this.gpb_InfoAppointment.PerformLayout();
             this.gpb_ReportSE.ResumeLayout(false);
             this.tlp_ReportSE.ResumeLayout(false);
             this.tlp_ReportSE.PerformLayout();
@@ -1331,6 +1546,8 @@ namespace Project_POO.View
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_)).EndInit();
+            this.gpb_InfoPrintAppointment.ResumeLayout(false);
+            this.gpb_InfoPrintAppointment.PerformLayout();
             this.gpb_InfoAppointment_Print.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
@@ -1415,5 +1632,23 @@ namespace Project_POO.View
         private System.Windows.Forms.Label lbl_Title_Address;
         private System.Windows.Forms.GroupBox gpb_InfoAppointment_Print;
         private System.Windows.Forms.Button btn_Create_Appointment;
+        private System.Windows.Forms.Label lbl_Title_Employee;
+        private System.Windows.Forms.Label lbl_Name_Employee;
+        private System.Windows.Forms.Label lbl_TitleCabin_Name;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbl_Cabin_Name;
+        private System.Windows.Forms.Label lbl_Cabin_Name_Print;
+        private System.Windows.Forms.Label lbl_Title_Cabin;
+        private System.Windows.Forms.Label lbl_Employee_Name_Print;
+        private System.Windows.Forms.Label lbl_Title_CenterAsigned;
+        private System.Windows.Forms.Label lbl_Appointment_Time;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.CheckBox cbx_Arrived;
+        private System.Windows.Forms.CheckBox cbx_Vaccinated;
+        private System.Windows.Forms.Label lbl_Time_Appointment_Print;
+        private System.Windows.Forms.Label lbl_TitleHour;
+        private System.Windows.Forms.Label lbl_CenterAsigned;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
     }
 }
