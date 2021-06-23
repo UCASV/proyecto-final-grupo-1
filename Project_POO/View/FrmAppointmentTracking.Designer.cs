@@ -33,7 +33,7 @@ namespace Project_POO.View
             this.dgv_Appointments = new System.Windows.Forms.DataGridView();
             this.lbl_Title_Appointment = new System.Windows.Forms.Label();
             this.cmb_Method_Search = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_SearchBy = new System.Windows.Forms.Label();
             this.txt_Search = new System.Windows.Forms.TextBox();
             this.btn_Add = new System.Windows.Forms.Button();
             this.btn_Search = new System.Windows.Forms.Button();
@@ -43,10 +43,24 @@ namespace Project_POO.View
             this.tlp_Info = new System.Windows.Forms.TableLayoutPanel();
             this.dgv_SE = new System.Windows.Forms.DataGridView();
             this.lbl_Title_InfoUser = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_TitleCD = new System.Windows.Forms.Label();
             this.dgv_CD = new System.Windows.Forms.DataGridView();
             this.gpb_CitizenInfo = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl_CitizenInstitution = new System.Windows.Forms.Label();
+            this.lbl_CitizenTel = new System.Windows.Forms.Label();
+            this.lbl_CitizenEmail = new System.Windows.Forms.Label();
+            this.lbl_CitizenAge = new System.Windows.Forms.Label();
+            this.lbl_CitizenDUI = new System.Windows.Forms.Label();
+            this.lbl_Title_CitizenDUI = new System.Windows.Forms.Label();
+            this.lbl_Citizen_Name = new System.Windows.Forms.Label();
+            this.lbl_Title_Citizen_Name = new System.Windows.Forms.Label();
+            this.lbl_Title_CitizenTel = new System.Windows.Forms.Label();
+            this.lbl_Title_CitizenAge = new System.Windows.Forms.Label();
+            this.lbl_TitleEmail = new System.Windows.Forms.Label();
+            this.lbl_Title_CitizenInstitution = new System.Windows.Forms.Label();
+            this.lbl_CitizenAddress = new System.Windows.Forms.Label();
+            this.lbl_Title_CitizenAddress = new System.Windows.Forms.Label();
             this.gpb_InfoAppointment = new System.Windows.Forms.GroupBox();
             this.lbl_Title_InfoAppointment = new System.Windows.Forms.Label();
             this.lbl_ReportSE = new System.Windows.Forms.Label();
@@ -59,14 +73,33 @@ namespace Project_POO.View
             this.lbl_SE = new System.Windows.Forms.Label();
             this.tbp_InfoForPrint = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.lbl_TitleCD_Print = new System.Windows.Forms.Label();
+            this.dgv_ = new System.Windows.Forms.DataGridView();
+            this.gpb_InfoPrintAppointment = new System.Windows.Forms.GroupBox();
+            this.lbl_InfoAppointment_Print = new System.Windows.Forms.Label();
+            this.btn_Print = new System.Windows.Forms.Button();
+            this.lbl_InfoCitizenPrint = new System.Windows.Forms.Label();
+            this.gpb_InfoAppointment_Print = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl_CInstitution = new System.Windows.Forms.Label();
+            this.lbl_CTel = new System.Windows.Forms.Label();
+            this.lbl_CEmail = new System.Windows.Forms.Label();
+            this.lbl_CAge = new System.Windows.Forms.Label();
+            this.lbl_CDUI = new System.Windows.Forms.Label();
+            this.lbl_Title_DUI = new System.Windows.Forms.Label();
+            this.lbl_CName = new System.Windows.Forms.Label();
+            this.lbl_Title_CitizenName = new System.Windows.Forms.Label();
+            this.lbl_Title_Tel = new System.Windows.Forms.Label();
+            this.lbl_Title_Age = new System.Windows.Forms.Label();
+            this.lbl_Title_Email = new System.Windows.Forms.Label();
+            this.lbl_Title_Institution = new System.Windows.Forms.Label();
+            this.lbl_CAddress = new System.Windows.Forms.Label();
+            this.lbl_Title_Address = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btn_Print = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btn_Create_Appointment = new System.Windows.Forms.Button();
             this.tlp_AT.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Appointments)).BeginInit();
             this.tbc_AT.SuspendLayout();
@@ -76,13 +109,16 @@ namespace Project_POO.View
             ((System.ComponentModel.ISupportInitialize)(this.dgv_SE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_CD)).BeginInit();
             this.gpb_CitizenInfo.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.gpb_ReportSE.SuspendLayout();
             this.tlp_ReportSE.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_DurationSE)).BeginInit();
             this.tbp_InfoForPrint.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_)).BeginInit();
+            this.gpb_InfoAppointment_Print.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tlp_AT
@@ -100,7 +136,7 @@ namespace Project_POO.View
             this.tlp_AT.Controls.Add(this.dgv_Appointments, 1, 2);
             this.tlp_AT.Controls.Add(this.lbl_Title_Appointment, 1, 1);
             this.tlp_AT.Controls.Add(this.cmb_Method_Search, 3, 1);
-            this.tlp_AT.Controls.Add(this.label1, 2, 1);
+            this.tlp_AT.Controls.Add(this.lbl_SearchBy, 2, 1);
             this.tlp_AT.Controls.Add(this.txt_Search, 5, 1);
             this.tlp_AT.Controls.Add(this.btn_Add, 4, 7);
             this.tlp_AT.Controls.Add(this.btn_Search, 7, 1);
@@ -175,18 +211,18 @@ namespace Project_POO.View
             this.cmb_Method_Search.Size = new System.Drawing.Size(392, 29);
             this.cmb_Method_Search.TabIndex = 2;
             // 
-            // label1
+            // lbl_SearchBy
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lbl_SearchBy.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(249, 44);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 63);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Buscar por:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbl_SearchBy.AutoSize = true;
+            this.lbl_SearchBy.Location = new System.Drawing.Point(249, 44);
+            this.lbl_SearchBy.Name = "lbl_SearchBy";
+            this.lbl_SearchBy.Size = new System.Drawing.Size(113, 63);
+            this.lbl_SearchBy.TabIndex = 3;
+            this.lbl_SearchBy.Text = "Buscar por:";
+            this.lbl_SearchBy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txt_Search
             // 
@@ -240,6 +276,7 @@ namespace Project_POO.View
             this.tbc_AT.SelectedIndex = 0;
             this.tbc_AT.Size = new System.Drawing.Size(1370, 749);
             this.tbc_AT.TabIndex = 1;
+            this.tbc_AT.SelectedIndexChanged += new System.EventHandler(this.tbc_AT_SelectedIndexChanged);
             // 
             // tbp_Appointment
             // 
@@ -279,7 +316,7 @@ namespace Project_POO.View
             this.tlp_Info.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.170993F));
             this.tlp_Info.Controls.Add(this.dgv_SE, 5, 7);
             this.tlp_Info.Controls.Add(this.lbl_Title_InfoUser, 1, 1);
-            this.tlp_Info.Controls.Add(this.label2, 5, 1);
+            this.tlp_Info.Controls.Add(this.lbl_TitleCD, 5, 1);
             this.tlp_Info.Controls.Add(this.dgv_CD, 5, 2);
             this.tlp_Info.Controls.Add(this.gpb_CitizenInfo, 1, 2);
             this.tlp_Info.Controls.Add(this.gpb_InfoAppointment, 1, 5);
@@ -301,8 +338,8 @@ namespace Project_POO.View
             this.tlp_Info.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.85798F));
             this.tlp_Info.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.037119F));
             this.tlp_Info.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.041447F));
-            this.tlp_Info.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.03609F));
-            this.tlp_Info.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.115149F));
+            this.tlp_Info.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.433567F));
+            this.tlp_Info.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.314685F));
             this.tlp_Info.Size = new System.Drawing.Size(1356, 715);
             this.tlp_Info.TabIndex = 1;
             // 
@@ -316,14 +353,13 @@ namespace Project_POO.View
             this.dgv_SE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tlp_Info.SetColumnSpan(this.dgv_SE, 3);
             this.dgv_SE.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dgv_SE.Location = new System.Drawing.Point(769, 577);
+            this.dgv_SE.Location = new System.Drawing.Point(769, 574);
             this.dgv_SE.Name = "dgv_SE";
             this.tlp_Info.SetRowSpan(this.dgv_SE, 2);
             this.dgv_SE.RowTemplate.Height = 25;
             this.dgv_SE.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_SE.Size = new System.Drawing.Size(537, 108);
+            this.dgv_SE.Size = new System.Drawing.Size(537, 96);
             this.dgv_SE.TabIndex = 9;
-            this.dgv_SE.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_SE_CellContentClick);
             // 
             // lbl_Title_InfoUser
             // 
@@ -344,24 +380,24 @@ namespace Project_POO.View
             this.lbl_Title_InfoUser.Text = "Información del ciudadano";
             this.lbl_Title_InfoUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // lbl_TitleCD
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lbl_TitleCD.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Gainsboro;
-            this.tlp_Info.SetColumnSpan(this.label2, 3);
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label2.Location = new System.Drawing.Point(769, 42);
-            this.label2.Margin = new System.Windows.Forms.Padding(3, 20, 3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(537, 37);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Enfermedades crónicas";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_TitleCD.AutoSize = true;
+            this.lbl_TitleCD.BackColor = System.Drawing.Color.Gainsboro;
+            this.tlp_Info.SetColumnSpan(this.lbl_TitleCD, 3);
+            this.lbl_TitleCD.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lbl_TitleCD.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_TitleCD.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lbl_TitleCD.Location = new System.Drawing.Point(769, 42);
+            this.lbl_TitleCD.Margin = new System.Windows.Forms.Padding(3, 20, 3, 0);
+            this.lbl_TitleCD.Name = "lbl_TitleCD";
+            this.lbl_TitleCD.Size = new System.Drawing.Size(537, 37);
+            this.lbl_TitleCD.TabIndex = 1;
+            this.lbl_TitleCD.Text = "Enfermedades crónicas";
+            this.lbl_TitleCD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dgv_CD
             // 
@@ -378,7 +414,7 @@ namespace Project_POO.View
             this.tlp_Info.SetRowSpan(this.dgv_CD, 2);
             this.dgv_CD.RowTemplate.Height = 25;
             this.dgv_CD.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_CD.Size = new System.Drawing.Size(537, 248);
+            this.dgv_CD.Size = new System.Drawing.Size(537, 246);
             this.dgv_CD.TabIndex = 2;
             // 
             // gpb_CitizenInfo
@@ -394,15 +430,29 @@ namespace Project_POO.View
             this.gpb_CitizenInfo.Location = new System.Drawing.Point(45, 82);
             this.gpb_CitizenInfo.Name = "gpb_CitizenInfo";
             this.tlp_Info.SetRowSpan(this.gpb_CitizenInfo, 2);
-            this.gpb_CitizenInfo.Size = new System.Drawing.Size(718, 248);
+            this.gpb_CitizenInfo.Size = new System.Drawing.Size(718, 246);
             this.gpb_CitizenInfo.TabIndex = 3;
             this.gpb_CitizenInfo.TabStop = false;
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.83486F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.16514F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.7191F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.2809F));
+            this.tableLayoutPanel1.Controls.Add(this.lbl_CitizenInstitution, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_CitizenTel, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_CitizenEmail, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_CitizenAge, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_CitizenDUI, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_Title_CitizenDUI, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_Citizen_Name, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_Title_Citizen_Name, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_Title_CitizenTel, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_Title_CitizenAge, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_TitleEmail, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_Title_CitizenInstitution, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_CitizenAddress, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_Title_CitizenAddress, 0, 6);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 23);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -414,8 +464,208 @@ namespace Project_POO.View
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(712, 222);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(712, 220);
             this.tableLayoutPanel1.TabIndex = 0;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
+            // 
+            // lbl_CitizenInstitution
+            // 
+            this.lbl_CitizenInstitution.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_CitizenInstitution.AutoSize = true;
+            this.lbl_CitizenInstitution.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbl_CitizenInstitution.Location = new System.Drawing.Point(179, 155);
+            this.lbl_CitizenInstitution.Name = "lbl_CitizenInstitution";
+            this.lbl_CitizenInstitution.Size = new System.Drawing.Size(530, 31);
+            this.lbl_CitizenInstitution.TabIndex = 13;
+            this.lbl_CitizenInstitution.Text = "Institución";
+            this.lbl_CitizenInstitution.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl_CitizenTel
+            // 
+            this.lbl_CitizenTel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_CitizenTel.AutoSize = true;
+            this.lbl_CitizenTel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbl_CitizenTel.Location = new System.Drawing.Point(179, 124);
+            this.lbl_CitizenTel.Name = "lbl_CitizenTel";
+            this.lbl_CitizenTel.Size = new System.Drawing.Size(530, 31);
+            this.lbl_CitizenTel.TabIndex = 12;
+            this.lbl_CitizenTel.Text = "Tel";
+            this.lbl_CitizenTel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl_CitizenEmail
+            // 
+            this.lbl_CitizenEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_CitizenEmail.AutoSize = true;
+            this.lbl_CitizenEmail.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbl_CitizenEmail.Location = new System.Drawing.Point(179, 93);
+            this.lbl_CitizenEmail.Name = "lbl_CitizenEmail";
+            this.lbl_CitizenEmail.Size = new System.Drawing.Size(530, 31);
+            this.lbl_CitizenEmail.TabIndex = 11;
+            this.lbl_CitizenEmail.Text = "Correo";
+            this.lbl_CitizenEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl_CitizenAge
+            // 
+            this.lbl_CitizenAge.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_CitizenAge.AutoSize = true;
+            this.lbl_CitizenAge.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbl_CitizenAge.Location = new System.Drawing.Point(179, 62);
+            this.lbl_CitizenAge.Name = "lbl_CitizenAge";
+            this.lbl_CitizenAge.Size = new System.Drawing.Size(530, 31);
+            this.lbl_CitizenAge.TabIndex = 10;
+            this.lbl_CitizenAge.Text = "Edad";
+            this.lbl_CitizenAge.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl_CitizenDUI
+            // 
+            this.lbl_CitizenDUI.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_CitizenDUI.AutoSize = true;
+            this.lbl_CitizenDUI.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbl_CitizenDUI.Location = new System.Drawing.Point(179, 31);
+            this.lbl_CitizenDUI.Name = "lbl_CitizenDUI";
+            this.lbl_CitizenDUI.Size = new System.Drawing.Size(530, 31);
+            this.lbl_CitizenDUI.TabIndex = 9;
+            this.lbl_CitizenDUI.Text = "DUI";
+            this.lbl_CitizenDUI.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl_Title_CitizenDUI
+            // 
+            this.lbl_Title_CitizenDUI.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Title_CitizenDUI.AutoSize = true;
+            this.lbl_Title_CitizenDUI.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lbl_Title_CitizenDUI.Location = new System.Drawing.Point(3, 31);
+            this.lbl_Title_CitizenDUI.Name = "lbl_Title_CitizenDUI";
+            this.lbl_Title_CitizenDUI.Size = new System.Drawing.Size(170, 31);
+            this.lbl_Title_CitizenDUI.TabIndex = 2;
+            this.lbl_Title_CitizenDUI.Text = "DUI";
+            this.lbl_Title_CitizenDUI.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl_Citizen_Name
+            // 
+            this.lbl_Citizen_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Citizen_Name.AutoSize = true;
+            this.lbl_Citizen_Name.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbl_Citizen_Name.Location = new System.Drawing.Point(179, 0);
+            this.lbl_Citizen_Name.Name = "lbl_Citizen_Name";
+            this.lbl_Citizen_Name.Size = new System.Drawing.Size(530, 31);
+            this.lbl_Citizen_Name.TabIndex = 1;
+            this.lbl_Citizen_Name.Text = "Nombre";
+            this.lbl_Citizen_Name.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl_Title_Citizen_Name
+            // 
+            this.lbl_Title_Citizen_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Title_Citizen_Name.AutoSize = true;
+            this.lbl_Title_Citizen_Name.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lbl_Title_Citizen_Name.Location = new System.Drawing.Point(3, 0);
+            this.lbl_Title_Citizen_Name.Name = "lbl_Title_Citizen_Name";
+            this.lbl_Title_Citizen_Name.Size = new System.Drawing.Size(170, 31);
+            this.lbl_Title_Citizen_Name.TabIndex = 0;
+            this.lbl_Title_Citizen_Name.Text = "Nombre";
+            this.lbl_Title_Citizen_Name.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl_Title_CitizenTel
+            // 
+            this.lbl_Title_CitizenTel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Title_CitizenTel.AutoSize = true;
+            this.lbl_Title_CitizenTel.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lbl_Title_CitizenTel.Location = new System.Drawing.Point(3, 124);
+            this.lbl_Title_CitizenTel.Name = "lbl_Title_CitizenTel";
+            this.lbl_Title_CitizenTel.Size = new System.Drawing.Size(170, 31);
+            this.lbl_Title_CitizenTel.TabIndex = 5;
+            this.lbl_Title_CitizenTel.Text = "Teléfono";
+            this.lbl_Title_CitizenTel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl_Title_CitizenAge
+            // 
+            this.lbl_Title_CitizenAge.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Title_CitizenAge.AutoSize = true;
+            this.lbl_Title_CitizenAge.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lbl_Title_CitizenAge.Location = new System.Drawing.Point(3, 62);
+            this.lbl_Title_CitizenAge.Name = "lbl_Title_CitizenAge";
+            this.lbl_Title_CitizenAge.Size = new System.Drawing.Size(170, 31);
+            this.lbl_Title_CitizenAge.TabIndex = 4;
+            this.lbl_Title_CitizenAge.Text = "Edad";
+            this.lbl_Title_CitizenAge.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl_TitleEmail
+            // 
+            this.lbl_TitleEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_TitleEmail.AutoSize = true;
+            this.lbl_TitleEmail.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lbl_TitleEmail.Location = new System.Drawing.Point(3, 93);
+            this.lbl_TitleEmail.Name = "lbl_TitleEmail";
+            this.lbl_TitleEmail.Size = new System.Drawing.Size(170, 31);
+            this.lbl_TitleEmail.TabIndex = 3;
+            this.lbl_TitleEmail.Text = "Correo";
+            this.lbl_TitleEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl_Title_CitizenInstitution
+            // 
+            this.lbl_Title_CitizenInstitution.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Title_CitizenInstitution.AutoSize = true;
+            this.lbl_Title_CitizenInstitution.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lbl_Title_CitizenInstitution.Location = new System.Drawing.Point(3, 155);
+            this.lbl_Title_CitizenInstitution.Name = "lbl_Title_CitizenInstitution";
+            this.lbl_Title_CitizenInstitution.Size = new System.Drawing.Size(170, 31);
+            this.lbl_Title_CitizenInstitution.TabIndex = 6;
+            this.lbl_Title_CitizenInstitution.Text = "Institución";
+            this.lbl_Title_CitizenInstitution.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl_CitizenAddress
+            // 
+            this.lbl_CitizenAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_CitizenAddress.AutoSize = true;
+            this.lbl_CitizenAddress.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbl_CitizenAddress.Location = new System.Drawing.Point(179, 186);
+            this.lbl_CitizenAddress.Name = "lbl_CitizenAddress";
+            this.lbl_CitizenAddress.Size = new System.Drawing.Size(530, 34);
+            this.lbl_CitizenAddress.TabIndex = 8;
+            this.lbl_CitizenAddress.Text = "Dirección";
+            this.lbl_CitizenAddress.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl_Title_CitizenAddress
+            // 
+            this.lbl_Title_CitizenAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Title_CitizenAddress.AutoSize = true;
+            this.lbl_Title_CitizenAddress.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lbl_Title_CitizenAddress.Location = new System.Drawing.Point(3, 186);
+            this.lbl_Title_CitizenAddress.Name = "lbl_Title_CitizenAddress";
+            this.lbl_Title_CitizenAddress.Size = new System.Drawing.Size(170, 34);
+            this.lbl_Title_CitizenAddress.TabIndex = 7;
+            this.lbl_Title_CitizenAddress.Text = "Dirección";
+            this.lbl_Title_CitizenAddress.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // gpb_InfoAppointment
             // 
@@ -426,9 +676,9 @@ namespace Project_POO.View
             this.tlp_Info.SetColumnSpan(this.gpb_InfoAppointment, 7);
             this.gpb_InfoAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.gpb_InfoAppointment.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.gpb_InfoAppointment.Location = new System.Drawing.Point(45, 393);
+            this.gpb_InfoAppointment.Location = new System.Drawing.Point(45, 391);
             this.gpb_InfoAppointment.Name = "gpb_InfoAppointment";
-            this.gpb_InfoAppointment.Size = new System.Drawing.Size(1261, 121);
+            this.gpb_InfoAppointment.Size = new System.Drawing.Size(1261, 120);
             this.gpb_InfoAppointment.TabIndex = 5;
             this.gpb_InfoAppointment.TabStop = false;
             // 
@@ -443,7 +693,7 @@ namespace Project_POO.View
             this.lbl_Title_InfoAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lbl_Title_InfoAppointment.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbl_Title_InfoAppointment.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbl_Title_InfoAppointment.Location = new System.Drawing.Point(42, 353);
+            this.lbl_Title_InfoAppointment.Location = new System.Drawing.Point(42, 351);
             this.lbl_Title_InfoAppointment.Margin = new System.Windows.Forms.Padding(0, 20, 0, 0);
             this.lbl_Title_InfoAppointment.Name = "lbl_Title_InfoAppointment";
             this.lbl_Title_InfoAppointment.Size = new System.Drawing.Size(1267, 37);
@@ -458,14 +708,14 @@ namespace Project_POO.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_ReportSE.AutoSize = true;
             this.lbl_ReportSE.BackColor = System.Drawing.Color.Gainsboro;
-            this.tlp_Info.SetColumnSpan(this.lbl_ReportSE, 3);
+            this.tlp_Info.SetColumnSpan(this.lbl_ReportSE, 4);
             this.lbl_ReportSE.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lbl_ReportSE.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbl_ReportSE.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbl_ReportSE.Location = new System.Drawing.Point(45, 537);
+            this.lbl_ReportSE.Location = new System.Drawing.Point(45, 534);
             this.lbl_ReportSE.Margin = new System.Windows.Forms.Padding(3, 20, 3, 0);
             this.lbl_ReportSE.Name = "lbl_ReportSE";
-            this.lbl_ReportSE.Size = new System.Drawing.Size(537, 37);
+            this.lbl_ReportSE.Size = new System.Drawing.Size(718, 37);
             this.lbl_ReportSE.TabIndex = 6;
             this.lbl_ReportSE.Text = "Reportar efecto secundario";
             this.lbl_ReportSE.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -476,22 +726,24 @@ namespace Project_POO.View
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gpb_ReportSE.BackColor = System.Drawing.Color.LightCyan;
-            this.tlp_Info.SetColumnSpan(this.gpb_ReportSE, 3);
+            this.tlp_Info.SetColumnSpan(this.gpb_ReportSE, 4);
             this.gpb_ReportSE.Controls.Add(this.tlp_ReportSE);
             this.gpb_ReportSE.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.gpb_ReportSE.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.gpb_ReportSE.Location = new System.Drawing.Point(45, 577);
+            this.gpb_ReportSE.Location = new System.Drawing.Point(45, 574);
             this.gpb_ReportSE.Name = "gpb_ReportSE";
             this.tlp_Info.SetRowSpan(this.gpb_ReportSE, 2);
-            this.gpb_ReportSE.Size = new System.Drawing.Size(537, 108);
+            this.gpb_ReportSE.Size = new System.Drawing.Size(718, 96);
             this.gpb_ReportSE.TabIndex = 7;
             this.gpb_ReportSE.TabStop = false;
             // 
             // tlp_ReportSE
             // 
-            this.tlp_ReportSE.ColumnCount = 2;
+            this.tlp_ReportSE.ColumnCount = 3;
             this.tlp_ReportSE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.26177F));
             this.tlp_ReportSE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 68.73823F));
+            this.tlp_ReportSE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 164F));
+            this.tlp_ReportSE.Controls.Add(this.btn_Create_Appointment, 2, 0);
             this.tlp_ReportSE.Controls.Add(this.lbl_NameSE, 0, 0);
             this.tlp_ReportSE.Controls.Add(this.lbl_DurationSE, 0, 1);
             this.tlp_ReportSE.Controls.Add(this.txt_NameSE, 1, 0);
@@ -503,7 +755,7 @@ namespace Project_POO.View
             this.tlp_ReportSE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlp_ReportSE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlp_ReportSE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlp_ReportSE.Size = new System.Drawing.Size(531, 82);
+            this.tlp_ReportSE.Size = new System.Drawing.Size(712, 70);
             this.tlp_ReportSE.TabIndex = 1;
             // 
             // lbl_NameSE
@@ -515,7 +767,7 @@ namespace Project_POO.View
             this.lbl_NameSE.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.lbl_NameSE.Location = new System.Drawing.Point(3, 0);
             this.lbl_NameSE.Name = "lbl_NameSE";
-            this.lbl_NameSE.Size = new System.Drawing.Size(160, 41);
+            this.lbl_NameSE.Size = new System.Drawing.Size(165, 35);
             this.lbl_NameSE.TabIndex = 0;
             this.lbl_NameSE.Text = "Efecto generado";
             this.lbl_NameSE.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -527,9 +779,9 @@ namespace Project_POO.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_DurationSE.AutoSize = true;
             this.lbl_DurationSE.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbl_DurationSE.Location = new System.Drawing.Point(3, 41);
+            this.lbl_DurationSE.Location = new System.Drawing.Point(3, 35);
             this.lbl_DurationSE.Name = "lbl_DurationSE";
-            this.lbl_DurationSE.Size = new System.Drawing.Size(160, 41);
+            this.lbl_DurationSE.Size = new System.Drawing.Size(165, 35);
             this.lbl_DurationSE.TabIndex = 1;
             this.lbl_DurationSE.Text = "Duración";
             this.lbl_DurationSE.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -540,10 +792,10 @@ namespace Project_POO.View
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_NameSE.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_NameSE.Location = new System.Drawing.Point(169, 3);
+            this.txt_NameSE.Location = new System.Drawing.Point(174, 3);
             this.txt_NameSE.MaxLength = 50;
             this.txt_NameSE.Name = "txt_NameSE";
-            this.txt_NameSE.Size = new System.Drawing.Size(359, 27);
+            this.txt_NameSE.Size = new System.Drawing.Size(370, 27);
             this.txt_NameSE.TabIndex = 2;
             // 
             // nud_DurationSE
@@ -553,9 +805,9 @@ namespace Project_POO.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.nud_DurationSE.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nud_DurationSE.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.nud_DurationSE.Location = new System.Drawing.Point(169, 44);
+            this.nud_DurationSE.Location = new System.Drawing.Point(174, 38);
             this.nud_DurationSE.Name = "nud_DurationSE";
-            this.nud_DurationSE.Size = new System.Drawing.Size(359, 27);
+            this.nud_DurationSE.Size = new System.Drawing.Size(370, 27);
             this.nud_DurationSE.TabIndex = 3;
             // 
             // lbl_SE
@@ -569,7 +821,7 @@ namespace Project_POO.View
             this.lbl_SE.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lbl_SE.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbl_SE.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbl_SE.Location = new System.Drawing.Point(769, 537);
+            this.lbl_SE.Location = new System.Drawing.Point(769, 534);
             this.lbl_SE.Margin = new System.Windows.Forms.Padding(3, 20, 3, 0);
             this.lbl_SE.Name = "lbl_SE";
             this.lbl_SE.Size = new System.Drawing.Size(537, 37);
@@ -599,13 +851,13 @@ namespace Project_POO.View
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.37972F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.37972F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.170993F));
-            this.tableLayoutPanel2.Controls.Add(this.label3, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label4, 5, 1);
-            this.tableLayoutPanel2.Controls.Add(this.dataGridView2, 5, 2);
-            this.tableLayoutPanel2.Controls.Add(this.groupBox1, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.groupBox2, 1, 5);
-            this.tableLayoutPanel2.Controls.Add(this.label5, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.lbl_TitleCD_Print, 5, 1);
+            this.tableLayoutPanel2.Controls.Add(this.dgv_, 5, 2);
+            this.tableLayoutPanel2.Controls.Add(this.gpb_InfoPrintAppointment, 1, 5);
+            this.tableLayoutPanel2.Controls.Add(this.lbl_InfoAppointment_Print, 1, 4);
             this.tableLayoutPanel2.Controls.Add(this.btn_Print, 4, 7);
+            this.tableLayoutPanel2.Controls.Add(this.lbl_InfoCitizenPrint, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.gpb_InfoAppointment_Print, 1, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tableLayoutPanel2.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -625,131 +877,76 @@ namespace Project_POO.View
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1362, 721);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
-            // label3
+            // lbl_TitleCD_Print
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lbl_TitleCD_Print.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Gainsboro;
-            this.tableLayoutPanel2.SetColumnSpan(this.label3, 4);
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label3.Location = new System.Drawing.Point(46, 42);
-            this.label3.Margin = new System.Windows.Forms.Padding(3, 20, 3, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(722, 37);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Información del ciudadano";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_TitleCD_Print.AutoSize = true;
+            this.lbl_TitleCD_Print.BackColor = System.Drawing.Color.Gainsboro;
+            this.tableLayoutPanel2.SetColumnSpan(this.lbl_TitleCD_Print, 3);
+            this.lbl_TitleCD_Print.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lbl_TitleCD_Print.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_TitleCD_Print.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lbl_TitleCD_Print.Location = new System.Drawing.Point(774, 42);
+            this.lbl_TitleCD_Print.Margin = new System.Windows.Forms.Padding(3, 20, 3, 0);
+            this.lbl_TitleCD_Print.Name = "lbl_TitleCD_Print";
+            this.lbl_TitleCD_Print.Size = new System.Drawing.Size(540, 37);
+            this.lbl_TitleCD_Print.TabIndex = 1;
+            this.lbl_TitleCD_Print.Text = "Enfermedades crónicas";
+            this.lbl_TitleCD_Print.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
+            // dgv_
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgv_.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Gainsboro;
-            this.tableLayoutPanel2.SetColumnSpan(this.label4, 3);
-            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label4.Location = new System.Drawing.Point(774, 42);
-            this.label4.Margin = new System.Windows.Forms.Padding(3, 20, 3, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(540, 37);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Enfermedades crónicas";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.dgv_.BackgroundColor = System.Drawing.SystemColors.HotTrack;
+            this.dgv_.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
+            this.dgv_.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tableLayoutPanel2.SetColumnSpan(this.dgv_, 3);
+            this.dgv_.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dgv_.Location = new System.Drawing.Point(774, 82);
+            this.dgv_.Name = "dgv_";
+            this.tableLayoutPanel2.SetRowSpan(this.dgv_, 2);
+            this.dgv_.RowTemplate.Height = 25;
+            this.dgv_.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_.Size = new System.Drawing.Size(540, 250);
+            this.dgv_.TabIndex = 2;
             // 
-            // dataGridView2
+            // gpb_InfoPrintAppointment
             // 
-            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.gpb_InfoPrintAppointment.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.HotTrack;
-            this.dataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tableLayoutPanel2.SetColumnSpan(this.dataGridView2, 3);
-            this.dataGridView2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dataGridView2.Location = new System.Drawing.Point(774, 82);
-            this.dataGridView2.Name = "dataGridView2";
-            this.tableLayoutPanel2.SetRowSpan(this.dataGridView2, 2);
-            this.dataGridView2.RowTemplate.Height = 25;
-            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(540, 250);
-            this.dataGridView2.TabIndex = 2;
+            this.gpb_InfoPrintAppointment.BackColor = System.Drawing.Color.LightCyan;
+            this.tableLayoutPanel2.SetColumnSpan(this.gpb_InfoPrintAppointment, 7);
+            this.gpb_InfoPrintAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.gpb_InfoPrintAppointment.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.gpb_InfoPrintAppointment.Location = new System.Drawing.Point(46, 395);
+            this.gpb_InfoPrintAppointment.Name = "gpb_InfoPrintAppointment";
+            this.gpb_InfoPrintAppointment.Size = new System.Drawing.Size(1268, 122);
+            this.gpb_InfoPrintAppointment.TabIndex = 5;
+            this.gpb_InfoPrintAppointment.TabStop = false;
             // 
-            // groupBox1
+            // lbl_InfoAppointment_Print
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lbl_InfoAppointment_Print.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.BackColor = System.Drawing.Color.LightCyan;
-            this.tableLayoutPanel2.SetColumnSpan(this.groupBox1, 4);
-            this.groupBox1.Controls.Add(this.tableLayoutPanel3);
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox1.Location = new System.Drawing.Point(46, 82);
-            this.groupBox1.Name = "groupBox1";
-            this.tableLayoutPanel2.SetRowSpan(this.groupBox1, 2);
-            this.groupBox1.Size = new System.Drawing.Size(722, 250);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.83486F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.16514F));
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 23);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 7;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(716, 224);
-            this.tableLayoutPanel3.TabIndex = 0;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.BackColor = System.Drawing.Color.LightCyan;
-            this.tableLayoutPanel2.SetColumnSpan(this.groupBox2, 7);
-            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox2.Location = new System.Drawing.Point(46, 395);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1268, 122);
-            this.groupBox2.TabIndex = 5;
-            this.groupBox2.TabStop = false;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Gainsboro;
-            this.tableLayoutPanel2.SetColumnSpan(this.label5, 7);
-            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label5.Location = new System.Drawing.Point(43, 355);
-            this.label5.Margin = new System.Windows.Forms.Padding(0, 20, 0, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(1274, 37);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Información de la cita";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_InfoAppointment_Print.AutoSize = true;
+            this.lbl_InfoAppointment_Print.BackColor = System.Drawing.Color.Gainsboro;
+            this.tableLayoutPanel2.SetColumnSpan(this.lbl_InfoAppointment_Print, 7);
+            this.lbl_InfoAppointment_Print.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lbl_InfoAppointment_Print.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_InfoAppointment_Print.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lbl_InfoAppointment_Print.Location = new System.Drawing.Point(43, 355);
+            this.lbl_InfoAppointment_Print.Margin = new System.Windows.Forms.Padding(0, 20, 0, 0);
+            this.lbl_InfoAppointment_Print.Name = "lbl_InfoAppointment_Print";
+            this.lbl_InfoAppointment_Print.Size = new System.Drawing.Size(1274, 37);
+            this.lbl_InfoAppointment_Print.TabIndex = 4;
+            this.lbl_InfoAppointment_Print.Text = "Información de la cita";
+            this.lbl_InfoAppointment_Print.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btn_Print
             // 
@@ -763,6 +960,343 @@ namespace Project_POO.View
             this.btn_Print.TabIndex = 38;
             this.btn_Print.Text = "Imprimir";
             this.btn_Print.UseVisualStyleBackColor = false;
+            // 
+            // lbl_InfoCitizenPrint
+            // 
+            this.lbl_InfoCitizenPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_InfoCitizenPrint.AutoSize = true;
+            this.lbl_InfoCitizenPrint.BackColor = System.Drawing.Color.Gainsboro;
+            this.tableLayoutPanel2.SetColumnSpan(this.lbl_InfoCitizenPrint, 4);
+            this.lbl_InfoCitizenPrint.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lbl_InfoCitizenPrint.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_InfoCitizenPrint.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lbl_InfoCitizenPrint.Location = new System.Drawing.Point(46, 42);
+            this.lbl_InfoCitizenPrint.Margin = new System.Windows.Forms.Padding(3, 20, 3, 0);
+            this.lbl_InfoCitizenPrint.Name = "lbl_InfoCitizenPrint";
+            this.lbl_InfoCitizenPrint.Size = new System.Drawing.Size(722, 37);
+            this.lbl_InfoCitizenPrint.TabIndex = 0;
+            this.lbl_InfoCitizenPrint.Text = "Información del ciudadano";
+            this.lbl_InfoCitizenPrint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // gpb_InfoAppointment_Print
+            // 
+            this.gpb_InfoAppointment_Print.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gpb_InfoAppointment_Print.BackColor = System.Drawing.Color.LightCyan;
+            this.tableLayoutPanel2.SetColumnSpan(this.gpb_InfoAppointment_Print, 4);
+            this.gpb_InfoAppointment_Print.Controls.Add(this.tableLayoutPanel4);
+            this.gpb_InfoAppointment_Print.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.gpb_InfoAppointment_Print.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.gpb_InfoAppointment_Print.Location = new System.Drawing.Point(46, 82);
+            this.gpb_InfoAppointment_Print.Name = "gpb_InfoAppointment_Print";
+            this.tableLayoutPanel2.SetRowSpan(this.gpb_InfoAppointment_Print, 2);
+            this.gpb_InfoAppointment_Print.Size = new System.Drawing.Size(722, 250);
+            this.gpb_InfoAppointment_Print.TabIndex = 4;
+            this.gpb_InfoAppointment_Print.TabStop = false;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.7191F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.2809F));
+            this.tableLayoutPanel4.Controls.Add(this.lbl_CInstitution, 1, 5);
+            this.tableLayoutPanel4.Controls.Add(this.lbl_CTel, 1, 4);
+            this.tableLayoutPanel4.Controls.Add(this.lbl_CEmail, 1, 3);
+            this.tableLayoutPanel4.Controls.Add(this.lbl_CAge, 1, 2);
+            this.tableLayoutPanel4.Controls.Add(this.lbl_CDUI, 1, 1);
+            this.tableLayoutPanel4.Controls.Add(this.lbl_Title_DUI, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.lbl_CName, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.lbl_Title_CitizenName, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.lbl_Title_Tel, 0, 4);
+            this.tableLayoutPanel4.Controls.Add(this.lbl_Title_Age, 0, 2);
+            this.tableLayoutPanel4.Controls.Add(this.lbl_Title_Email, 0, 3);
+            this.tableLayoutPanel4.Controls.Add(this.lbl_Title_Institution, 0, 5);
+            this.tableLayoutPanel4.Controls.Add(this.lbl_CAddress, 1, 6);
+            this.tableLayoutPanel4.Controls.Add(this.lbl_Title_Address, 0, 6);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 23);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 7;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(716, 224);
+            this.tableLayoutPanel4.TabIndex = 0;
+            // 
+            // lbl_CInstitution
+            // 
+            this.lbl_CInstitution.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_CInstitution.AutoSize = true;
+            this.lbl_CInstitution.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbl_CInstitution.Location = new System.Drawing.Point(179, 155);
+            this.lbl_CInstitution.Name = "lbl_CInstitution";
+            this.lbl_CInstitution.Size = new System.Drawing.Size(534, 31);
+            this.lbl_CInstitution.TabIndex = 13;
+            this.lbl_CInstitution.Text = "Institución";
+            this.lbl_CInstitution.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl_CTel
+            // 
+            this.lbl_CTel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_CTel.AutoSize = true;
+            this.lbl_CTel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbl_CTel.Location = new System.Drawing.Point(179, 124);
+            this.lbl_CTel.Name = "lbl_CTel";
+            this.lbl_CTel.Size = new System.Drawing.Size(534, 31);
+            this.lbl_CTel.TabIndex = 12;
+            this.lbl_CTel.Text = "Tel";
+            this.lbl_CTel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl_CEmail
+            // 
+            this.lbl_CEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_CEmail.AutoSize = true;
+            this.lbl_CEmail.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbl_CEmail.Location = new System.Drawing.Point(179, 93);
+            this.lbl_CEmail.Name = "lbl_CEmail";
+            this.lbl_CEmail.Size = new System.Drawing.Size(534, 31);
+            this.lbl_CEmail.TabIndex = 11;
+            this.lbl_CEmail.Text = "Correo";
+            this.lbl_CEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl_CAge
+            // 
+            this.lbl_CAge.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_CAge.AutoSize = true;
+            this.lbl_CAge.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbl_CAge.Location = new System.Drawing.Point(179, 62);
+            this.lbl_CAge.Name = "lbl_CAge";
+            this.lbl_CAge.Size = new System.Drawing.Size(534, 31);
+            this.lbl_CAge.TabIndex = 10;
+            this.lbl_CAge.Text = "Edad";
+            this.lbl_CAge.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl_CDUI
+            // 
+            this.lbl_CDUI.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_CDUI.AutoSize = true;
+            this.lbl_CDUI.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbl_CDUI.Location = new System.Drawing.Point(179, 31);
+            this.lbl_CDUI.Name = "lbl_CDUI";
+            this.lbl_CDUI.Size = new System.Drawing.Size(534, 31);
+            this.lbl_CDUI.TabIndex = 9;
+            this.lbl_CDUI.Text = "DUI";
+            this.lbl_CDUI.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl_Title_DUI
+            // 
+            this.lbl_Title_DUI.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Title_DUI.AutoSize = true;
+            this.lbl_Title_DUI.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lbl_Title_DUI.Location = new System.Drawing.Point(3, 31);
+            this.lbl_Title_DUI.Name = "lbl_Title_DUI";
+            this.lbl_Title_DUI.Size = new System.Drawing.Size(170, 31);
+            this.lbl_Title_DUI.TabIndex = 2;
+            this.lbl_Title_DUI.Text = "DUI";
+            this.lbl_Title_DUI.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl_CName
+            // 
+            this.lbl_CName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_CName.AutoSize = true;
+            this.lbl_CName.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbl_CName.Location = new System.Drawing.Point(179, 0);
+            this.lbl_CName.Name = "lbl_CName";
+            this.lbl_CName.Size = new System.Drawing.Size(534, 31);
+            this.lbl_CName.TabIndex = 1;
+            this.lbl_CName.Text = "Nombre";
+            this.lbl_CName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl_Title_CitizenName
+            // 
+            this.lbl_Title_CitizenName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Title_CitizenName.AutoSize = true;
+            this.lbl_Title_CitizenName.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lbl_Title_CitizenName.Location = new System.Drawing.Point(3, 0);
+            this.lbl_Title_CitizenName.Name = "lbl_Title_CitizenName";
+            this.lbl_Title_CitizenName.Size = new System.Drawing.Size(170, 31);
+            this.lbl_Title_CitizenName.TabIndex = 0;
+            this.lbl_Title_CitizenName.Text = "Nombre";
+            this.lbl_Title_CitizenName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl_Title_Tel
+            // 
+            this.lbl_Title_Tel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Title_Tel.AutoSize = true;
+            this.lbl_Title_Tel.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lbl_Title_Tel.Location = new System.Drawing.Point(3, 124);
+            this.lbl_Title_Tel.Name = "lbl_Title_Tel";
+            this.lbl_Title_Tel.Size = new System.Drawing.Size(170, 31);
+            this.lbl_Title_Tel.TabIndex = 5;
+            this.lbl_Title_Tel.Text = "Teléfono";
+            this.lbl_Title_Tel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl_Title_Age
+            // 
+            this.lbl_Title_Age.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Title_Age.AutoSize = true;
+            this.lbl_Title_Age.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lbl_Title_Age.Location = new System.Drawing.Point(3, 62);
+            this.lbl_Title_Age.Name = "lbl_Title_Age";
+            this.lbl_Title_Age.Size = new System.Drawing.Size(170, 31);
+            this.lbl_Title_Age.TabIndex = 4;
+            this.lbl_Title_Age.Text = "Edad";
+            this.lbl_Title_Age.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl_Title_Email
+            // 
+            this.lbl_Title_Email.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Title_Email.AutoSize = true;
+            this.lbl_Title_Email.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lbl_Title_Email.Location = new System.Drawing.Point(3, 93);
+            this.lbl_Title_Email.Name = "lbl_Title_Email";
+            this.lbl_Title_Email.Size = new System.Drawing.Size(170, 31);
+            this.lbl_Title_Email.TabIndex = 3;
+            this.lbl_Title_Email.Text = "Correo";
+            this.lbl_Title_Email.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl_Title_Institution
+            // 
+            this.lbl_Title_Institution.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Title_Institution.AutoSize = true;
+            this.lbl_Title_Institution.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lbl_Title_Institution.Location = new System.Drawing.Point(3, 155);
+            this.lbl_Title_Institution.Name = "lbl_Title_Institution";
+            this.lbl_Title_Institution.Size = new System.Drawing.Size(170, 31);
+            this.lbl_Title_Institution.TabIndex = 6;
+            this.lbl_Title_Institution.Text = "Institución";
+            this.lbl_Title_Institution.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl_CAddress
+            // 
+            this.lbl_CAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_CAddress.AutoSize = true;
+            this.lbl_CAddress.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbl_CAddress.Location = new System.Drawing.Point(179, 186);
+            this.lbl_CAddress.Name = "lbl_CAddress";
+            this.lbl_CAddress.Size = new System.Drawing.Size(534, 38);
+            this.lbl_CAddress.TabIndex = 8;
+            this.lbl_CAddress.Text = "Dirección";
+            this.lbl_CAddress.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl_Title_Address
+            // 
+            this.lbl_Title_Address.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Title_Address.AutoSize = true;
+            this.lbl_Title_Address.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lbl_Title_Address.Location = new System.Drawing.Point(3, 186);
+            this.lbl_Title_Address.Name = "lbl_Title_Address";
+            this.lbl_Title_Address.Size = new System.Drawing.Size(170, 38);
+            this.lbl_Title_Address.TabIndex = 7;
+            this.lbl_Title_Address.Text = "Dirección";
+            this.lbl_Title_Address.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.BackColor = System.Drawing.Color.LightCyan;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 100);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.7191F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.2809F));
+            this.tableLayoutPanel3.Controls.Add(this.label1, 1, 5);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 6;
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(200, 100);
+            this.tableLayoutPanel3.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label1.Location = new System.Drawing.Point(52, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(145, 100);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Institución";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label2.Location = new System.Drawing.Point(45, 52);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(122, 13);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Tel";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // btn_Create_Appointment
+            // 
+            this.btn_Create_Appointment.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Create_Appointment.BackColor = System.Drawing.Color.SandyBrown;
+            this.btn_Create_Appointment.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Create_Appointment.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_Create_Appointment.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_Create_Appointment.Location = new System.Drawing.Point(550, 3);
+            this.btn_Create_Appointment.Name = "btn_Create_Appointment";
+            this.tlp_ReportSE.SetRowSpan(this.btn_Create_Appointment, 2);
+            this.btn_Create_Appointment.Size = new System.Drawing.Size(159, 64);
+            this.btn_Create_Appointment.TabIndex = 17;
+            this.btn_Create_Appointment.Text = "Reportar";
+            this.btn_Create_Appointment.UseVisualStyleBackColor = false;
             // 
             // FrmAppointmentTracking
             // 
@@ -787,6 +1321,8 @@ namespace Project_POO.View
             ((System.ComponentModel.ISupportInitialize)(this.dgv_SE)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_CD)).EndInit();
             this.gpb_CitizenInfo.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.gpb_ReportSE.ResumeLayout(false);
             this.tlp_ReportSE.ResumeLayout(false);
             this.tlp_ReportSE.PerformLayout();
@@ -794,8 +1330,12 @@ namespace Project_POO.View
             this.tbp_InfoForPrint.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_)).EndInit();
+            this.gpb_InfoAppointment_Print.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -810,12 +1350,12 @@ namespace Project_POO.View
         private System.Windows.Forms.DataGridView dgv_Appointments;
         private System.Windows.Forms.Label lbl_Title_Appointment;
         private System.Windows.Forms.ComboBox cmb_Method_Search;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_SearchBy;
         private System.Windows.Forms.TextBox txt_Search;
         private System.Windows.Forms.Button btn_Search;
         private System.Windows.Forms.Button btn_Add;
         private System.Windows.Forms.Label lbl_Title_InfoUser;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_TitleCD;
         private System.Windows.Forms.DataGridView dgv_CD;
         private System.Windows.Forms.GroupBox gpb_CitizenInfo;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
@@ -832,13 +1372,48 @@ namespace Project_POO.View
         private System.Windows.Forms.NumericUpDown nud_DurationSE;
         private System.Windows.Forms.TabPage tbp_InfoForPrint;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Label lbl_InfoCitizenPrint;
+        private System.Windows.Forms.Label lbl_TitleCD_Print;
+        private System.Windows.Forms.DataGridView dgv_;
+        private System.Windows.Forms.GroupBox gpb_InfoPrintAppointment;
+        private System.Windows.Forms.Label lbl_InfoAppointment_Print;
+        private System.Windows.Forms.Button btn_Print;
+        private System.Windows.Forms.Label lbl_Title_Citizen_Name;
+        private System.Windows.Forms.Label lbl_Title_CitizenDUI;
+        private System.Windows.Forms.Label lbl_Citizen_Name;
+        private System.Windows.Forms.Label lbl_TitleEmail;
+        private System.Windows.Forms.Label lbl_Title_CitizenAge;
+        private System.Windows.Forms.Label lbl_Citizen_Age;
+        private System.Windows.Forms.Label lbl_Title_CitizenTel;
+        private System.Windows.Forms.Label lbl_Title_CitizenInstitution;
+        private System.Windows.Forms.Label lbl_CitizenAddress;
+        private System.Windows.Forms.Label lbl_Title_CitizenAddress;
+        private System.Windows.Forms.Label lbl_CitizenDUI;
+        private System.Windows.Forms.Label lbl_CitizenAge;
+        private System.Windows.Forms.Label lbl_CitizenEmail;
+        private System.Windows.Forms.Label lbl_CitizenTel;
+        private System.Windows.Forms.Label lbl_CitizenInstitution;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btn_Print;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox x;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.Label lbl_CInstitution;
+        private System.Windows.Forms.Label lbl_CTel;
+        private System.Windows.Forms.Label lbl_CEmail;
+        private System.Windows.Forms.Label lbl_CAge;
+        private System.Windows.Forms.Label lbl_CDUI;
+        private System.Windows.Forms.Label lbl_Title_DUI;
+        private System.Windows.Forms.Label lbl_CName;
+        private System.Windows.Forms.Label lbl_Title_CitizenName;
+        private System.Windows.Forms.Label lbl_Title_Tel;
+        private System.Windows.Forms.Label lbl_Title_Age;
+        private System.Windows.Forms.Label lbl_Title_Email;
+        private System.Windows.Forms.Label lbl_Title_Institution;
+        private System.Windows.Forms.Label lbl_CAddress;
+        private System.Windows.Forms.Label lbl_Title_Address;
+        private System.Windows.Forms.GroupBox gpb_InfoAppointment_Print;
+        private System.Windows.Forms.Button btn_Create_Appointment;
     }
 }

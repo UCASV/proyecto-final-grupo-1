@@ -37,7 +37,7 @@ namespace Project_POO
             this.txt_Email = new System.Windows.Forms.TextBox();
             this.txt_Name = new System.Windows.Forms.TextBox();
             this.lbl_Name = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.img_LogoRegist = new System.Windows.Forms.PictureBox();
             this.lbl_Pass = new System.Windows.Forms.Label();
             this.lbl_Conf_Pass = new System.Windows.Forms.Label();
             this.txt_Pass = new System.Windows.Forms.TextBox();
@@ -45,7 +45,7 @@ namespace Project_POO
             this.lbl_Address = new System.Windows.Forms.Label();
             this.txt_Address = new System.Windows.Forms.TextBox();
             this.btn_Clean = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_LogoRegist)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Create
@@ -132,13 +132,19 @@ namespace Project_POO
             this.lbl_Name.TabIndex = 21;
             this.lbl_Name.Text = "Nombre Completo*";
             // 
-            // pictureBox1
+            // img_LogoRegist
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(382, 47);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 39;
-            this.pictureBox1.TabStop = false;
+            this.img_LogoRegist.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.img_LogoRegist.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.img_LogoRegist.Image = global::Project_POO.Properties.Resources.IMG_4042;
+            this.img_LogoRegist.Location = new System.Drawing.Point(351, 12);
+            this.img_LogoRegist.Name = "img_LogoRegist";
+            this.img_LogoRegist.Size = new System.Drawing.Size(134, 126);
+            this.img_LogoRegist.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.img_LogoRegist.TabIndex = 39;
+            this.img_LogoRegist.TabStop = false;
             // 
             // lbl_Pass
             // 
@@ -232,14 +238,14 @@ namespace Project_POO
             this.Controls.Add(this.lbl_Address);
             this.Controls.Add(this.txt_Name);
             this.Controls.Add(this.lbl_Name);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.img_LogoRegist);
             this.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.MaximizeBox = false;
             this.Name = "Seguimiento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registrar Empleado";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_LogoRegist)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -254,7 +260,7 @@ namespace Project_POO
         private System.Windows.Forms.TextBox txt_Email;
         private System.Windows.Forms.TextBox txt_Name;
         private System.Windows.Forms.Label lbl_Name;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox img_LogoRegist;
         private System.Windows.Forms.Label lbl_Pass;
         private System.Windows.Forms.Label lbl_Conf_Pass;
         private System.Windows.Forms.TextBox txt_Pass;

@@ -29,17 +29,18 @@ namespace Project_POO
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.lbl_Email = new System.Windows.Forms.Label();
             this.txt_Email = new System.Windows.Forms.TextBox();
             this.txt_Pass = new System.Windows.Forms.TextBox();
             this.lbl_Pass = new System.Windows.Forms.Label();
-            this.img1 = new System.Windows.Forms.PictureBox();
+            this.img_LogoLogin = new System.Windows.Forms.PictureBox();
             this.lbl_Title_Login = new System.Windows.Forms.Label();
             this.lbl_Center = new System.Windows.Forms.Label();
             this.cmb_Center = new System.Windows.Forms.ComboBox();
             this.btn_Create_Appointment = new System.Windows.Forms.Button();
             this.btn_Clean = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.img1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_LogoLogin)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_Email
@@ -81,13 +82,15 @@ namespace Project_POO
             this.lbl_Pass.TabIndex = 3;
             this.lbl_Pass.Text = "Contraseña";
             // 
-            // img1
+            // img_LogoLogin
             // 
-            this.img1.Location = new System.Drawing.Point(256, 59);
-            this.img1.Name = "img1";
-            this.img1.Size = new System.Drawing.Size(100, 50);
-            this.img1.TabIndex = 7;
-            this.img1.TabStop = false;
+            this.img_LogoLogin.Image = global::Project_POO.Properties.Resources.IMG_4042;
+            this.img_LogoLogin.Location = new System.Drawing.Point(211, 12);
+            this.img_LogoLogin.Name = "img_LogoLogin";
+            this.img_LogoLogin.Size = new System.Drawing.Size(164, 145);
+            this.img_LogoLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.img_LogoLogin.TabIndex = 7;
+            this.img_LogoLogin.TabStop = false;
             // 
             // lbl_Title_Login
             // 
@@ -153,20 +156,21 @@ namespace Project_POO
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.ClientSize = new System.Drawing.Size(583, 591);
+            this.ClientSize = new System.Drawing.Size(583, 588);
             this.Controls.Add(this.btn_Clean);
             this.Controls.Add(this.btn_Create_Appointment);
             this.Controls.Add(this.cmb_Center);
             this.Controls.Add(this.lbl_Center);
             this.Controls.Add(this.lbl_Title_Login);
-            this.Controls.Add(this.img1);
+            this.Controls.Add(this.img_LogoLogin);
             this.Controls.Add(this.txt_Pass);
             this.Controls.Add(this.lbl_Pass);
             this.Controls.Add(this.txt_Email);
             this.Controls.Add(this.lbl_Email);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmLogin";
             this.Text = "Limpiar";
-            ((System.ComponentModel.ISupportInitialize)(this.img1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_LogoLogin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -178,7 +182,7 @@ namespace Project_POO
         private System.Windows.Forms.TextBox txt_Email;
         private System.Windows.Forms.TextBox txt_Pass;
         private System.Windows.Forms.Label lbl_Pass;
-        private System.Windows.Forms.PictureBox img1;
+        private System.Windows.Forms.PictureBox img_LogoLogin;
         private System.Windows.Forms.Label lbl_Title_Login;
         private System.Windows.Forms.Label lbl_Center;
         private System.Windows.Forms.ComboBox cmb_Center;
