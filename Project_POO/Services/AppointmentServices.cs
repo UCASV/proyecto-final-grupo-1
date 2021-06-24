@@ -49,8 +49,18 @@ namespace Project_POO.Services
         public Appointment GetAppointment(int id)
         {
             return _context.Appointments
+                .Include(x => x.IdCitizenNavigation)
+                .Include(x => x.IdTypeAppointmentNavigation)
+                .Include(x => x.IdVaccinationCenterNavigation)
                 .Where(x => x.Id.Equals(id))
                 .SingleOrDefault();
+        }
+
+        public int CountAppointmentsByDate(DateTime datetime)
+        {
+            return _context.Appointments
+                .Where(x => x.ADatetime.Equals(datetime))
+                .Count();
         }
 
         public void SaveSecondaryEffects(AppointmentxsecondaryEffect tmpAxE)

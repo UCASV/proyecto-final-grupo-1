@@ -204,7 +204,7 @@ INSERT INTO EMPLOYEE VALUES(  -- ID 8
 'cr7@gmail.com',
 'elbicho',
 'Urb. Las abejas, San Salvador',
-2
+1
 );
 
 -- Vaccinate_Center Employees 
@@ -283,7 +283,7 @@ INSERT INTO CENTER VALUES (
 'Surf City, La Libertad',
 '2237-8090',
 'SurfCityLL_CentroVacunacion@gmail.com',
-2,
+1,
 5
 );
 -- INSERT VACCINATION_CENTER
