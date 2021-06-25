@@ -116,6 +116,10 @@ namespace Project_POO
             // 
             // cmb_Center
             // 
+            this.cmb_Center.BackColor = System.Drawing.Color.MintCream;
+            this.cmb_Center.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmb_Center.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_Center.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmb_Center.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cmb_Center.FormattingEnabled = true;
             this.cmb_Center.Location = new System.Drawing.Point(158, 430);
@@ -135,6 +139,7 @@ namespace Project_POO
             this.btn_Create_Appointment.TabIndex = 16;
             this.btn_Create_Appointment.Text = "Iniciar";
             this.btn_Create_Appointment.UseVisualStyleBackColor = false;
+            this.btn_Create_Appointment.Click += new System.EventHandler(this.btn_Create_Appointment_Click);
             // 
             // btn_Clean
             // 
@@ -170,7 +175,8 @@ namespace Project_POO
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FrmLogin";
-            this.Text = "Limpiar";
+            this.Text = "Inicio de Sesión";
+            this.Load += new System.EventHandler(this.FrmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.img_LogoLogin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

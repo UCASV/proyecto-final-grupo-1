@@ -25,7 +25,7 @@ namespace Project_POO.Services
 
         public List<Employee> GetAll()
         {
-            throw new NotImplementedException();
+            return _context.Employees.ToList();
         }
 
         public void Update(Employee item)
@@ -48,5 +48,12 @@ namespace Project_POO.Services
                 .Where(x => x.Id.Equals(id))
                 .SingleOrDefault();
         }
+        public Employee GetEmployeeInLogin(string email, string pass)
+        {
+            return _context.Employees
+                .Where(x => x.Email.Equals(email) && x.Pass.Equals(pass))
+                .SingleOrDefault();
+        }
+        
     }
 }
