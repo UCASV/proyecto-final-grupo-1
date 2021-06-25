@@ -30,21 +30,21 @@ namespace Project_POO.View
         private void InitializeComponent()
         {
             this.tlp_Stats = new System.Windows.Forms.TableLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.gpb_Efficiency = new System.Windows.Forms.GroupBox();
             this.lbl_SE_Stats = new System.Windows.Forms.Label();
             this.sts_Admin = new System.Windows.Forms.StatusStrip();
             this.lbl_AdminName = new System.Windows.Forms.ToolStripStatusLabel();
             this.lbl_Admin = new System.Windows.Forms.ToolStripStatusLabel();
             this.gpb_EFS = new System.Windows.Forms.GroupBox();
+            this.gpb_Efficiency = new System.Windows.Forms.GroupBox();
             this.gpb_VaccinatedPeople = new System.Windows.Forms.GroupBox();
             this.tlp_VaccinatedPeople = new System.Windows.Forms.TableLayoutPanel();
-            this.lbl_NumVaccinatedTotal = new System.Windows.Forms.Label();
-            this.lbl_NumVaccinated2 = new System.Windows.Forms.Label();
-            this.lbl_Title_VaccinatedTotal = new System.Windows.Forms.Label();
-            this.lbl_NumVaccinated1 = new System.Windows.Forms.Label();
-            this.lbl_Title_Vaccinated2 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.lbl_Title_Vaccinated1 = new System.Windows.Forms.Label();
+            this.lbl_Title_Vaccinated2 = new System.Windows.Forms.Label();
+            this.lbl_NumVaccinated1 = new System.Windows.Forms.Label();
+            this.lbl_Title_VaccinatedTotal = new System.Windows.Forms.Label();
+            this.lbl_NumVaccinated2 = new System.Windows.Forms.Label();
+            this.lbl_NumVaccinatedTotal = new System.Windows.Forms.Label();
             this.tlp_Stats.SuspendLayout();
             this.sts_Admin.SuspendLayout();
             this.gpb_VaccinatedPeople.SuspendLayout();
@@ -82,37 +82,6 @@ namespace Project_POO.View
             this.tlp_Stats.Size = new System.Drawing.Size(866, 515);
             this.tlp_Stats.TabIndex = 1;
             // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.tlp_Stats.SetColumnSpan(this.label2, 2);
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(463, 140);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(338, 50);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Eficiencia del proceso de vacunación";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // gpb_Efficiency
-            // 
-            this.gpb_Efficiency.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.gpb_Efficiency.BackColor = System.Drawing.Color.MintCream;
-            this.tlp_Stats.SetColumnSpan(this.gpb_Efficiency, 2);
-            this.gpb_Efficiency.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.gpb_Efficiency.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.gpb_Efficiency.Location = new System.Drawing.Point(463, 193);
-            this.gpb_Efficiency.Name = "gpb_Efficiency";
-            this.tlp_Stats.SetRowSpan(this.gpb_Efficiency, 3);
-            this.gpb_Efficiency.Size = new System.Drawing.Size(338, 264);
-            this.gpb_Efficiency.TabIndex = 2;
-            this.gpb_Efficiency.TabStop = false;
-            // 
             // lbl_SE_Stats
             // 
             this.lbl_SE_Stats.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -141,7 +110,7 @@ namespace Project_POO.View
             this.sts_Admin.Location = new System.Drawing.Point(0, 488);
             this.sts_Admin.Name = "sts_Admin";
             this.sts_Admin.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.sts_Admin.Size = new System.Drawing.Size(866, 27);
+            this.sts_Admin.Size = new System.Drawing.Size(800, 27);
             this.sts_Admin.TabIndex = 41;
             this.sts_Admin.Text = "Bienvenido:";
             // 
@@ -175,6 +144,22 @@ namespace Project_POO.View
             this.gpb_EFS.Size = new System.Drawing.Size(338, 264);
             this.gpb_EFS.TabIndex = 1;
             this.gpb_EFS.TabStop = false;
+            // 
+            // gpb_Efficiency
+            // 
+            this.gpb_Efficiency.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gpb_Efficiency.BackColor = System.Drawing.Color.MintCream;
+            this.tlp_Stats.SetColumnSpan(this.gpb_Efficiency, 2);
+            this.gpb_Efficiency.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gpb_Efficiency.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.gpb_Efficiency.Location = new System.Drawing.Point(463, 193);
+            this.gpb_Efficiency.Name = "gpb_Efficiency";
+            this.tlp_Stats.SetRowSpan(this.gpb_Efficiency, 3);
+            this.gpb_Efficiency.Size = new System.Drawing.Size(338, 264);
+            this.gpb_Efficiency.TabIndex = 2;
+            this.gpb_Efficiency.TabStop = false;
             // 
             // gpb_VaccinatedPeople
             // 
@@ -215,77 +200,20 @@ namespace Project_POO.View
             this.tlp_VaccinatedPeople.Size = new System.Drawing.Size(734, 63);
             this.tlp_VaccinatedPeople.TabIndex = 0;
             // 
-            // lbl_NumVaccinatedTotal
+            // label2
             // 
-            this.lbl_NumVaccinatedTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_NumVaccinatedTotal.AutoSize = true;
-            this.lbl_NumVaccinatedTotal.Location = new System.Drawing.Point(491, 31);
-            this.lbl_NumVaccinatedTotal.Name = "lbl_NumVaccinatedTotal";
-            this.lbl_NumVaccinatedTotal.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_NumVaccinatedTotal.Size = new System.Drawing.Size(240, 32);
-            this.lbl_NumVaccinatedTotal.TabIndex = 2;
-            this.lbl_NumVaccinatedTotal.Text = "Numero3";
-            this.lbl_NumVaccinatedTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl_NumVaccinated2
-            // 
-            this.lbl_NumVaccinated2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_NumVaccinated2.AutoSize = true;
-            this.lbl_NumVaccinated2.Location = new System.Drawing.Point(247, 31);
-            this.lbl_NumVaccinated2.Name = "lbl_NumVaccinated2";
-            this.lbl_NumVaccinated2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_NumVaccinated2.Size = new System.Drawing.Size(238, 32);
-            this.lbl_NumVaccinated2.TabIndex = 2;
-            this.lbl_NumVaccinated2.Text = "Numero2";
-            this.lbl_NumVaccinated2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl_Title_VaccinatedTotal
-            // 
-            this.lbl_Title_VaccinatedTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_Title_VaccinatedTotal.AutoSize = true;
-            this.lbl_Title_VaccinatedTotal.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_Title_VaccinatedTotal.Location = new System.Drawing.Point(491, 0);
-            this.lbl_Title_VaccinatedTotal.Name = "lbl_Title_VaccinatedTotal";
-            this.lbl_Title_VaccinatedTotal.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_Title_VaccinatedTotal.Size = new System.Drawing.Size(240, 31);
-            this.lbl_Title_VaccinatedTotal.TabIndex = 2;
-            this.lbl_Title_VaccinatedTotal.Text = "Total de vacunaciones";
-            this.lbl_Title_VaccinatedTotal.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // lbl_NumVaccinated1
-            // 
-            this.lbl_NumVaccinated1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_NumVaccinated1.AutoSize = true;
-            this.lbl_NumVaccinated1.Location = new System.Drawing.Point(3, 31);
-            this.lbl_NumVaccinated1.Name = "lbl_NumVaccinated1";
-            this.lbl_NumVaccinated1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_NumVaccinated1.Size = new System.Drawing.Size(238, 32);
-            this.lbl_NumVaccinated1.TabIndex = 1;
-            this.lbl_NumVaccinated1.Text = "Numero1";
-            this.lbl_NumVaccinated1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl_Title_Vaccinated2
-            // 
-            this.lbl_Title_Vaccinated2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_Title_Vaccinated2.AutoSize = true;
-            this.lbl_Title_Vaccinated2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_Title_Vaccinated2.Location = new System.Drawing.Point(247, 0);
-            this.lbl_Title_Vaccinated2.Name = "lbl_Title_Vaccinated2";
-            this.lbl_Title_Vaccinated2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_Title_Vaccinated2.Size = new System.Drawing.Size(238, 31);
-            this.lbl_Title_Vaccinated2.TabIndex = 1;
-            this.lbl_Title_Vaccinated2.Text = "Vacunadas en segunda cita";
-            this.lbl_Title_Vaccinated2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label2.AutoSize = true;
+            this.tlp_Stats.SetColumnSpan(this.label2, 2);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(463, 140);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(338, 50);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Eficiencia del proceso de vacunación";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // lbl_Title_Vaccinated1
             // 
@@ -303,6 +231,78 @@ namespace Project_POO.View
             this.lbl_Title_Vaccinated1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lbl_Title_Vaccinated1.Click += new System.EventHandler(this.lbl_Title_Vaccinated1_Click);
             // 
+            // lbl_Title_Vaccinated2
+            // 
+            this.lbl_Title_Vaccinated2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Title_Vaccinated2.AutoSize = true;
+            this.lbl_Title_Vaccinated2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_Title_Vaccinated2.Location = new System.Drawing.Point(247, 0);
+            this.lbl_Title_Vaccinated2.Name = "lbl_Title_Vaccinated2";
+            this.lbl_Title_Vaccinated2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbl_Title_Vaccinated2.Size = new System.Drawing.Size(238, 31);
+            this.lbl_Title_Vaccinated2.TabIndex = 1;
+            this.lbl_Title_Vaccinated2.Text = "Vacunadas en segunda cita";
+            this.lbl_Title_Vaccinated2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // lbl_NumVaccinated1
+            // 
+            this.lbl_NumVaccinated1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_NumVaccinated1.AutoSize = true;
+            this.lbl_NumVaccinated1.Location = new System.Drawing.Point(3, 31);
+            this.lbl_NumVaccinated1.Name = "lbl_NumVaccinated1";
+            this.lbl_NumVaccinated1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbl_NumVaccinated1.Size = new System.Drawing.Size(238, 32);
+            this.lbl_NumVaccinated1.TabIndex = 1;
+            this.lbl_NumVaccinated1.Text = "Numero1";
+            this.lbl_NumVaccinated1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_Title_VaccinatedTotal
+            // 
+            this.lbl_Title_VaccinatedTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Title_VaccinatedTotal.AutoSize = true;
+            this.lbl_Title_VaccinatedTotal.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_Title_VaccinatedTotal.Location = new System.Drawing.Point(491, 0);
+            this.lbl_Title_VaccinatedTotal.Name = "lbl_Title_VaccinatedTotal";
+            this.lbl_Title_VaccinatedTotal.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbl_Title_VaccinatedTotal.Size = new System.Drawing.Size(240, 31);
+            this.lbl_Title_VaccinatedTotal.TabIndex = 2;
+            this.lbl_Title_VaccinatedTotal.Text = "Total de vacunaciones";
+            this.lbl_Title_VaccinatedTotal.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // lbl_NumVaccinated2
+            // 
+            this.lbl_NumVaccinated2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_NumVaccinated2.AutoSize = true;
+            this.lbl_NumVaccinated2.Location = new System.Drawing.Point(247, 31);
+            this.lbl_NumVaccinated2.Name = "lbl_NumVaccinated2";
+            this.lbl_NumVaccinated2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbl_NumVaccinated2.Size = new System.Drawing.Size(238, 32);
+            this.lbl_NumVaccinated2.TabIndex = 2;
+            this.lbl_NumVaccinated2.Text = "Numero2";
+            this.lbl_NumVaccinated2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_NumVaccinatedTotal
+            // 
+            this.lbl_NumVaccinatedTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_NumVaccinatedTotal.AutoSize = true;
+            this.lbl_NumVaccinatedTotal.Location = new System.Drawing.Point(491, 31);
+            this.lbl_NumVaccinatedTotal.Name = "lbl_NumVaccinatedTotal";
+            this.lbl_NumVaccinatedTotal.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbl_NumVaccinatedTotal.Size = new System.Drawing.Size(240, 32);
+            this.lbl_NumVaccinatedTotal.TabIndex = 2;
+            this.lbl_NumVaccinatedTotal.Text = "Numero3";
+            this.lbl_NumVaccinatedTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FrmStatistics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -312,7 +312,7 @@ namespace Project_POO.View
             this.Controls.Add(this.tlp_Stats);
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "FrmStatistics";
-            this.Text = "Estadísticas (Administrador)";
+            this.Text = "Estadísticas";
             this.tlp_Stats.ResumeLayout(false);
             this.tlp_Stats.PerformLayout();
             this.sts_Admin.ResumeLayout(false);

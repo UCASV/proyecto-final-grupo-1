@@ -209,7 +209,7 @@ namespace Project_POO.ViewModel
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "FrmMenuAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Menu de Admin (Administrador)";
+            this.Text = "Menu de Admin";
             this.tlp_MenuAdmin.ResumeLayout(false);
             this.tlp_MenuAdmin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_LogoMenuAdmin)).EndInit();
