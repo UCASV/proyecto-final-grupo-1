@@ -27,13 +27,24 @@ namespace Project_POO
             employeeServices = new EmployeeServices();
             centerServices = new CenterServices();
         }
-        private void btn_Clean_Click(object sender, EventArgs e)
+
+        // This function resets the entire form
+        private void resetForm()
         {
             txt_Email.Text = "";
             txt_Pass.Text = "";
             cmb_Center.SelectedItem = null;
-        }
+            cmb_Center.Visible = false;
 
+            // Enabling the first inputs 
+            txt_Email.Enabled = true;
+            txt_Pass.Enabled = true;
+        }
+        private void btn_Clean_Click(object sender, EventArgs e)
+        {
+            resetForm();
+        }
+        
         private void btn_Create_Appointment_Click(object sender, EventArgs e)
         {
             string email = txt_Email.Text;
@@ -45,28 +56,43 @@ namespace Project_POO
             // Show
             if (employeeToLogin != null)
             {
-                int type = employeeToLogin.IdTypeEmployee;
-                var centerToLogin = centerServices.GetByType(type);
-                cmb_Center.DataSource = centerToLogin;
-                cmb_Center.DisplayMember = "CenterAddress";
-                cmb_Center.ValueMember = "Id";
-                // Seccess
-                MessageBox.Show("Bienvenido ", "Inicio de Sesión exitoso",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                // Oculta esta ventana y abre el formulario principal tras el logueo exitoso
-                FrmAppointmentTracking window = new FrmAppointmentTracking();
-                this.Hide();
-                window.ShowDialog();
-                // Reseteamos inputs
-                txt_Email.Text = "";
-                txt_Pass.Text = "";
-                this.Show();
+ 
+                if (cmb_Center.SelectedItem != null)
+                {// Seccess
+                    MessageBox.Show("Bienvenido ", "Inicio de Sesión exitoso",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // Next Form
+                    FrmAppointmentTracking window = new FrmAppointmentTracking();
+                    this.Hide();
+                    window.ShowDialog();
+                    // Reset form
+                    resetForm();
+                    this.Show();
+                }
+                // User found, now will select the center where he is logging in
+                else
+                { 
+                    MessageBox.Show("Usuario encontrado, selecciona el centro en que estas iniciando sesión",
+                        "Elige un centro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // cmb_Center now is available
+                    int type = employeeToLogin.IdTypeEmployee;
+                    var centerToLogin = centerServices.GetByType(type);
+                    cmb_Center.Visible = true;
+                    cmb_Center.DataSource = centerToLogin;
+                    cmb_Center.DisplayMember = "CenterAddress";
+                    cmb_Center.ValueMember = "Id";
+
+                    // Disabled previous inputs 
+                    txt_Email.Enabled = false;
+                    txt_Pass.Enabled = false;
+                }
             }
             else
             {
                 // fail
-                MessageBox.Show("Usuario o contraseña son incorrectos, vuelve a introducir los datos de entrada",
-                    "Inicio de Sesión falló", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Correo o contraseña son incorrectos, vuelve a introducir los datos de entrada",
+                    "Inicio de Sesión falló", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                resetForm();
             }
         }
 

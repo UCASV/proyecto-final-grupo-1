@@ -48,7 +48,7 @@ namespace Project_POO
             this.lbl_Email.AutoSize = true;
             this.lbl_Email.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbl_Email.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lbl_Email.Location = new System.Drawing.Point(158, 225);
+            this.lbl_Email.Location = new System.Drawing.Point(60, 225);
             this.lbl_Email.Name = "lbl_Email";
             this.lbl_Email.Size = new System.Drawing.Size(186, 22);
             this.lbl_Email.TabIndex = 1;
@@ -56,18 +56,20 @@ namespace Project_POO
             // 
             // txt_Email
             // 
-            this.txt_Email.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_Email.Location = new System.Drawing.Point(158, 252);
+            this.txt_Email.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_Email.Font = new System.Drawing.Font("Century Gothic", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txt_Email.Location = new System.Drawing.Point(60, 250);
             this.txt_Email.Name = "txt_Email";
-            this.txt_Email.Size = new System.Drawing.Size(262, 31);
+            this.txt_Email.Size = new System.Drawing.Size(460, 28);
             this.txt_Email.TabIndex = 2;
             // 
             // txt_Pass
             // 
-            this.txt_Pass.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_Pass.Location = new System.Drawing.Point(158, 339);
+            this.txt_Pass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_Pass.Font = new System.Drawing.Font("Century Gothic", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txt_Pass.Location = new System.Drawing.Point(60, 339);
             this.txt_Pass.Name = "txt_Pass";
-            this.txt_Pass.Size = new System.Drawing.Size(262, 31);
+            this.txt_Pass.Size = new System.Drawing.Size(460, 28);
             this.txt_Pass.TabIndex = 4;
             this.txt_Pass.UseSystemPasswordChar = true;
             // 
@@ -76,7 +78,7 @@ namespace Project_POO
             this.lbl_Pass.AutoSize = true;
             this.lbl_Pass.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbl_Pass.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lbl_Pass.Location = new System.Drawing.Point(158, 312);
+            this.lbl_Pass.Location = new System.Drawing.Point(60, 314);
             this.lbl_Pass.Name = "lbl_Pass";
             this.lbl_Pass.Size = new System.Drawing.Size(119, 22);
             this.lbl_Pass.TabIndex = 3;
@@ -108,11 +110,12 @@ namespace Project_POO
             this.lbl_Center.AutoSize = true;
             this.lbl_Center.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbl_Center.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lbl_Center.Location = new System.Drawing.Point(158, 403);
+            this.lbl_Center.Location = new System.Drawing.Point(60, 405);
             this.lbl_Center.Name = "lbl_Center";
             this.lbl_Center.Size = new System.Drawing.Size(74, 22);
             this.lbl_Center.TabIndex = 8;
             this.lbl_Center.Text = "Centro";
+            this.lbl_Center.Visible = false;
             // 
             // cmb_Center
             // 
@@ -120,12 +123,13 @@ namespace Project_POO
             this.cmb_Center.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmb_Center.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Center.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmb_Center.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cmb_Center.Font = new System.Drawing.Font("Century Gothic", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cmb_Center.FormattingEnabled = true;
-            this.cmb_Center.Location = new System.Drawing.Point(158, 430);
+            this.cmb_Center.Location = new System.Drawing.Point(60, 430);
             this.cmb_Center.Name = "cmb_Center";
-            this.cmb_Center.Size = new System.Drawing.Size(262, 30);
+            this.cmb_Center.Size = new System.Drawing.Size(460, 29);
             this.cmb_Center.TabIndex = 9;
+            this.cmb_Center.Visible = false;
             // 
             // btn_Create_Appointment
             // 
@@ -133,7 +137,7 @@ namespace Project_POO
             this.btn_Create_Appointment.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Create_Appointment.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Create_Appointment.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_Create_Appointment.Location = new System.Drawing.Point(294, 509);
+            this.btn_Create_Appointment.Location = new System.Drawing.Point(394, 509);
             this.btn_Create_Appointment.Name = "btn_Create_Appointment";
             this.btn_Create_Appointment.Size = new System.Drawing.Size(126, 42);
             this.btn_Create_Appointment.TabIndex = 16;
@@ -148,7 +152,7 @@ namespace Project_POO
             this.btn_Clean.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Clean.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_Clean.ForeColor = System.Drawing.Color.White;
-            this.btn_Clean.Location = new System.Drawing.Point(158, 509);
+            this.btn_Clean.Location = new System.Drawing.Point(60, 509);
             this.btn_Clean.Name = "btn_Clean";
             this.btn_Clean.Size = new System.Drawing.Size(130, 42);
             this.btn_Clean.TabIndex = 17;

@@ -19,7 +19,7 @@ namespace Project_POO
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmAppointmentTracking());
+            Application.Run(new FrmLogin());
         }
     }
 }
