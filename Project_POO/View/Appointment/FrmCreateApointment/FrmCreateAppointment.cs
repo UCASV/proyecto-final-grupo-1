@@ -16,16 +16,18 @@ namespace Proyect_POO
         private Center LocalCenter;
         private int VaccinationCenter;
 
-        private EmployeeServices _employeeS;
+        // private EmployeeServices _employeeS;
         private InstitutionServices _institutionS;
         private CenterServices _centerS;
         private AppointmentServices _appointmentS;
         private CitizenServices _citzenS;
         private ChronicDiseaseServices _chronicDiseaseServices;
 
-        public FrmCreateAppointment()
+        public FrmCreateAppointment(Employee eemploye, Center center)
         {
             InitializeComponent();
+            LocalEmployee = eemploye;
+            LocalCenter = center;
         }
 
         private void Create_Load(object sender, EventArgs e)
@@ -34,7 +36,7 @@ namespace Proyect_POO
             VaccinationCenter = 1;
 
             // Init services 
-            _employeeS = new EmployeeServices();
+            // _employeeS = new EmployeeServices();
             _institutionS = new InstitutionServices();
             _centerS = new CenterServices();
             _appointmentS = new AppointmentServices();
@@ -42,10 +44,10 @@ namespace Proyect_POO
             _chronicDiseaseServices = new ChronicDiseaseServices();
 
             // set employee info
-            LocalEmployee = _employeeS.GetEmployee(1);
+            // LocalEmployee = _employeeS.GetEmployee(1);
 
             // set center info
-            LocalCenter = _centerS.GetCenter(1);
+            // LocalCenter = _centerS.GetCenter(1);
 
             // Set max birth day
             dtp_BirthDate.MaxDate = DateTime.Now;

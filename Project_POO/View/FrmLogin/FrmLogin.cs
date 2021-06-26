@@ -11,6 +11,7 @@ using Project_POO.ProjectPOOContext;
 using Project_POO.Services;
 using Project_POO.Tools;
 using Project_POO.View;
+using Project_POO.ViewModel;
 
 namespace Project_POO
 {
@@ -35,6 +36,7 @@ namespace Project_POO
             txt_Pass.Text = "";
             cmb_Center.SelectedItem = null;
             cmb_Center.Visible = false;
+            lbl_Center.Visible = false;
 
             // Enabling the first inputs 
             txt_Email.Enabled = true;
@@ -56,13 +58,30 @@ namespace Project_POO
             // Show
             if (employeeToLogin != null)
             {
- 
-                if (cmb_Center.SelectedItem != null)
-                {// Seccess
+                // Verify if administrator 
+                if (employeeToLogin.IdTypeEmployee.Equals(5))
+                {
+                    // Success
                     MessageBox.Show("Bienvenido ", "Inicio de Sesión exitoso",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     // Next Form
-                    FrmAppointmentTracking window = new FrmAppointmentTracking();
+                    FrmMenuAdmin window = new FrmMenuAdmin(employeeToLogin.Id);
+                    this.Hide();
+                    window.ShowDialog();
+                    // Reset form
+                    resetForm();
+                    this.Show();
+                }
+
+                if (cmb_Center.SelectedItem != null)
+                {
+                    // Success
+                    MessageBox.Show("Bienvenido ", "Inicio de Sesión exitoso",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // Selection
+                    var selection = (Center)cmb_Center.SelectedItem;
+                    // Next Form
+                    FrmAppointmentTracking window = new FrmAppointmentTracking(employeeToLogin.Id, selection.Id);
                     this.Hide();
                     window.ShowDialog();
                     // Reset form
@@ -70,13 +89,25 @@ namespace Project_POO
                     this.Show();
                 }
                 // User found, now will select the center where he is logging in
-                else
+                else if (cmb_Center.SelectedItem is null && employeeToLogin.IdTypeEmployee != 5)
                 { 
                     MessageBox.Show("Usuario encontrado, selecciona el centro en que estas iniciando sesión",
                         "Elige un centro", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     // cmb_Center now is available
                     int type = employeeToLogin.IdTypeEmployee;
-                    var centerToLogin = centerServices.GetByType(type);
+
+                    List<Center> centerToLogin;
+
+                    if (employeeToLogin.IdTypeEmployee == 1 || employeeToLogin.IdTypeEmployee == 2)
+                    {
+                        centerToLogin = centerServices.GetByType(1);
+                    }
+                    else
+                    {
+                        centerToLogin = centerServices.GetByType(2);
+                    }
+
+                    lbl_Center.Visible = true;
                     cmb_Center.Visible = true;
                     cmb_Center.DataSource = centerToLogin;
                     cmb_Center.DisplayMember = "CenterAddress";
@@ -86,10 +117,17 @@ namespace Project_POO
                     txt_Email.Enabled = false;
                     txt_Pass.Enabled = false;
                 }
+                else
+                {
+                    // Log out
+                    MessageBox.Show("Sesion cerrada exitosamente",
+                        "Adios", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    resetForm();
+                }
             }
             else
             {
-                // fail
+                // Fail
                 MessageBox.Show("Correo o contraseña son incorrectos, vuelve a introducir los datos de entrada",
                     "Inicio de Sesión falló", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 resetForm();

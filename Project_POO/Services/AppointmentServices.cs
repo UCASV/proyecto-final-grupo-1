@@ -84,7 +84,7 @@ namespace Project_POO.Services
         public int TotalVaccinatedUsers(int type = 1)
         {
             return _context.Appointments
-                .Where(x => x.IdTypeAppointment.Equals(type) && x.AStatus.Equals(1))
+                .Where(x => x.IdTypeAppointment.Equals(type) && x.AStatus.Equals(true))
                 .Count();
         }
 

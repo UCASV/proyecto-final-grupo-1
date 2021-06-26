@@ -136,6 +136,7 @@ INSERT INTO TYPE_EMPLOYEE VALUES('Gestor de cabina'); -- ID 1
 INSERT INTO TYPE_EMPLOYEE VALUES('Administrador de cabina'); -- ID 2
 INSERT INTO TYPE_EMPLOYEE VALUES('Gestor de centro de vacunación'); -- ID 3
 INSERT INTO TYPE_EMPLOYEE VALUES('Administrador de centro de vacunación'); -- ID 4
+INSERT INTO TYPE_EMPLOYEE VALUES('Administrador general'); -- ID 5
 
 INSERT INTO TYPE_CENTER VALUES('Cabina'); -- ID 1
 INSERT INTO TYPE_CENTER VALUES('Centro de vacunación'); -- ID 2
@@ -214,6 +215,15 @@ INSERT INTO EMPLOYEE VALUES(  -- ID 9
 '12345',
 'Urb. Las manzanas, Santa Tecla',
 3
+);
+
+-- General administrator 
+INSERT INTO EMPLOYEE VALUES(  -- ID 10
+'Leonel Messi',
+'messi@gmail.com',
+'12345',
+'Urb. Los aguacates',
+5
 );
 
 -- INSTITUTIONS

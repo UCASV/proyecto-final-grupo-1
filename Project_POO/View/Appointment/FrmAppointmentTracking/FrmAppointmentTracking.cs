@@ -16,25 +16,38 @@ namespace Project_POO.View
 {
     public partial class FrmAppointmentTracking : Form
     {
+        private int tmpEmployeeId = 0;
+        private int tmpCenterId = 0;
+
+        private Employee LocalEmployee;
+        private Center LocalCenter;
+
         private int tmpAppointmentId;
         private Appointment tmpAppointmentObj;
 
+        private EmployeeServices _employeeS;
+        private CenterServices _centerS;
         private AppointmentServices _appointmentS;
         private CitizenServices _citizenS;
         private SecondaryEffectServices _secondaryEffectS;
 
-        public FrmAppointmentTracking()
+        public FrmAppointmentTracking(int eemployeId, int centerId)
         {
             InitializeComponent();
+            tmpEmployeeId = eemployeId;
+            tmpCenterId = centerId;
         }
 
         private void FrmAppointmentTracking_Load(object sender, EventArgs e)
         {
-            tmpAppointmentId = 0;
-
+            _employeeS = new EmployeeServices();
+            _centerS = new CenterServices();
             _appointmentS = new AppointmentServices();
             _citizenS = new CitizenServices();
             _secondaryEffectS = new SecondaryEffectServices();
+
+            LocalEmployee = _employeeS.GetEmployee(tmpEmployeeId);
+            LocalCenter = _centerS.GetCenter(tmpCenterId);
 
             // Tab control style
             tbc_AT.Appearance = TabAppearance.FlatButtons;
@@ -59,18 +72,15 @@ namespace Project_POO.View
 
         private void dgv_Appointments_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            var varUserType = 2;
-
             // Select appointment
             int tmpId = (int)dgv_Appointments.SelectedRows[0].Cells["Id"].Value;
             tmpAppointmentId = tmpId;
 
-            if (varUserType == 2)
+            if (LocalEmployee.IdTypeEmployee == 3 || LocalEmployee.IdTypeEmployee == 4)
                 SetInfoForVaccinationCenter();
             else
                 SetInfoForCabinCenter();
         }
-
 
         private void SetInfoForVaccinationCenter()
         {
@@ -219,20 +229,32 @@ namespace Project_POO.View
 
         private void btn_Create_Appointment_Click(object sender, EventArgs e)
         {
-            // Add secondary effect
-            if ((int)nud_DurationSE.Value > 0)
+            var tmpEffects = _appointmentS.GetAppointmentEffects(tmpAppointmentObj.Id);
+
+            // Validate if secondary effect already exist in this appointment
+            if (!tmpEffects.Contains(cmb_NameSE.SelectedItem)) // fails
             {
-                int tmpEffectSelection = (int)cmb_NameSE.SelectedValue;
+                // Validate secondary effect duration
+                if ((int)nud_DurationSE.Value > 0)
+                {
+                    // Add secondary effect
+                    int tmpEffectSelection = (int)cmb_NameSE.SelectedValue;
 
-                var newAppointmentEffect = new AppointmentxsecondaryEffect(tmpAppointmentObj.Id, 
-                    tmpEffectSelection, (int)nud_DurationSE.Value);
+                    var newAppointmentEffect = new AppointmentxsecondaryEffect(tmpAppointmentObj.Id,
+                        tmpEffectSelection, (int)nud_DurationSE.Value);
 
-                _appointmentS.SaveSecondaryEffects(newAppointmentEffect);
+                    _appointmentS.SaveSecondaryEffects(newAppointmentEffect);
 
-                MessageBox.Show("Efecto secundario agregado con exito");
+                    // Refresh secondary effects
+                    LoadSecondaryEffects();
+
+                    MessageBox.Show("Efecto secundario agregado con exito");
+                }
+                else
+                    MessageBox.Show("Duracion de efecto secundario no valida");
             }
             else
-                MessageBox.Show("Duracion de efecto secundario no valida");
+                MessageBox.Show("Efecto secundario previamente registrado");
         }
 
         private void LoadSecondaryEffects()
@@ -247,7 +269,7 @@ namespace Project_POO.View
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            FrmCreateAppointment window = new FrmCreateAppointment();
+            FrmCreateAppointment window = new FrmCreateAppointment(LocalEmployee, LocalCenter);
             this.Hide();
             window.ShowDialog();
             // Reload updates
