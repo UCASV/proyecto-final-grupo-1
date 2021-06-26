@@ -18,8 +18,8 @@ namespace Project_POO.ViewModel
                 Tipo_cita = a.IdTypeAppointmentNavigation.TaName,
                 Centro_vacunacion = a.IdVaccinationCenterNavigation.CenterAddress,
                 Fecha_Hora = a.ADatetime,
-                Hora_asistencia = a.StartTime,
-                Hora_vacunacion = a.FinalTime,
+                Hora_asistencia = String.Format("{0:hh\\:mm\\:ss}", a.StartTime),
+                Hora_vacunacion = String.Format("{0:hh\\:mm\\:ss}", a.FinalTime),
                 Estado = (a.AStatus is false) ? "Pendiente" : "Finalizada"
             };
         }

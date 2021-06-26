@@ -13,8 +13,8 @@ namespace Project_POO.ViewModel
         public string Tipo_cita { get; set; }
         public string Centro_vacunacion { get; set; }
         public DateTime Fecha_Hora { get; set; }
-        public TimeSpan? Hora_asistencia { get; set; }
-        public TimeSpan? Hora_vacunacion { get; set; }
+        public string? Hora_asistencia { get; set; }
+        public string? Hora_vacunacion { get; set; }
         public string Estado { get; set; }
        
         // public string EmployeeName { get; set; }
