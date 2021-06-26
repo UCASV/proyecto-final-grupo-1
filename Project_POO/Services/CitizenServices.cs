@@ -54,6 +54,15 @@ namespace Project_POO.Services
             return tmpCitizen;
         }
 
+        public List<CitizenxchronicDisease> GetDiseasesByUser(string citizenDui)
+        {
+            return _context.CitizenxchronicDiseases
+                .Include(x => x.IdCitizenNavigation)
+                .Include(x => x.IdChronicDiseaseNavigation)
+                .Where(x => x.IdCitizen.Equals(citizenDui))
+                .ToList();
+        }
+
         public bool ValidateCitizen(Citizen item)
         {
             // Must complete validating function

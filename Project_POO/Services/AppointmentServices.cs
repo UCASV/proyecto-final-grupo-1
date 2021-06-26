@@ -50,10 +50,20 @@ namespace Project_POO.Services
         {
             return _context.Appointments
                 .Include(x => x.IdCitizenNavigation)
+                    .ThenInclude(x => x.IdInstitutionNavigation)
+                .Include(x => x.IdEmployeeNavigation)
+                .Include(x => x.IdCabinNavigation)
                 .Include(x => x.IdTypeAppointmentNavigation)
                 .Include(x => x.IdVaccinationCenterNavigation)
                 .Where(x => x.Id.Equals(id))
                 .SingleOrDefault();
+        }
+        public List<AppointmentxsecondaryEffect> GetAppointmentEffects(int id)
+        {
+            return _context.AppointmentxsecondaryEffects
+                .Include(x => x.IdSecondaryEffectNavigation)
+                .Where(x => x.IdAppointment.Equals(id))
+                .ToList();
         }
 
         public int CountAppointmentsByDate(DateTime datetime)
@@ -67,6 +77,25 @@ namespace Project_POO.Services
         {
             _context.AppointmentxsecondaryEffects.Add(tmpAxE);
             _context.SaveChanges();
+        }
+
+        // Extra functions for stadistics module
+
+        public int TotalVaccinatedUsers(int type = 1)
+        {
+            return _context.Appointments
+                .Where(x => x.IdTypeAppointment.Equals(type) && x.AStatus.Equals(1))
+                .Count();
+        }
+
+        public List<Appointment> GetCompleted()
+        {
+            return _context.Appointments
+                .Include(x => x.IdCitizenNavigation)
+                .Include(x => x.IdTypeAppointmentNavigation)
+                .Include(x => x.IdVaccinationCenterNavigation)
+                .Where(x => x.AStatus.Equals(true))
+                .ToList();
         }
     }
 }

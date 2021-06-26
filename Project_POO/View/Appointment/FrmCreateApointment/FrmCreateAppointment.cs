@@ -16,6 +16,13 @@ namespace Proyect_POO
         private Center LocalCenter;
         private int VaccinationCenter;
 
+        private EmployeeServices _employeeS;
+        private InstitutionServices _institutionS;
+        private CenterServices _centerS;
+        private AppointmentServices _appointmentS;
+        private CitizenServices _citzenS;
+        private ChronicDiseaseServices _chronicDiseaseServices;
+
         public FrmCreateAppointment()
         {
             InitializeComponent();
@@ -26,13 +33,19 @@ namespace Proyect_POO
             // Set vaccination center
             VaccinationCenter = 1;
 
+            // Init services 
+            _employeeS = new EmployeeServices();
+            _institutionS = new InstitutionServices();
+            _centerS = new CenterServices();
+            _appointmentS = new AppointmentServices();
+            _citzenS = new CitizenServices();
+            _chronicDiseaseServices = new ChronicDiseaseServices();
+
             // set employee info
-            var employeeS = new EmployeeServices();
-            LocalEmployee = employeeS.GetEmployee(1);
+            LocalEmployee = _employeeS.GetEmployee(1);
 
             // set center info
-            var centerS = new CenterServices();
-            LocalCenter = centerS.GetCenter(1);
+            LocalCenter = _centerS.GetCenter(1);
 
             // Set max birth day
             dtp_BirthDate.MaxDate = DateTime.Now;
@@ -50,8 +63,6 @@ namespace Proyect_POO
 
             if (tmpDUI != "error")
             {
-                var appointmentS = new AppointmentServices();
-
                 // Get DateTime -> temp function
                 var appointmentDate = GetAppointmentDate();
 
@@ -59,7 +70,7 @@ namespace Proyect_POO
                 {
                     var tmpAppointment = new Appointment(tmpDUI, LocalEmployee.Id, LocalCenter.Id,
                         VaccinationCenter, appointmentDate, 1);
-                    appointmentS.Create(tmpAppointment);
+                    _appointmentS.Create(tmpAppointment);
 
                     DefineNextVaccinationCenter();
 
@@ -77,7 +88,6 @@ namespace Proyect_POO
 
         private DateTime GetAppointmentDate()
         {
-            var appointmentS = new AppointmentServices();
             var pending = true;
 
             DateTime today = DateTime.Now;
@@ -87,7 +97,7 @@ namespace Proyect_POO
             do
             {
                 // If selected date alredy has an appointment it changes to the next one
-                if (appointmentS.CountAppointmentsByDate(appointmentDate) > 1)
+                if (_appointmentS.CountAppointmentsByDate(appointmentDate) > 1)
                 {
                     appointmentDate = appointmentDate.AddDays(1);
                 }
@@ -101,10 +111,8 @@ namespace Proyect_POO
 
         private void DefineNextVaccinationCenter()
         {
-            var centerS = new CenterServices();
-
             // Define next vaccination center
-            var vaccinationCenters = centerS.GetByType(2);
+            var vaccinationCenters = _centerS.GetByType(2);
             VaccinationCenter++;
             if (VaccinationCenter > vaccinationCenters.Count)
                 VaccinationCenter = 1;
@@ -112,16 +120,26 @@ namespace Proyect_POO
 
         private string CreateUser()
         {
-            var citzensS = new CitizenServices();
+            // Pending -> input data validation for format...
+            // Get citizen institution
+            var tmpInstitution = (int)txt_TypeDoc.SelectedValue;
+            int? citizenInstitution = (tmpInstitution.Equals(13)) ? null : tmpInstitution;
 
-            // Pending -> input data validation for format
-            // var tmpInstitution = (txt_TypeDoc.SelectedValue != "") ? txt_TypeDoc.SelectedValue : null;
+            // Get reference dates
+            var citizenBirthDate = dtp_BirthDate.Value;
+            var today = DateTime.Now;
+
+            // Get citizen age in years
+            var yearsOld = today - citizenBirthDate;
+            byte years = (byte)(yearsOld.TotalDays / 365.25);
+
+            // Create citizen
             var tmpCitizen = new Citizen(txt_DUI.Text, txt_Name.Text, txt_Address.Text,
-                txt_Tel.Text, txt_Email.Text, 18, 1);
+                txt_Tel.Text, txt_Email.Text, years, citizenInstitution);
 
             // Create diseases list based on selections
-            var chronicDiseaseS = new ChronicDiseaseServices();
-            var diseases = chronicDiseaseS.GetAll();
+            // var chronicDiseaseS = new ChronicDiseaseServices();
+            // var diseases = chronicDiseaseS.GetAll();
 
             List<CitizenxchronicDisease> tmpCxD = new List<CitizenxchronicDisease>();
             var selectedDiseases = clb_CD.CheckedItems;
@@ -133,12 +151,12 @@ namespace Proyect_POO
                 tmpCxD.Add(new CitizenxchronicDisease(tmpCitizen.Dui, tmpItem.Id));
             }
 
-            if (citzensS.ValidateCitizen(tmpCitizen))
+            if (_citzenS.ValidateCitizen(tmpCitizen))
             {
-                if (citzensS.ValidateElegibleCitizen(tmpCitizen, tmpCxD))
+                if (_citzenS.ValidateElegibleCitizen(tmpCitizen, tmpCxD))
                 {
-                    citzensS.Create(tmpCitizen);
-                    citzensS.SaveCitizenDiseases(tmpCxD);
+                    _citzenS.Create(tmpCitizen);
+                    _citzenS.SaveCitizenDiseases(tmpCxD);
                     return tmpCitizen.Dui;
                 }
                 else
@@ -150,8 +168,12 @@ namespace Proyect_POO
 
         private void LoadDocumentsInfo()
         {
-            var institutionS = new InstitutionServices();
-            var institutions = institutionS.GetAll();
+            // Get institutions
+            var institutions = _institutionS.GetAll();
+
+            // Set default option
+            var defOption = new Institution(13, "No especificado");
+            institutions.Insert(0, defOption);
 
             txt_TypeDoc.DataSource = institutions;
             txt_TypeDoc.ValueMember = "Id";
@@ -160,8 +182,8 @@ namespace Proyect_POO
 
         private void LoadDiseases()
         {
-            var chronicDiseaseS = new ChronicDiseaseServices();
-            var diseases = chronicDiseaseS.GetAll();
+            // Get diseases
+            var diseases = _chronicDiseaseServices.GetAll();
 
             clb_CD.DataSource = null;
             clb_CD.DataSource = diseases;
@@ -189,7 +211,6 @@ namespace Proyect_POO
 
         private void btn_Create_Appointment_Click(object sender, EventArgs e)
         {
-            // CreateUserAppointment();
             CreateUserAppointment();
         }
     }
