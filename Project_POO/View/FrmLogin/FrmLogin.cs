@@ -50,9 +50,9 @@ namespace Project_POO
         private void btn_Create_Appointment_Click(object sender, EventArgs e)
         {
             string email = txt_Email.Text;
-            // Encrypt
-            // string pass = Encrypt.SHA256(txt_Pass.Text);
-            string pass = txt_Pass.Text;
+            // Encripting pass
+            string pass = Encrypt.SHA256(txt_Pass.Text);
+            //string pass = txt_Pass.Text;
             Employee employeeToLogin = employeeServices.GetEmployeeInLogin(email, pass);
 
             // Show
@@ -62,7 +62,7 @@ namespace Project_POO
                 if (employeeToLogin.IdTypeEmployee.Equals(5))
                 {
                     // Success
-                    MessageBox.Show("Bienvenido ", "Inicio de Sesión exitoso",
+                    MessageBox.Show("Bienvenido Administrador", "Inicio de Sesión exitoso",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     // Next Form
                     FrmMenuAdmin window = new FrmMenuAdmin(employeeToLogin.Id);

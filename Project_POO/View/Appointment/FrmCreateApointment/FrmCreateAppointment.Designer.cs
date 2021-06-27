@@ -35,7 +35,7 @@ namespace Proyect_POO
             this.lbl_DUI = new System.Windows.Forms.Label();
             this.txt_DUI = new System.Windows.Forms.TextBox();
             this.lbl_TypeDoc = new System.Windows.Forms.Label();
-            this.txt_TypeDoc = new System.Windows.Forms.ComboBox();
+            this.cmb_TypeDoc = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_Email = new System.Windows.Forms.TextBox();
             this.dtp_BirthDate = new System.Windows.Forms.DateTimePicker();
@@ -115,24 +115,24 @@ namespace Proyect_POO
             this.lbl_TypeDoc.TabIndex = 5;
             this.lbl_TypeDoc.Text = "Tipo de documento*";
             // 
-            // txt_TypeDoc
+            // cmb_TypeDoc
             // 
-            this.txt_TypeDoc.BackColor = System.Drawing.Color.MintCream;
-            this.txt_TypeDoc.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txt_TypeDoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txt_TypeDoc.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.txt_TypeDoc.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_TypeDoc.FormattingEnabled = true;
-            this.txt_TypeDoc.Items.AddRange(new object[] {
+            this.cmb_TypeDoc.BackColor = System.Drawing.Color.MintCream;
+            this.cmb_TypeDoc.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmb_TypeDoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_TypeDoc.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmb_TypeDoc.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cmb_TypeDoc.FormattingEnabled = true;
+            this.cmb_TypeDoc.Items.AddRange(new object[] {
             "DUI",
             "NIT",
             "Pasaporte",
             "Carnet de Residente",
             "Otro"});
-            this.txt_TypeDoc.Location = new System.Drawing.Point(546, 145);
-            this.txt_TypeDoc.Name = "txt_TypeDoc";
-            this.txt_TypeDoc.Size = new System.Drawing.Size(348, 29);
-            this.txt_TypeDoc.TabIndex = 6;
+            this.cmb_TypeDoc.Location = new System.Drawing.Point(546, 145);
+            this.cmb_TypeDoc.Name = "cmb_TypeDoc";
+            this.cmb_TypeDoc.Size = new System.Drawing.Size(348, 29);
+            this.cmb_TypeDoc.TabIndex = 6;
             // 
             // label4
             // 
@@ -319,14 +319,14 @@ namespace Proyect_POO
             this.Controls.Add(this.dtp_BirthDate);
             this.Controls.Add(this.txt_Email);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txt_TypeDoc);
+            this.Controls.Add(this.cmb_TypeDoc);
             this.Controls.Add(this.lbl_TypeDoc);
             this.Controls.Add(this.txt_DUI);
             this.Controls.Add(this.lbl_DUI);
             this.Controls.Add(this.txt_Name);
             this.Controls.Add(this.lbl_Name);
             this.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.MaximizeBox = false;
             this.Name = "FrmCreateAppointment";
@@ -346,7 +346,7 @@ namespace Proyect_POO
         private System.Windows.Forms.TextBox txt_Name;
         private System.Windows.Forms.Label lbl_DUI;
         private System.Windows.Forms.Label lbl_TypeDoc;
-        private System.Windows.Forms.ComboBox txt_TypeDoc;
+        private System.Windows.Forms.ComboBox cmb_TypeDoc;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_Email;
         private System.Windows.Forms.DateTimePicker dtp_BirthDate;

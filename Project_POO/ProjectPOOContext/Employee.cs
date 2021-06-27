@@ -25,5 +25,14 @@ namespace Project_POO.ProjectPOOContext
             Centers = new HashSet<Center>();
             Employeexcenters = new HashSet<Employeexcenter>();
         }
+
+        public Employee(string EName, string Email, string Pass, string EAddress, int IdTypeEmployee)
+        {
+            this.EName = EName;
+            this.Email = Email;
+            this.Pass = Pass;
+            this.EAddress = EAddress;
+            this.IdTypeEmployee = IdTypeEmployee;
+        }
     }
 }

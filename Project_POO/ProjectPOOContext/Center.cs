@@ -26,5 +26,14 @@ namespace Project_POO.ProjectPOOContext
             AppointmentIdVaccinationCenterNavigations = new HashSet<Appointment>();
             Employeexcenters = new HashSet<Employeexcenter>();
         }
+
+        public Center(string CenterAddress, string Tel, string CenterEmail, int IdCenterType, int IdEmployeeInCharge)
+        {
+            this.CenterAddress = CenterAddress;
+            this.Tel = Tel;
+            this.CenterEmail = CenterEmail;
+            this.IdCenterType = IdCenterType;
+            this.IdEmployeeInCharge = IdEmployeeInCharge;
+        }
     }
 }

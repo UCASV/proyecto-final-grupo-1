@@ -109,6 +109,7 @@ namespace Project_POO.ViewModel
             this.btn_RegistCenters.TabIndex = 18;
             this.btn_RegistCenters.Text = "Registrar Centros";
             this.btn_RegistCenters.UseVisualStyleBackColor = false;
+            this.btn_RegistCenters.Click += new System.EventHandler(this.btn_RegistCenters_Click);
             // 
             // btn_Statistics
             // 
@@ -168,10 +169,10 @@ namespace Project_POO.ViewModel
             this.lbl_WelcomeAdmin,
             this.lbl_AdminName,
             this.lbl_Admin});
-            this.sts_Employee.Location = new System.Drawing.Point(0, 389);
+            this.sts_Employee.Location = new System.Drawing.Point(0, 397);
             this.sts_Employee.Name = "sts_Employee";
             this.sts_Employee.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.sts_Employee.Size = new System.Drawing.Size(800, 36);
+            this.sts_Employee.Size = new System.Drawing.Size(800, 28);
             this.sts_Employee.TabIndex = 40;
             this.sts_Employee.Text = "Bienvenido:";
             // 
@@ -180,14 +181,14 @@ namespace Project_POO.ViewModel
             this.lbl_WelcomeAdmin.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbl_WelcomeAdmin.ForeColor = System.Drawing.Color.White;
             this.lbl_WelcomeAdmin.Name = "lbl_WelcomeAdmin";
-            this.lbl_WelcomeAdmin.Size = new System.Drawing.Size(154, 30);
+            this.lbl_WelcomeAdmin.Size = new System.Drawing.Size(123, 23);
             this.lbl_WelcomeAdmin.Text = "Bienvenido: ";
             // 
             // lbl_AdminName
             // 
             this.lbl_AdminName.ForeColor = System.Drawing.Color.White;
             this.lbl_AdminName.Name = "lbl_AdminName";
-            this.lbl_AdminName.Size = new System.Drawing.Size(240, 30);
+            this.lbl_AdminName.Size = new System.Drawing.Size(182, 23);
             this.lbl_AdminName.Text = "Nombre del Admin";
             // 
             // lbl_Admin
@@ -195,12 +196,12 @@ namespace Project_POO.ViewModel
             this.lbl_Admin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbl_Admin.ForeColor = System.Drawing.Color.White;
             this.lbl_Admin.Name = "lbl_Admin";
-            this.lbl_Admin.Size = new System.Drawing.Size(158, 30);
+            this.lbl_Admin.Size = new System.Drawing.Size(130, 23);
             this.lbl_Admin.Text = "-Administrador-";
             // 
             // FrmMenuAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 30F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(800, 425);

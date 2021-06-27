@@ -59,6 +59,18 @@ namespace Proyect_POO
             {
                 if (tmpDUI != "error")
                 {
+                    var tmpAppointment = new Appointment(tmpDUI, LocalEmployee.Id, LocalCenter.Id,
+                        VaccinationCenter, appointmentDate, 1);
+                    _appointmentS.Create(tmpAppointment);
+
+                    DefineNextVaccinationCenter();
+
+                    MessageBox.Show("Cita agregada con exito", "Acción exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception exception)
+                {
+                    MessageBox.Show(exception.Message);
+                    throw;
                     if (tmpDUI != "not-elegible")
                     {
                         // Get DateTime -> temp function
@@ -88,6 +100,7 @@ namespace Proyect_POO
                     MessageBox.Show("Verifique que la información tenga el formato estipulado");
             }
             else
+                MessageBox.Show("Error creating user", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 MessageBox.Show("El usuario con este DUI ya tiene una cita");
         }
 
@@ -133,7 +146,7 @@ namespace Proyect_POO
                 return "exists";
 
             // Get citizen institution
-            var tmpInstitution = (int)txt_TypeDoc.SelectedValue;
+            var tmpInstitution = (int)cmb_TypeDoc.SelectedValue;
             int? citizenInstitution = (tmpInstitution.Equals(13)) ? null : tmpInstitution;
 
             // Get reference dates
@@ -182,9 +195,9 @@ namespace Proyect_POO
             var defOption = new Institution(13, "No especificado");
             institutions.Insert(0, defOption);
 
-            txt_TypeDoc.DataSource = institutions;
-            txt_TypeDoc.ValueMember = "Id";
-            txt_TypeDoc.DisplayMember = "IName";
+            cmb_TypeDoc.DataSource = institutions;
+            cmb_TypeDoc.ValueMember = "Id";
+            cmb_TypeDoc.DisplayMember = "IName";
         }
 
         private void LoadDiseases()

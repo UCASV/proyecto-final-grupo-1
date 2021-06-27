@@ -56,6 +56,7 @@ namespace Project_POO
             // 
             this.btn_Create.BackColor = System.Drawing.Color.LightCyan;
             this.btn_Create.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Create.Enabled = false;
             this.btn_Create.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Create.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_Create.Location = new System.Drawing.Point(622, 493);
@@ -64,6 +65,7 @@ namespace Project_POO
             this.btn_Create.TabIndex = 36;
             this.btn_Create.Text = "Crear Usuario";
             this.btn_Create.UseVisualStyleBackColor = false;
+            this.btn_Create.Click += new System.EventHandler(this.btn_Create_Click);
             // 
             // label7
             // 
@@ -103,6 +105,7 @@ namespace Project_POO
             this.cmb_Type.Name = "cmb_Type";
             this.cmb_Type.Size = new System.Drawing.Size(317, 30);
             this.cmb_Type.TabIndex = 32;
+            this.cmb_Type.SelectedIndexChanged += new System.EventHandler(this.cmb_Type_SelectedIndexChanged);
             // 
             // lbl_Email
             // 
@@ -121,6 +124,7 @@ namespace Project_POO
             this.txt_Email.Name = "txt_Email";
             this.txt_Email.Size = new System.Drawing.Size(317, 31);
             this.txt_Email.TabIndex = 25;
+            this.txt_Email.TextChanged += new System.EventHandler(this.txt_Email_TextChanged);
             // 
             // txt_Name
             // 
@@ -128,6 +132,7 @@ namespace Project_POO
             this.txt_Name.Name = "txt_Name";
             this.txt_Name.Size = new System.Drawing.Size(317, 31);
             this.txt_Name.TabIndex = 22;
+            this.txt_Name.TextChanged += new System.EventHandler(this.txt_Name_TextChanged);
             // 
             // lbl_Name
             // 
@@ -183,6 +188,7 @@ namespace Project_POO
             this.txt_Pass.Size = new System.Drawing.Size(317, 31);
             this.txt_Pass.TabIndex = 42;
             this.txt_Pass.UseSystemPasswordChar = true;
+            this.txt_Pass.TextChanged += new System.EventHandler(this.txt_Pass_TextChanged);
             // 
             // txt_Conf_Pass
             // 
@@ -191,6 +197,7 @@ namespace Project_POO
             this.txt_Conf_Pass.Size = new System.Drawing.Size(317, 31);
             this.txt_Conf_Pass.TabIndex = 43;
             this.txt_Conf_Pass.UseSystemPasswordChar = true;
+            this.txt_Conf_Pass.TextChanged += new System.EventHandler(this.txt_Conf_Pass_TextChanged);
             // 
             // lbl_Address
             // 
@@ -210,6 +217,7 @@ namespace Project_POO
             this.txt_Address.Name = "txt_Address";
             this.txt_Address.Size = new System.Drawing.Size(317, 31);
             this.txt_Address.TabIndex = 29;
+            this.txt_Address.TextChanged += new System.EventHandler(this.txt_Address_TextChanged);
             // 
             // btn_Clean
             // 
@@ -281,11 +289,13 @@ namespace Project_POO
             this.Controls.Add(this.lbl_Name);
             this.Controls.Add(this.img_LogoRegist);
             this.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.MaximizeBox = false;
             this.Name = "FrmRegist";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registrar Empleado (Administrador)";
+            this.Load += new System.EventHandler(this.FrmRegist_Load);
             ((System.ComponentModel.ISupportInitialize)(this.img_LogoRegist)).EndInit();
             this.sts_Admin.ResumeLayout(false);
             this.sts_Admin.PerformLayout();
