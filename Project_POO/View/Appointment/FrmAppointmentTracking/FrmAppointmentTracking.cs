@@ -51,7 +51,10 @@ namespace Project_POO.View
 
             // Footer
             lbl_EmployeeName.Text = LocalEmployee.EName;
-            // lbl_TypeEmployee.Text = LocalEmployee.IdTypeEmployeeNavigation.TeName; // falta un include...
+            lbl_TypeEmployee.Text = LocalEmployee.IdTypeEmployeeNavigation.TeName;
+            lbl_VaccinationEmployeeType.Text = LocalEmployee.IdTypeEmployeeNavigation.TeName;
+            lbl_CabinEmployee_Type.Text = LocalEmployee.IdTypeEmployeeNavigation.TeName;
+
             lbl_VaccinationEmployeeName.Text = LocalEmployee.EName;
             lbl_CabinEmployee_Name.Text = LocalEmployee.EName;
 
@@ -145,7 +148,7 @@ namespace Project_POO.View
                     cbx_Vaccinated.Visible = true;
                     cbx_Vaccinated.Enabled = true;
 
-                    btn_Report.Enabled = false;
+                    btn_Report.Enabled = true;
                 }
                 else
                 {
@@ -162,7 +165,7 @@ namespace Project_POO.View
                 cbx_Vaccinated.Visible = true;
                 cbx_Vaccinated.Enabled = false;
 
-                btn_Report.Enabled = true;
+                btn_Report.Enabled = false;
             }
 
             // Change tab

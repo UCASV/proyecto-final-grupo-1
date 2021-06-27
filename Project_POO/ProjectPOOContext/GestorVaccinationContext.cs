@@ -36,7 +36,7 @@ namespace Project_POO.ProjectPOOContext
             if (!optionsBuilder.IsConfigured)
             {
                 // Server=LAPTOP-HSVPQEO5;Database=GestorVaccination;Trusted_Connection=True;
-                optionsBuilder.UseSqlServer("Server=.;Database=GestorVaccination;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=.\\SQLEXPRESS;Database=GestorVaccination;Trusted_Connection=True;");
             }
         }
 

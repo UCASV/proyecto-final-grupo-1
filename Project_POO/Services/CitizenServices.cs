@@ -60,7 +60,7 @@ namespace Project_POO.Services
         {
             var tmpCitizen = _context.Citizens
                 .Include(x => x.CitizenxchronicDiseases)
-                .ThenInclude(d => d.IdChronicDiseaseNavigation) // Must use ...Navigation to acces other table prop
+                .ThenInclude(d => d.IdChronicDiseaseNavigation) 
                 .Where(x => x.Dui.Equals(tmpDUI))
                 .SingleOrDefault();
 
