@@ -1061,7 +1061,7 @@ namespace Project_POO.View
             this.btn_Report.TabIndex = 17;
             this.btn_Report.Text = "Reportar";
             this.btn_Report.UseVisualStyleBackColor = false;
-            this.btn_Report.Click += new System.EventHandler(this.btn_Create_Appointment_Click);
+            this.btn_Report.Click += new System.EventHandler(this.btn_Report_Click);
             // 
             // lbl_NameSE
             // 

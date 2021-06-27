@@ -328,7 +328,7 @@ namespace Project_POO.View
             return appointmentDate;
         }
 
-        private void btn_Create_Appointment_Click(object sender, EventArgs e)
+        private void btn_Report_Click(object sender, EventArgs e)
         {
             var tmpEffects = _appointmentS.GetAppointmentEffects(tmpAppointmentObj.Id);
 
