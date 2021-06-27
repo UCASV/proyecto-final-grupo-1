@@ -7,12 +7,6 @@ namespace Project_POO.ProjectPOOContext
 {
     public partial class Center
     {
-        private string text1;
-        private string text2;
-        private string text3;
-        private string text4;
-        private string text5;
-
         public int Id { get; set; }
         public string CenterAddress { get; set; }
         public string Tel { get; set; }
