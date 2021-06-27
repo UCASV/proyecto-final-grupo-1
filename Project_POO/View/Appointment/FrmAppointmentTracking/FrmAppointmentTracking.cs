@@ -145,14 +145,14 @@ namespace Project_POO.View
                     cbx_Vaccinated.Visible = true;
                     cbx_Vaccinated.Enabled = true;
 
-                    btn_Create_Appointment.Enabled = false;
+                    btn_Report.Enabled = false;
                 }
                 else
                 {
                     cbx_Arrived.Enabled = true;
                     cbx_Vaccinated.Visible = false;
 
-                    btn_Create_Appointment.Enabled = false;
+                    btn_Report.Enabled = false;
                 }
             }
             else 
@@ -162,7 +162,7 @@ namespace Project_POO.View
                 cbx_Vaccinated.Visible = true;
                 cbx_Vaccinated.Enabled = false;
 
-                btn_Create_Appointment.Enabled = true;
+                btn_Report.Enabled = true;
             }
 
             // Change tab
