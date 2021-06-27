@@ -66,11 +66,12 @@ namespace Proyect_POO
 
                         try
                         {
+                            // Select next vaccination center
+                            DefineVaccinationCenter();
+
                             var tmpAppointment = new Appointment(tmpDUI, LocalEmployee.Id, LocalCenter.Id,
                                 VaccinationCenter, appointmentDate, 1);
                             _appointmentS.Create(tmpAppointment);
-
-                            DefineNextVaccinationCenter();
 
                             MessageBox.Show("Cita agregada con exito");
                         }
@@ -113,21 +114,16 @@ namespace Proyect_POO
             return appointmentDate;
         }
 
-        private void DefineNextVaccinationCenter()
+        private void DefineVaccinationCenter()
         {
             // Define next vaccination center based on last insert
             var appointmentsList = _appointmentS.GetAll();
+            var availableCenter = _centerS.GetByType(2);
 
-            if (appointmentsList.Count != 0)
-            {
-                var lastItem = appointmentsList[appointmentsList.Count - 1];
-                if (lastItem.IdVaccinationCenter < appointmentsList.Count)
-                    VaccinationCenter++;
-                else
-                    VaccinationCenter = 1;
-            }
+            if (appointmentsList.Count % 2 == 0)
+                VaccinationCenter = availableCenter[0].Id;
             else
-                VaccinationCenter = 1;
+                VaccinationCenter = availableCenter[1].Id;
         }
 
         private string CreateUser()

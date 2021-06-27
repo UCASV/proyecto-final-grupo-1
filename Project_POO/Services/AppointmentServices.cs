@@ -29,6 +29,18 @@ namespace Project_POO.Services
                 .Include(x => x.IdCitizenNavigation)
                 .Include(x => x.IdTypeAppointmentNavigation)
                 .Include(x => x.IdVaccinationCenterNavigation)
+                .OrderBy(x => x.ADatetime)
+                .ToList();
+        }
+
+        public List<Appointment> GetAllByCenter(int tmpCenterId)
+        {
+            return _context.Appointments
+                .Include(x => x.IdCitizenNavigation)
+                .Include(x => x.IdTypeAppointmentNavigation)
+                .Include(x => x.IdVaccinationCenterNavigation)
+                .Where(x => x.IdVaccinationCenter.Equals(tmpCenterId))
+                .OrderBy(x => x.ADatetime)
                 .ToList();
         }
 
@@ -90,6 +102,34 @@ namespace Project_POO.Services
                 seconds,
                 milliseconds,
                 dateTime.Kind);
+        }
+
+        // Seach functions
+
+        public List<Appointment> GetSearch(bool flag, string search)
+        {
+            if (flag)
+            {
+                // Search by DUI
+                return _context.Appointments
+                    .Include(x => x.IdCitizenNavigation)
+                    .Include(x => x.IdTypeAppointmentNavigation)
+                    .Include(x => x.IdVaccinationCenterNavigation)
+                    .Where(x => x.IdCitizenNavigation.Dui.Equals(search))
+                    .OrderBy(x => x.ADatetime)
+                    .ToList();
+            }
+            else 
+            {
+                // Search by Email
+                return _context.Appointments
+                    .Include(x => x.IdCitizenNavigation)
+                    .Include(x => x.IdTypeAppointmentNavigation)
+                    .Include(x => x.IdVaccinationCenterNavigation)
+                    .Where(x => x.IdCitizenNavigation.Email.Equals(search))
+                    .OrderBy(x => x.ADatetime)
+                    .ToList();
+            }
         }
 
         // Extra functions for stadistics module
