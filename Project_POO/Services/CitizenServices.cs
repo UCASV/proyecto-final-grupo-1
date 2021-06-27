@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 namespace Project_POO.Services
 {
@@ -43,6 +44,18 @@ namespace Project_POO.Services
 
         // Extra services
 
+        public bool VerifyICitizenExists(string tmpDui)
+        {
+            var citizen = _context.Citizens
+                .Where(x => x.Dui.Equals(tmpDui))
+                .Count();
+
+            if (citizen == 0)
+                return false;
+            else
+                return true;
+        }
+
         public Citizen GetCitizen(string tmpDUI)
         {
             var tmpCitizen = _context.Citizens
@@ -65,18 +78,45 @@ namespace Project_POO.Services
 
         public bool ValidateCitizen(Citizen item)
         {
-            // Must complete validating function
-            if (item.CName.Length > 5 && item.Age >= 0)
-                return true;
+            var telExp = "^[2-9]{1}[0-9]{3}-[0-9]{4}$";
+            var emailExp = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$";
+            var duiExp = "^[0-9]{8}-[0-9]{1}$";
+
+            // Validating data function
+            if (item.Dui.Length == 10 && item.CName.Length > 5 && item.Age > 0 
+                && item.CAddress.Length > 5 && item.Email.Length > 5 && item.Tel.Length == 9)
+            {
+                if (Regex.IsMatch(item.Tel, telExp))
+                {
+                    if (Regex.IsMatch(item.Email, emailExp))
+                    {
+                        if (Regex.IsMatch(item.Dui, duiExp))
+                        {
+                            return true;
+                        }
+                        else
+                            return false;
+                    }
+                    else
+                        return false;
+                }
+                else
+                    return false;
+            }
             else
                 return false;
         }
 
         public bool ValidateElegibleCitizen(Citizen item, List<CitizenxchronicDisease> TmpCxD)
         {
-            // Must complete validating function
-            if (item.Age >= 60 || item.IdInstitution is not null)
-                return true;
+            // Validating if elegible
+            if (item.Age >= 18)
+            {
+                if (item.Age >= 60 || item.IdInstitution is not null || TmpCxD.Count > 0)
+                    return true;
+                else
+                    return false;
+            }
             else
                 return false;
         }

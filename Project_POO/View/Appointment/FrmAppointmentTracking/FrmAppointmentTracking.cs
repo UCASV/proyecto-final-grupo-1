@@ -279,13 +279,13 @@ namespace Project_POO.View
             var pending = true;
 
             DateTime today = DateTime.Now;
-            today = ChangeTime(today, 7);
+            today = _appointmentS.ChangeTime(today, 7);
             DateTime appointmentDate = today.AddDays(42);
 
             do
             {
                 // If selected date alredy has an appointment it changes to the next one
-                if (_appointmentS.CountAppointmentsByDate(appointmentDate) > 1)
+                if (_appointmentS.CountAppointmentsByDate(appointmentDate) >= 1)
                 {
                     appointmentDate = appointmentDate.AddDays(1);
                 }
@@ -295,19 +295,6 @@ namespace Project_POO.View
             while (pending);
 
             return appointmentDate;
-        }
-
-        public DateTime ChangeTime(DateTime dateTime, int hours, int minutes = 0, int seconds = 0, int milliseconds = 0)
-        {
-            return new DateTime(
-                dateTime.Year,
-                dateTime.Month,
-                dateTime.Day,
-                hours,
-                minutes,
-                seconds,
-                milliseconds,
-                dateTime.Kind);
         }
 
         private void btn_Create_Appointment_Click(object sender, EventArgs e)
@@ -380,9 +367,9 @@ namespace Project_POO.View
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            String text = String.Format("Comrpobante de cita \n" +
-                "Nombre: {0}\nFecha y hora: {1}\nCentro de vacunacion: {2}",
-                lbl_CName.Text, lbl_Time_Appointment_Print.Text, lbl_CenterAsigned.Text);
+            String text = String.Format("Comrpobante de cita - Vacuna COVID\n" +
+                "Nombre: {0}\n DUI: {1}\nFecha y hora: {2}\nCentro de vacunacion: {3}",
+                lbl_CName.Text, lbl_CDUI.Text, lbl_Time_Appointment_Print.Text, lbl_CenterAsigned.Text);
 
             e.Graphics.DrawImage(Properties.Resources.vaccine, new PointF(100, 100));
             e.Graphics.DrawString(text, new Font("Century Gothic", 14, FontStyle.Bold), Brushes.Black, new PointF(100, 350));

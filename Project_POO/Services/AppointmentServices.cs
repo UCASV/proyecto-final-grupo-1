@@ -79,6 +79,19 @@ namespace Project_POO.Services
             _context.SaveChanges();
         }
 
+        public DateTime ChangeTime(DateTime dateTime, int hours, int minutes = 0, int seconds = 0, int milliseconds = 0)
+        {
+            return new DateTime(
+                dateTime.Year,
+                dateTime.Month,
+                dateTime.Day,
+                hours,
+                minutes,
+                seconds,
+                milliseconds,
+                dateTime.Kind);
+        }
+
         // Extra functions for stadistics module
 
         public int TotalVaccinatedUsers(int type = 1)
