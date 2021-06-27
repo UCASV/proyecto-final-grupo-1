@@ -16,7 +16,6 @@ namespace Proyect_POO
         private Center LocalCenter;
         private int VaccinationCenter;
 
-        // private EmployeeServices _employeeS;
         private InstitutionServices _institutionS;
         private CenterServices _centerS;
         private AppointmentServices _appointmentS;
@@ -36,7 +35,6 @@ namespace Proyect_POO
             VaccinationCenter = 1;
 
             // Init services 
-            // _employeeS = new EmployeeServices();
             _institutionS = new InstitutionServices();
             _centerS = new CenterServices();
             _appointmentS = new AppointmentServices();
@@ -57,12 +55,9 @@ namespace Proyect_POO
             // Create a new user ang get its DUI
             var tmpDUI = CreateUser();
 
-            if (tmpDUI != "error")
+            if (tmpDUI != "exists")
             {
-                // Get DateTime -> temp function
-                var appointmentDate = GetAppointmentDate();
-
-                try
+                if (tmpDUI != "error")
                 {
                     var tmpAppointment = new Appointment(tmpDUI, LocalEmployee.Id, LocalCenter.Id,
                         VaccinationCenter, appointmentDate, 1);
@@ -76,10 +71,37 @@ namespace Proyect_POO
                 {
                     MessageBox.Show(exception.Message);
                     throw;
+                    if (tmpDUI != "not-elegible")
+                    {
+                        // Get DateTime -> temp function
+                        var appointmentDate = GetAppointmentDate();
+
+                        try
+                        {
+                            // Select next vaccination center
+                            DefineVaccinationCenter();
+
+                            var tmpAppointment = new Appointment(tmpDUI, LocalEmployee.Id, LocalCenter.Id,
+                                VaccinationCenter, appointmentDate, 1);
+                            _appointmentS.Create(tmpAppointment);
+
+                            MessageBox.Show("Cita agregada con exito");
+                        }
+                        catch (Exception exception)
+                        {
+                            MessageBox.Show(exception.Message);
+                            throw;
+                        }
+                    }
+                    else
+                        MessageBox.Show("Usuario no elegible para la vacunación");
                 }
+                else
+                    MessageBox.Show("Verifique que la información tenga el formato estipulado");
             }
             else
                 MessageBox.Show("Error creating user", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El usuario con este DUI ya tiene una cita");
         }
 
         private DateTime GetAppointmentDate()
@@ -87,13 +109,13 @@ namespace Proyect_POO
             var pending = true;
 
             DateTime today = DateTime.Now;
-            today = ChangeTime(today, 7);
+            today = _appointmentS.ChangeTime(today, 7);
             DateTime appointmentDate = today.AddDays(1);
 
             do
             {
                 // If selected date alredy has an appointment it changes to the next one
-                if (_appointmentS.CountAppointmentsByDate(appointmentDate) > 1)
+                if (_appointmentS.CountAppointmentsByDate(appointmentDate) >= 1)
                 {
                     appointmentDate = appointmentDate.AddDays(1);
                 }
@@ -105,26 +127,24 @@ namespace Proyect_POO
             return appointmentDate;
         }
 
-        private void DefineNextVaccinationCenter()
+        private void DefineVaccinationCenter()
         {
             // Define next vaccination center based on last insert
             var appointmentsList = _appointmentS.GetAll();
+            var availableCenter = _centerS.GetByType(2);
 
-            if (appointmentsList.Count != 0)
-            {
-                var lastItem = appointmentsList[appointmentsList.Count - 1];
-                if (lastItem.IdVaccinationCenter < appointmentsList.Count)
-                    VaccinationCenter++;
-                else
-                    VaccinationCenter = 1;
-            }
+            if (appointmentsList.Count % 2 == 0)
+                VaccinationCenter = availableCenter[0].Id;
             else
-                VaccinationCenter = 1;
+                VaccinationCenter = availableCenter[1].Id;
         }
 
         private string CreateUser()
         {
-            // Pending -> input data validation for format...
+            // Verify if user exists
+            if (_citzenS.VerifyICitizenExists(txt_DUI.Text)) 
+                return "exists";
+
             // Get citizen institution
             var tmpInstitution = (int)cmb_TypeDoc.SelectedValue;
             int? citizenInstitution = (tmpInstitution.Equals(13)) ? null : tmpInstitution;
@@ -141,9 +161,6 @@ namespace Proyect_POO
             var tmpCitizen = new Citizen(txt_DUI.Text, txt_Name.Text, txt_Address.Text,
                 txt_Tel.Text, txt_Email.Text, years, citizenInstitution);
 
-            // Create diseases list based on selections
-            // var chronicDiseaseS = new ChronicDiseaseServices();
-            // var diseases = chronicDiseaseS.GetAll();
 
             List<CitizenxchronicDisease> tmpCxD = new List<CitizenxchronicDisease>();
             var selectedDiseases = clb_CD.CheckedItems;
@@ -151,7 +168,6 @@ namespace Proyect_POO
             foreach (var item in selectedDiseases)
             {
                 var tmpItem = (ChronicDisease)item;
-                // MessageBox.Show($"I: {tmpItem.Id} Item: {tmpItem.ChName}");
                 tmpCxD.Add(new CitizenxchronicDisease(tmpCitizen.Dui, tmpItem.Id));
             }
 
@@ -164,7 +180,7 @@ namespace Proyect_POO
                     return tmpCitizen.Dui;
                 }
                 else
-                    return "error";
+                    return "not-elegible";
             }
             else
                 return "error";
@@ -195,22 +211,13 @@ namespace Proyect_POO
             clb_CD.ValueMember = "Id";
         }
 
-        public DateTime ChangeTime(DateTime dateTime, int hours, int minutes = 0, int seconds = 0, int milliseconds = 0)
-        {
-            return new DateTime(
-                dateTime.Year,
-                dateTime.Month,
-                dateTime.Day,
-                hours,
-                minutes,
-                seconds,
-                milliseconds,
-                dateTime.Kind);
-        }
-
         private void btn_Clean_Click(object sender, EventArgs e)
         {
             // Pending -> Clean form 
+            txt_Name.Clear();
+            txt_Address.Clear();
+            txt_DUI.Clear();
+            txt_Tel.Clear();
         }
 
         private void btn_Create_Appointment_Click(object sender, EventArgs e)
