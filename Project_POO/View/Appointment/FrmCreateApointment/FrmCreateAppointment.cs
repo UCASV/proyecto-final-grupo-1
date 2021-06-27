@@ -43,12 +43,6 @@ namespace Proyect_POO
             _citzenS = new CitizenServices();
             _chronicDiseaseServices = new ChronicDiseaseServices();
 
-            // set employee info
-            // LocalEmployee = _employeeS.GetEmployee(1);
-
-            // set center info
-            // LocalCenter = _centerS.GetCenter(1);
-
             // Set max birth day
             dtp_BirthDate.MaxDate = DateTime.Now;
 
@@ -113,10 +107,18 @@ namespace Proyect_POO
 
         private void DefineNextVaccinationCenter()
         {
-            // Define next vaccination center
-            var vaccinationCenters = _centerS.GetByType(2);
-            VaccinationCenter++;
-            if (VaccinationCenter > vaccinationCenters.Count)
+            // Define next vaccination center based on last insert
+            var appointmentsList = _appointmentS.GetAll();
+
+            if (appointmentsList.Count != 0)
+            {
+                var lastItem = appointmentsList[appointmentsList.Count - 1];
+                if (lastItem.IdVaccinationCenter < appointmentsList.Count)
+                    VaccinationCenter++;
+                else
+                    VaccinationCenter = 1;
+            }
+            else
                 VaccinationCenter = 1;
         }
 

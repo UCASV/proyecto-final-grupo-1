@@ -1030,7 +1030,7 @@ namespace Project_POO.View
             this.tlp_ReportSE.ColumnCount = 3;
             this.tlp_ReportSE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.26177F));
             this.tlp_ReportSE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 68.73823F));
-            this.tlp_ReportSE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 248F));
+            this.tlp_ReportSE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 257F));
             this.tlp_ReportSE.Controls.Add(this.btn_Create_Appointment, 2, 0);
             this.tlp_ReportSE.Controls.Add(this.lbl_NameSE, 0, 0);
             this.tlp_ReportSE.Controls.Add(this.lbl_DurationSE, 0, 1);
@@ -1056,11 +1056,11 @@ namespace Project_POO.View
             this.btn_Create_Appointment.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Create_Appointment.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Create_Appointment.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_Create_Appointment.Location = new System.Drawing.Point(570, 4);
+            this.btn_Create_Appointment.Location = new System.Drawing.Point(561, 4);
             this.btn_Create_Appointment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_Create_Appointment.Name = "btn_Create_Appointment";
             this.tlp_ReportSE.SetRowSpan(this.btn_Create_Appointment, 2);
-            this.btn_Create_Appointment.Size = new System.Drawing.Size(243, 88);
+            this.btn_Create_Appointment.Size = new System.Drawing.Size(252, 88);
             this.btn_Create_Appointment.TabIndex = 17;
             this.btn_Create_Appointment.Text = "Reportar";
             this.btn_Create_Appointment.UseVisualStyleBackColor = false;
@@ -1075,7 +1075,7 @@ namespace Project_POO.View
             this.lbl_NameSE.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.lbl_NameSE.Location = new System.Drawing.Point(3, 0);
             this.lbl_NameSE.Name = "lbl_NameSE";
-            this.lbl_NameSE.Size = new System.Drawing.Size(171, 48);
+            this.lbl_NameSE.Size = new System.Drawing.Size(168, 48);
             this.lbl_NameSE.TabIndex = 0;
             this.lbl_NameSE.Text = "Efecto generado";
             this.lbl_NameSE.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1089,7 +1089,7 @@ namespace Project_POO.View
             this.lbl_DurationSE.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.lbl_DurationSE.Location = new System.Drawing.Point(3, 48);
             this.lbl_DurationSE.Name = "lbl_DurationSE";
-            this.lbl_DurationSE.Size = new System.Drawing.Size(171, 48);
+            this.lbl_DurationSE.Size = new System.Drawing.Size(168, 48);
             this.lbl_DurationSE.TabIndex = 1;
             this.lbl_DurationSE.Text = "Duración";
             this.lbl_DurationSE.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1101,10 +1101,10 @@ namespace Project_POO.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.nud_DurationSE.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nud_DurationSE.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.nud_DurationSE.Location = new System.Drawing.Point(180, 52);
+            this.nud_DurationSE.Location = new System.Drawing.Point(177, 52);
             this.nud_DurationSE.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.nud_DurationSE.Name = "nud_DurationSE";
-            this.nud_DurationSE.Size = new System.Drawing.Size(384, 32);
+            this.nud_DurationSE.Size = new System.Drawing.Size(378, 32);
             this.nud_DurationSE.TabIndex = 3;
             // 
             // cmb_NameSE
@@ -1113,9 +1113,9 @@ namespace Project_POO.View
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmb_NameSE.FormattingEnabled = true;
-            this.cmb_NameSE.Location = new System.Drawing.Point(180, 3);
+            this.cmb_NameSE.Location = new System.Drawing.Point(177, 3);
             this.cmb_NameSE.Name = "cmb_NameSE";
-            this.cmb_NameSE.Size = new System.Drawing.Size(384, 31);
+            this.cmb_NameSE.Size = new System.Drawing.Size(378, 31);
             this.cmb_NameSE.TabIndex = 18;
             // 
             // lbl_SE

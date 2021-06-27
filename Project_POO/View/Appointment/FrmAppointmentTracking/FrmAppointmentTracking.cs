@@ -86,19 +86,9 @@ namespace Project_POO.View
         {
             // Get one appointment info
             var tmpAppointment = _appointmentS.GetAppointment(tmpAppointmentId);
-            var tmpDiseases = _citizenS.GetDiseasesByUser(tmpAppointment.IdCitizenNavigation.Dui);
-            var tmpEffects = _appointmentS.GetAppointmentEffects(tmpAppointment.Id);
-
+     
             // Store current appointment
             tmpAppointmentObj = tmpAppointment;
-
-            // Mapping diseases
-            List<CitizenxchronicDiseaseVm> mapedDiseases = new List<CitizenxchronicDiseaseVm>();
-            tmpDiseases.ForEach(x => mapedDiseases.Add(ProjectMapper.MapCitizenxchronicDiseaseToVm(x)));
-
-            // Mapping effects
-            List<AppointmentxsecondaryEffectVm> mapedEffects = new List<AppointmentxsecondaryEffectVm>();
-            tmpEffects.ForEach(x => mapedEffects.Add(ProjectMapper.MapAppointmentxsecondaryEffectToVm(x)));
 
             // Set info
             lbl_Citizen_Name.Text = tmpAppointment.IdCitizenNavigation.CName;
@@ -113,42 +103,41 @@ namespace Project_POO.View
             else
                 lbl_CitizenInstitution.Text = "No especificado";
 
-            dgv_CD.DataSource = null;
-            dgv_CD.DataSource = mapedDiseases;
+            // Load citizen diseases
+            LoadCitizenDiseases();
 
             lbl_status.Text = (tmpAppointment.AStatus is false) ? "Pendiente" : "Finalizada";
             lbl_Name_Employee.Text = tmpAppointment.IdEmployeeNavigation.EName;
             lbl_Cabin_N.Text = tmpAppointment.IdCabinNavigation.CenterAddress;
             lbl_Hour.Text = tmpAppointment.ADatetime.ToString();
 
-            dgv_SE.DataSource = null;
-            dgv_SE.DataSource = mapedEffects;
-
             // Load secondary effects
             LoadSecondaryEffects();
+            // Appointment secondary effects
+            LoadCxASecondaryEffects();
 
-            // Enable or disable selection boxes and add secondary effects -> must be completed...
-            if (tmpAppointmentObj.AStatus is true)
+            // Enable or disable selection boxes and add secondary effects
+            if (tmpAppointmentObj.AStatus.Equals(false))
+            {
+                if (tmpAppointmentObj.StartTime is not null)
+                {
+                    cbx_Arrived.Enabled = false;
+
+                    cbx_Vaccinated.Visible = true;
+                    cbx_Vaccinated.Enabled = true;
+                }
+                else
+                {
+                    cbx_Arrived.Enabled = true;
+                    cbx_Vaccinated.Visible = false;
+                }
+            }
+            else 
             {
                 cbx_Arrived.Enabled = false;
-                // cbx_Arrived.Checked = true;
 
                 cbx_Vaccinated.Visible = true;
                 cbx_Vaccinated.Enabled = false;
-                // cbx_Vaccinated.Checked = true;
-            }
-            else if (tmpAppointmentObj.StartTime is not null)
-            {
-                cbx_Arrived.Enabled = false;
-                // cbx_Arrived.Checked = true;
-
-                cbx_Vaccinated.Visible = true;
-                cbx_Vaccinated.Enabled = true;
-            }
-            else
-            {
-                cbx_Arrived.Enabled = true;
-                cbx_Vaccinated.Visible = false;
             }
 
             // Change tab
@@ -159,14 +148,9 @@ namespace Project_POO.View
         {
             // Get one appointment info
             var tmpAppointment = _appointmentS.GetAppointment(tmpAppointmentId);
-            var tmpDiseases = _citizenS.GetDiseasesByUser(tmpAppointment.IdCitizenNavigation.Dui);
 
             // Store current appointment
             tmpAppointmentObj = tmpAppointment;
-
-            // Mapping diseases
-            List<CitizenxchronicDiseaseVm> mapedDiseases = new List<CitizenxchronicDiseaseVm>();
-            tmpDiseases.ForEach(x => mapedDiseases.Add(ProjectMapper.MapCitizenxchronicDiseaseToVm(x)));
 
             // Set info
             lbl_CName.Text = tmpAppointment.IdCitizenNavigation.CName;
@@ -181,8 +165,8 @@ namespace Project_POO.View
             else
                 lbl_CInstitution.Text = "No especificado";
 
-            dgv_.DataSource = null;
-            dgv_.DataSource = mapedDiseases;
+            // Load citizen diseases
+            LoadCitizenDiseases();
 
             lbl_Employee_Name_Print.Text = tmpAppointment.IdEmployeeNavigation.EName;
             lbl_Cabin_Print.Text = tmpAppointment.IdCabinNavigation.CenterAddress;
@@ -191,6 +175,35 @@ namespace Project_POO.View
 
             // Change tab
             tbc_AT.SelectedIndex = 2;
+        }
+
+        private void LoadCxASecondaryEffects()
+        {
+            // Appointment secondary effects
+            var tmpEffects = _appointmentS.GetAppointmentEffects(tmpAppointmentObj.Id);
+
+            // Mapping effects
+            List<AppointmentxsecondaryEffectVm> mapedEffects = new List<AppointmentxsecondaryEffectVm>();
+            tmpEffects.ForEach(x => mapedEffects.Add(ProjectMapper.MapAppointmentxsecondaryEffectToVm(x)));
+
+            dgv_SE.DataSource = null;
+            dgv_SE.DataSource = mapedEffects;
+        }
+
+        private void LoadCitizenDiseases()
+        {
+            // Citizen diseases
+            var tmpDiseases = _citizenS.GetDiseasesByUser(tmpAppointmentObj.IdCitizenNavigation.Dui);
+
+            // Mapping diseases
+            List<CitizenxchronicDiseaseVm> mapedDiseases = new List<CitizenxchronicDiseaseVm>();
+            tmpDiseases.ForEach(x => mapedDiseases.Add(ProjectMapper.MapCitizenxchronicDiseaseToVm(x)));
+
+            dgv_CD.DataSource = null;
+            dgv_CD.DataSource = mapedDiseases;
+
+            dgv_.DataSource = null;
+            dgv_.DataSource = mapedDiseases;
         }
 
         private void cbx_Arrived_CheckedChanged(object sender, EventArgs e)
@@ -205,6 +218,12 @@ namespace Project_POO.View
             // Update start time 
             tmpAppointmentObj.StartTime = currentTime;
             _appointmentS.Update(tmpAppointmentObj);
+
+            // Update appointment info
+            if (LocalEmployee.IdTypeEmployee == 3 || LocalEmployee.IdTypeEmployee == 4)
+                SetInfoForVaccinationCenter();
+            else
+                SetInfoForCabinCenter();
 
             MessageBox.Show("Hora de llegada actualizada");
         }
@@ -222,31 +241,95 @@ namespace Project_POO.View
             tmpAppointmentObj.AStatus = true;
             _appointmentS.Update(tmpAppointmentObj);
 
+            // Update appointment info
+            if (LocalEmployee.IdTypeEmployee == 3 || LocalEmployee.IdTypeEmployee == 4)
+                SetInfoForVaccinationCenter();
+            else
+                SetInfoForCabinCenter();
+
             // Create second appointment is pending...
+            if (tmpAppointmentObj.IdTypeAppointment.Equals(1))
+                CreateSecondAppointment();
 
             MessageBox.Show("Hora de vacunacion actualizada");
+        }
+
+        private void CreateSecondAppointment()
+        {
+            // Get DateTime -> temp function
+            var appointmentDate = GetAppointmentDate();
+
+            try
+            {
+                var tmpAppointment = new Appointment(tmpAppointmentObj.IdCitizen, LocalEmployee.Id, LocalCenter.Id,
+                    tmpAppointmentObj.IdVaccinationCenter, appointmentDate, 2);
+                _appointmentS.Create(tmpAppointment);
+
+                MessageBox.Show("Cita agregada con exito");
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+                throw;
+            }
+        }
+
+        private DateTime GetAppointmentDate()
+        {
+            var pending = true;
+
+            DateTime today = DateTime.Now;
+            today = ChangeTime(today, 7);
+            DateTime appointmentDate = today.AddDays(42);
+
+            do
+            {
+                // If selected date alredy has an appointment it changes to the next one
+                if (_appointmentS.CountAppointmentsByDate(appointmentDate) > 1)
+                {
+                    appointmentDate = appointmentDate.AddDays(1);
+                }
+                else
+                    pending = false;
+            }
+            while (pending);
+
+            return appointmentDate;
+        }
+
+        public DateTime ChangeTime(DateTime dateTime, int hours, int minutes = 0, int seconds = 0, int milliseconds = 0)
+        {
+            return new DateTime(
+                dateTime.Year,
+                dateTime.Month,
+                dateTime.Day,
+                hours,
+                minutes,
+                seconds,
+                milliseconds,
+                dateTime.Kind);
         }
 
         private void btn_Create_Appointment_Click(object sender, EventArgs e)
         {
             var tmpEffects = _appointmentS.GetAppointmentEffects(tmpAppointmentObj.Id);
 
+            // Add secondary effect
+            int tmpEffectSelection = (int)cmb_NameSE.SelectedValue;
+
             // Validate if secondary effect already exist in this appointment
-            if (!tmpEffects.Contains(cmb_NameSE.SelectedItem)) // fails
+            if (ValidateSecondaryEffectAdd(tmpEffects, tmpEffectSelection)) 
             {
                 // Validate secondary effect duration
                 if ((int)nud_DurationSE.Value > 0)
                 {
-                    // Add secondary effect
-                    int tmpEffectSelection = (int)cmb_NameSE.SelectedValue;
-
                     var newAppointmentEffect = new AppointmentxsecondaryEffect(tmpAppointmentObj.Id,
                         tmpEffectSelection, (int)nud_DurationSE.Value);
 
                     _appointmentS.SaveSecondaryEffects(newAppointmentEffect);
 
-                    // Refresh secondary effects
-                    LoadSecondaryEffects();
+                    // Refresh appointment secondary effects
+                    LoadCxASecondaryEffects();
 
                     MessageBox.Show("Efecto secundario agregado con exito");
                 }
@@ -257,8 +340,20 @@ namespace Project_POO.View
                 MessageBox.Show("Efecto secundario previamente registrado");
         }
 
+        private bool ValidateSecondaryEffectAdd(List<AppointmentxsecondaryEffect> tmpEffects, int currentEffect)
+        {
+            foreach (var x in tmpEffects)
+            {
+                if (x.IdSecondaryEffect.Equals(currentEffect))
+                    return false;
+            }
+
+            return true;
+        }
+
         private void LoadSecondaryEffects()
         {
+            // All secondary effects
             var secondaryEffects = _secondaryEffectS.GetAll();
 
             cmb_NameSE.DataSource = null;
