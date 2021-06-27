@@ -145,7 +145,7 @@ namespace Project_POO.View
                     cbx_Vaccinated.Visible = true;
                     cbx_Vaccinated.Enabled = true;
 
-                    btn_Create_Appointment.Enabled = true;
+                    btn_Create_Appointment.Enabled = false;
                 }
                 else
                 {
@@ -162,7 +162,7 @@ namespace Project_POO.View
                 cbx_Vaccinated.Visible = true;
                 cbx_Vaccinated.Enabled = false;
 
-                btn_Create_Appointment.Enabled = false;
+                btn_Create_Appointment.Enabled = true;
             }
 
             // Change tab
@@ -252,7 +252,7 @@ namespace Project_POO.View
                 else
                     SetInfoForCabinCenter();
 
-                MessageBox.Show("Hora de llegada actualizada");
+                MessageBox.Show("Hora de llegada actualizada", "Acción exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -281,7 +281,7 @@ namespace Project_POO.View
                 if (tmpAppointmentObj.IdTypeAppointment.Equals(1))
                     CreateSecondAppointment();
 
-                MessageBox.Show("Hora de vacunacion actualizada");
+                MessageBox.Show("Hora de vacunacion actualizada", "Acción exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -296,7 +296,7 @@ namespace Project_POO.View
                     tmpAppointmentObj.IdVaccinationCenter, appointmentDate, 2);
                 _appointmentS.Create(tmpAppointment);
 
-                MessageBox.Show("Cita agregada con exito");
+                MessageBox.Show("Cita agregada con exito", "Acción exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception exception)
             {
@@ -349,13 +349,13 @@ namespace Project_POO.View
                     // Refresh appointment secondary effects
                     LoadCxASecondaryEffects();
 
-                    MessageBox.Show("Efecto secundario agregado con exito");
+                    MessageBox.Show("Efecto secundario agregado con exito", "Acción exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
-                    MessageBox.Show("Duracion de efecto secundario no valida");
+                    MessageBox.Show("Duracion de efecto secundario no valida", "Error en la duración", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
-                MessageBox.Show("Efecto secundario previamente registrado");
+                MessageBox.Show("Efecto secundario previamente registrado", "Efecto repetido", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private bool ValidateSecondaryEffectAdd(List<AppointmentxsecondaryEffect> tmpEffects, int currentEffect)
@@ -436,21 +436,6 @@ namespace Project_POO.View
 
             dgv_Appointments.DataSource = null;
             dgv_Appointments.DataSource = mapedAppointments;
-        }
-
-        private void tbc_AT_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void tlp_AT_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

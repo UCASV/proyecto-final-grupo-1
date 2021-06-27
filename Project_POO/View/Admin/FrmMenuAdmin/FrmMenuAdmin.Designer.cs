@@ -232,7 +232,6 @@ namespace Project_POO.ViewModel
         private System.Windows.Forms.StatusStrip sts_Employee;
         private System.Windows.Forms.ToolStripStatusLabel lbl_WelcomeAdmin;
         private System.Windows.Forms.ToolStripStatusLabel lbl_EmployeeName;
-        private System.Windows.Forms.ToolStripStatusLabel lbl_TypeEmployee;
         private System.Windows.Forms.ToolStripStatusLabel lbl_AdminName;
         private System.Windows.Forms.ToolStripStatusLabel lbl_Admin;
     }

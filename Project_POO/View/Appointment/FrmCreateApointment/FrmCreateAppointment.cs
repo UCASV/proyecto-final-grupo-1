@@ -59,18 +59,6 @@ namespace Proyect_POO
             {
                 if (tmpDUI != "error")
                 {
-                    var tmpAppointment = new Appointment(tmpDUI, LocalEmployee.Id, LocalCenter.Id,
-                        VaccinationCenter, appointmentDate, 1);
-                    _appointmentS.Create(tmpAppointment);
-
-                    DefineNextVaccinationCenter();
-
-                    MessageBox.Show("Cita agregada con exito", "Acción exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch (Exception exception)
-                {
-                    MessageBox.Show(exception.Message);
-                    throw;
                     if (tmpDUI != "not-elegible")
                     {
                         // Get DateTime -> temp function
@@ -85,23 +73,24 @@ namespace Proyect_POO
                                 VaccinationCenter, appointmentDate, 1);
                             _appointmentS.Create(tmpAppointment);
 
-                            MessageBox.Show("Cita agregada con exito");
+                            // Success message
+                            MessageBox.Show("Cita agregada con exito", "Acción exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Close();
                         }
                         catch (Exception exception)
                         {
-                            MessageBox.Show(exception.Message);
+                            MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             throw;
                         }
                     }
                     else
-                        MessageBox.Show("Usuario no elegible para la vacunación");
+                        MessageBox.Show("Usuario no elegible para la vacunación", "Información incorrecta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
-                    MessageBox.Show("Verifique que la información tenga el formato estipulado");
+                    MessageBox.Show("Verifique que la información tenga el formato estipulado", "Información incorrecta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
-                MessageBox.Show("Error creating user", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                MessageBox.Show("El usuario con este DUI ya tiene una cita");
+                MessageBox.Show("El usuario con este DUI ya tiene una cita", "Información incorrecta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private DateTime GetAppointmentDate()
@@ -142,7 +131,7 @@ namespace Proyect_POO
         private string CreateUser()
         {
             // Verify if user exists
-            if (_citzenS.VerifyICitizenExists(txt_DUI.Text)) 
+            if (_citzenS.VerifyICitizenExists(txt_DUI.Text))
                 return "exists";
 
             // Get citizen institution

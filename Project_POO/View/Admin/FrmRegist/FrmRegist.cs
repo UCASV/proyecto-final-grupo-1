@@ -147,6 +147,11 @@ namespace Project_POO
             Employee employee1 = new Employee(txt_Name.Text, txt_Email.Text, encryptPass, txt_Address.Text, TypeEmployee);
             employeenew.Create(employee1);
 
+            // Success message
+            MessageBox.Show("Empleado registrado exitosamente", "Acción exitosa", MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
+            this.Close();
+
         }
 
     }

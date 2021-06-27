@@ -89,7 +89,7 @@ namespace Project_POO.View.Admin.FrmCreateCenter
             enable_btn_Create();
         }
 
-        private int CreateCenter()
+        private void CreateCenter()
         {
             // Casting cmb_TypeCenter.SelectedValue to get the ID
             var tmpType = (int)cmb_TypeCenter.SelectedValue;
@@ -104,10 +104,13 @@ namespace Project_POO.View.Admin.FrmCreateCenter
             if (_centerS.ValidateCenter(tmpCenter))
             {
                 _centerS.Create(tmpCenter);
-                return tmpCenter.Id;
+                MessageBox.Show("Centro añadido exitosamente", "Acción exitosa", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                this.Close();
             }
             else
-                return 0;
+                MessageBox.Show("Error al añadir el centro", "Hubo un error", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
         }
 
 
