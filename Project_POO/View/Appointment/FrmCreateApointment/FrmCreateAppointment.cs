@@ -70,7 +70,7 @@ namespace Proyect_POO
 
                     DefineNextVaccinationCenter();
 
-                    MessageBox.Show("Cita agregada con exito");
+                    MessageBox.Show("Cita agregada con exito", "Acción exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception exception)
                 {
@@ -79,7 +79,7 @@ namespace Proyect_POO
                 }
             }
             else
-                MessageBox.Show("Error creating user");
+                MessageBox.Show("Error creating user", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private DateTime GetAppointmentDate()
@@ -126,7 +126,7 @@ namespace Proyect_POO
         {
             // Pending -> input data validation for format...
             // Get citizen institution
-            var tmpInstitution = (int)txt_TypeDoc.SelectedValue;
+            var tmpInstitution = (int)cmb_TypeDoc.SelectedValue;
             int? citizenInstitution = (tmpInstitution.Equals(13)) ? null : tmpInstitution;
 
             // Get reference dates
@@ -179,9 +179,9 @@ namespace Proyect_POO
             var defOption = new Institution(13, "No especificado");
             institutions.Insert(0, defOption);
 
-            txt_TypeDoc.DataSource = institutions;
-            txt_TypeDoc.ValueMember = "Id";
-            txt_TypeDoc.DisplayMember = "IName";
+            cmb_TypeDoc.DataSource = institutions;
+            cmb_TypeDoc.ValueMember = "Id";
+            cmb_TypeDoc.DisplayMember = "IName";
         }
 
         private void LoadDiseases()

@@ -7,6 +7,12 @@ namespace Project_POO.ProjectPOOContext
 {
     public partial class Center
     {
+        private string text1;
+        private string text2;
+        private string text3;
+        private string text4;
+        private string text5;
+
         public int Id { get; set; }
         public string CenterAddress { get; set; }
         public string Tel { get; set; }
@@ -25,6 +31,15 @@ namespace Project_POO.ProjectPOOContext
             AppointmentIdCabinNavigations = new HashSet<Appointment>();
             AppointmentIdVaccinationCenterNavigations = new HashSet<Appointment>();
             Employeexcenters = new HashSet<Employeexcenter>();
+        }
+
+        public Center(string CenterAddress, string Tel, string CenterEmail, int IdCenterType, int IdEmployeeInCharge)
+        {
+            this.CenterAddress = CenterAddress;
+            this.Tel = Tel;
+            this.CenterEmail = CenterEmail;
+            this.IdCenterType = IdCenterType;
+            this.IdEmployeeInCharge = IdEmployeeInCharge;
         }
     }
 }

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Project_POO.ProjectPOOContext;
 using Project_POO.Services;
 using Project_POO.View;
+using Project_POO.View.Admin.FrmCreateCenter;
 
 namespace Project_POO.ViewModel
 {
@@ -35,16 +36,24 @@ namespace Project_POO.ViewModel
             lbl_AdminName.Text = employeeObj.EName;
         }
 
+        // To go to the forms for admin
         private void btn_RegistEmployee_Click(object sender, EventArgs e)
         {
             // Admin new window
-            FrmRegist window = new FrmRegist();
+            FrmRegist window = new FrmRegist(employeeObj);
             this.Hide();
             window.ShowDialog();
             this.Show();
 
         }
-
+        private void btn_RegistCenters_Click(object sender, EventArgs e)
+        {
+            // Admin new window
+            FrmCreateCenter window = new FrmCreateCenter(employeeObj);
+            this.Hide();
+            window.ShowDialog();
+            this.Show();
+        }
         private void btn_Statistics_Click(object sender, EventArgs e)
         {
             // Admin new window
@@ -53,5 +62,6 @@ namespace Project_POO.ViewModel
             window.ShowDialog();
             this.Show();
         }
+
     }
 }

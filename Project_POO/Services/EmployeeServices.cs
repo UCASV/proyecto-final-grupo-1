@@ -54,6 +54,11 @@ namespace Project_POO.Services
                 .Where(x => x.Email.Equals(email) && x.Pass.Equals(pass))
                 .SingleOrDefault();
         }
-        
+        public Employee GetEmployeeInCreateCenter(int TypeCenterE)
+        {
+            return _context.Employees
+                .Where(x => x.IdTypeEmployee.Equals(2*(TypeCenterE)-1))
+                .SingleOrDefault();
+        }
     }
 }

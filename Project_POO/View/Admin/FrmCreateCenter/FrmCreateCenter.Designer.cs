@@ -30,20 +30,20 @@ namespace Project_POO.View.Admin.FrmCreateCenter
         private void InitializeComponent()
         {
             this.tlp_CreateCenter = new System.Windows.Forms.TableLayoutPanel();
+            this.txt_TelCenter = new System.Windows.Forms.TextBox();
             this.img_AdminCreateCenter = new System.Windows.Forms.PictureBox();
             this.lbl_Title_CreateCenter = new System.Windows.Forms.Label();
             this.lbl_Title_CenterAddress = new System.Windows.Forms.Label();
-            this.lbl_Title_CenterEmail = new System.Windows.Forms.Label();
             this.txt_AddressCenter = new System.Windows.Forms.TextBox();
             this.txt_EmailCenter = new System.Windows.Forms.TextBox();
+            this.lbl_Title_CenterEmail = new System.Windows.Forms.Label();
             this.lbl_Title_TelCenter = new System.Windows.Forms.Label();
-            this.txt_TelCenter = new System.Windows.Forms.TextBox();
-            this.lbl_Title_TypeCenter = new System.Windows.Forms.Label();
-            this.cmb_TypeCenter = new System.Windows.Forms.ComboBox();
-            this.cmb_EmployeeInChargeCenter = new System.Windows.Forms.ComboBox();
-            this.lbl_Title_EmployeeInCharge = new System.Windows.Forms.Label();
             this.btn_RegistCenter = new System.Windows.Forms.Button();
             this.btn_Clean = new System.Windows.Forms.Button();
+            this.lbl_Title_TypeCenter = new System.Windows.Forms.Label();
+            this.cmb_TypeCenter = new System.Windows.Forms.ComboBox();
+            this.lbl_Title_EmployeeInCharge = new System.Windows.Forms.Label();
+            this.cmb_EmployeeInChargeCenter = new System.Windows.Forms.ComboBox();
             this.sts_Admin = new System.Windows.Forms.StatusStrip();
             this.lbl_AdminName = new System.Windows.Forms.ToolStripStatusLabel();
             this.lbl_Admin = new System.Windows.Forms.ToolStripStatusLabel();
@@ -70,12 +70,12 @@ namespace Project_POO.View.Admin.FrmCreateCenter
             this.tlp_CreateCenter.Controls.Add(this.txt_EmailCenter, 4, 3);
             this.tlp_CreateCenter.Controls.Add(this.lbl_Title_CenterEmail, 3, 3);
             this.tlp_CreateCenter.Controls.Add(this.lbl_Title_TelCenter, 1, 3);
-            this.tlp_CreateCenter.Controls.Add(this.lbl_Title_TypeCenter, 3, 4);
-            this.tlp_CreateCenter.Controls.Add(this.cmb_TypeCenter, 4, 4);
-            this.tlp_CreateCenter.Controls.Add(this.lbl_Title_EmployeeInCharge, 1, 4);
-            this.tlp_CreateCenter.Controls.Add(this.cmb_EmployeeInChargeCenter, 2, 4);
             this.tlp_CreateCenter.Controls.Add(this.btn_RegistCenter, 5, 5);
             this.tlp_CreateCenter.Controls.Add(this.btn_Clean, 1, 5);
+            this.tlp_CreateCenter.Controls.Add(this.lbl_Title_TypeCenter, 1, 4);
+            this.tlp_CreateCenter.Controls.Add(this.cmb_TypeCenter, 2, 4);
+            this.tlp_CreateCenter.Controls.Add(this.lbl_Title_EmployeeInCharge, 3, 4);
+            this.tlp_CreateCenter.Controls.Add(this.cmb_EmployeeInChargeCenter, 4, 4);
             this.tlp_CreateCenter.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlp_CreateCenter.Location = new System.Drawing.Point(0, 0);
             this.tlp_CreateCenter.Name = "tlp_CreateCenter";
@@ -89,6 +89,20 @@ namespace Project_POO.View.Admin.FrmCreateCenter
             this.tlp_CreateCenter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.150328F));
             this.tlp_CreateCenter.Size = new System.Drawing.Size(800, 450);
             this.tlp_CreateCenter.TabIndex = 0;
+            // 
+            // txt_TelCenter
+            // 
+            this.txt_TelCenter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_TelCenter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_TelCenter.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_TelCenter.Font = new System.Drawing.Font("Century Gothic", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txt_TelCenter.Location = new System.Drawing.Point(163, 229);
+            this.txt_TelCenter.MaxLength = 9;
+            this.txt_TelCenter.Name = "txt_TelCenter";
+            this.txt_TelCenter.Size = new System.Drawing.Size(234, 28);
+            this.txt_TelCenter.TabIndex = 29;
+            this.txt_TelCenter.TextChanged += new System.EventHandler(this.txt_TelCenter_TextChanged);
             // 
             // img_AdminCreateCenter
             // 
@@ -134,20 +148,6 @@ namespace Project_POO.View.Admin.FrmCreateCenter
             this.lbl_Title_CenterAddress.Text = "Dirección";
             this.lbl_Title_CenterAddress.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // lbl_Title_CenterEmail
-            // 
-            this.lbl_Title_CenterEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_Title_CenterEmail.AutoSize = true;
-            this.lbl_Title_CenterEmail.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_Title_CenterEmail.Location = new System.Drawing.Point(403, 187);
-            this.lbl_Title_CenterEmail.Name = "lbl_Title_CenterEmail";
-            this.lbl_Title_CenterEmail.Size = new System.Drawing.Size(115, 73);
-            this.lbl_Title_CenterEmail.TabIndex = 25;
-            this.lbl_Title_CenterEmail.Text = "Email del centro";
-            this.lbl_Title_CenterEmail.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
             // txt_AddressCenter
             // 
             this.txt_AddressCenter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -161,6 +161,7 @@ namespace Project_POO.View.Admin.FrmCreateCenter
             this.txt_AddressCenter.Name = "txt_AddressCenter";
             this.txt_AddressCenter.Size = new System.Drawing.Size(228, 28);
             this.txt_AddressCenter.TabIndex = 26;
+            this.txt_AddressCenter.TextChanged += new System.EventHandler(this.txt_AddressCenter_TextChanged);
             // 
             // txt_EmailCenter
             // 
@@ -175,6 +176,21 @@ namespace Project_POO.View.Admin.FrmCreateCenter
             this.txt_EmailCenter.Name = "txt_EmailCenter";
             this.txt_EmailCenter.Size = new System.Drawing.Size(228, 28);
             this.txt_EmailCenter.TabIndex = 27;
+            this.txt_EmailCenter.TextChanged += new System.EventHandler(this.txt_EmailCenter_TextChanged);
+            // 
+            // lbl_Title_CenterEmail
+            // 
+            this.lbl_Title_CenterEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Title_CenterEmail.AutoSize = true;
+            this.lbl_Title_CenterEmail.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_Title_CenterEmail.Location = new System.Drawing.Point(403, 187);
+            this.lbl_Title_CenterEmail.Name = "lbl_Title_CenterEmail";
+            this.lbl_Title_CenterEmail.Size = new System.Drawing.Size(115, 73);
+            this.lbl_Title_CenterEmail.TabIndex = 25;
+            this.lbl_Title_CenterEmail.Text = "Email del centro";
+            this.lbl_Title_CenterEmail.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // lbl_Title_TelCenter
             // 
@@ -189,78 +205,6 @@ namespace Project_POO.View.Admin.FrmCreateCenter
             this.lbl_Title_TelCenter.TabIndex = 28;
             this.lbl_Title_TelCenter.Text = "Teléfono del centro";
             this.lbl_Title_TelCenter.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // txt_TelCenter
-            // 
-            this.txt_TelCenter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_TelCenter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_TelCenter.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_TelCenter.Font = new System.Drawing.Font("Century Gothic", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_TelCenter.Location = new System.Drawing.Point(163, 229);
-            this.txt_TelCenter.MaxLength = 9;
-            this.txt_TelCenter.Name = "txt_TelCenter";
-            this.txt_TelCenter.Size = new System.Drawing.Size(234, 28);
-            this.txt_TelCenter.TabIndex = 29;
-            // 
-            // lbl_Title_TypeCenter
-            // 
-            this.lbl_Title_TypeCenter.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_Title_TypeCenter.AutoSize = true;
-            this.lbl_Title_TypeCenter.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_Title_TypeCenter.Location = new System.Drawing.Point(403, 260);
-            this.lbl_Title_TypeCenter.Name = "lbl_Title_TypeCenter";
-            this.lbl_Title_TypeCenter.Size = new System.Drawing.Size(115, 73);
-            this.lbl_Title_TypeCenter.TabIndex = 30;
-            this.lbl_Title_TypeCenter.Text = "Tipo de centro";
-            this.lbl_Title_TypeCenter.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // cmb_TypeCenter
-            // 
-            this.cmb_TypeCenter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmb_TypeCenter.BackColor = System.Drawing.Color.MintCream;
-            this.tlp_CreateCenter.SetColumnSpan(this.cmb_TypeCenter, 2);
-            this.cmb_TypeCenter.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmb_TypeCenter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmb_TypeCenter.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmb_TypeCenter.Font = new System.Drawing.Font("Century Gothic", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cmb_TypeCenter.FormattingEnabled = true;
-            this.cmb_TypeCenter.Location = new System.Drawing.Point(524, 296);
-            this.cmb_TypeCenter.Name = "cmb_TypeCenter";
-            this.cmb_TypeCenter.Size = new System.Drawing.Size(228, 29);
-            this.cmb_TypeCenter.TabIndex = 31;
-            // 
-            // cmb_EmployeeInChargeCenter
-            // 
-            this.cmb_EmployeeInChargeCenter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmb_EmployeeInChargeCenter.BackColor = System.Drawing.Color.MintCream;
-            this.cmb_EmployeeInChargeCenter.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmb_EmployeeInChargeCenter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmb_EmployeeInChargeCenter.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmb_EmployeeInChargeCenter.Font = new System.Drawing.Font("Century Gothic", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cmb_EmployeeInChargeCenter.FormattingEnabled = true;
-            this.cmb_EmployeeInChargeCenter.Location = new System.Drawing.Point(163, 301);
-            this.cmb_EmployeeInChargeCenter.Name = "cmb_EmployeeInChargeCenter";
-            this.cmb_EmployeeInChargeCenter.Size = new System.Drawing.Size(234, 29);
-            this.cmb_EmployeeInChargeCenter.TabIndex = 32;
-            // 
-            // lbl_Title_EmployeeInCharge
-            // 
-            this.lbl_Title_EmployeeInCharge.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_Title_EmployeeInCharge.AutoSize = true;
-            this.lbl_Title_EmployeeInCharge.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_Title_EmployeeInCharge.Location = new System.Drawing.Point(41, 260);
-            this.lbl_Title_EmployeeInCharge.Name = "lbl_Title_EmployeeInCharge";
-            this.lbl_Title_EmployeeInCharge.Size = new System.Drawing.Size(116, 73);
-            this.lbl_Title_EmployeeInCharge.TabIndex = 33;
-            this.lbl_Title_EmployeeInCharge.Text = "Encargado del  centro";
-            this.lbl_Title_EmployeeInCharge.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // btn_RegistCenter
             // 
@@ -278,6 +222,7 @@ namespace Project_POO.View.Admin.FrmCreateCenter
             this.btn_RegistCenter.TabIndex = 34;
             this.btn_RegistCenter.Text = "Registrar Centro";
             this.btn_RegistCenter.UseVisualStyleBackColor = false;
+            this.btn_RegistCenter.Click += new System.EventHandler(this.btn_RegistCenter_Click);
             // 
             // btn_Clean
             // 
@@ -296,6 +241,67 @@ namespace Project_POO.View.Admin.FrmCreateCenter
             this.btn_Clean.Text = "Limpiar";
             this.btn_Clean.UseVisualStyleBackColor = false;
             this.btn_Clean.Click += new System.EventHandler(this.btn_Clean_Click);
+            // 
+            // lbl_Title_TypeCenter
+            // 
+            this.lbl_Title_TypeCenter.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Title_TypeCenter.AutoSize = true;
+            this.lbl_Title_TypeCenter.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_Title_TypeCenter.Location = new System.Drawing.Point(41, 260);
+            this.lbl_Title_TypeCenter.Name = "lbl_Title_TypeCenter";
+            this.lbl_Title_TypeCenter.Size = new System.Drawing.Size(116, 73);
+            this.lbl_Title_TypeCenter.TabIndex = 30;
+            this.lbl_Title_TypeCenter.Text = "Tipo de centro";
+            this.lbl_Title_TypeCenter.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // cmb_TypeCenter
+            // 
+            this.cmb_TypeCenter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_TypeCenter.BackColor = System.Drawing.Color.MintCream;
+            this.cmb_TypeCenter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmb_TypeCenter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_TypeCenter.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmb_TypeCenter.Font = new System.Drawing.Font("Century Gothic", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cmb_TypeCenter.FormattingEnabled = true;
+            this.cmb_TypeCenter.Location = new System.Drawing.Point(163, 301);
+            this.cmb_TypeCenter.Name = "cmb_TypeCenter";
+            this.cmb_TypeCenter.Size = new System.Drawing.Size(234, 29);
+            this.cmb_TypeCenter.TabIndex = 31;
+            this.cmb_TypeCenter.SelectedIndexChanged += new System.EventHandler(this.cmb_TypeCenter_SelectedIndexChanged);
+            // 
+            // lbl_Title_EmployeeInCharge
+            // 
+            this.lbl_Title_EmployeeInCharge.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Title_EmployeeInCharge.AutoSize = true;
+            this.lbl_Title_EmployeeInCharge.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_Title_EmployeeInCharge.Location = new System.Drawing.Point(403, 260);
+            this.lbl_Title_EmployeeInCharge.Name = "lbl_Title_EmployeeInCharge";
+            this.lbl_Title_EmployeeInCharge.Size = new System.Drawing.Size(115, 73);
+            this.lbl_Title_EmployeeInCharge.TabIndex = 33;
+            this.lbl_Title_EmployeeInCharge.Text = "Encargado del  centro";
+            this.lbl_Title_EmployeeInCharge.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // cmb_EmployeeInChargeCenter
+            // 
+            this.cmb_EmployeeInChargeCenter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_EmployeeInChargeCenter.BackColor = System.Drawing.Color.MintCream;
+            this.tlp_CreateCenter.SetColumnSpan(this.cmb_EmployeeInChargeCenter, 2);
+            this.cmb_EmployeeInChargeCenter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmb_EmployeeInChargeCenter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_EmployeeInChargeCenter.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmb_EmployeeInChargeCenter.Font = new System.Drawing.Font("Century Gothic", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cmb_EmployeeInChargeCenter.FormattingEnabled = true;
+            this.cmb_EmployeeInChargeCenter.Location = new System.Drawing.Point(524, 301);
+            this.cmb_EmployeeInChargeCenter.Name = "cmb_EmployeeInChargeCenter";
+            this.cmb_EmployeeInChargeCenter.Size = new System.Drawing.Size(228, 29);
+            this.cmb_EmployeeInChargeCenter.TabIndex = 32;
+            this.cmb_EmployeeInChargeCenter.SelectedIndexChanged += new System.EventHandler(this.cmb_EmployeeInChargeCenter_SelectedIndexChanged);
             // 
             // sts_Admin
             // 
@@ -340,6 +346,7 @@ namespace Project_POO.View.Admin.FrmCreateCenter
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "FrmCreateCenter";
             this.Text = "Registrar Centro (Administrador)";
+            this.Load += new System.EventHandler(this.FrmCreateCenter_Load);
             this.tlp_CreateCenter.ResumeLayout(false);
             this.tlp_CreateCenter.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_AdminCreateCenter)).EndInit();

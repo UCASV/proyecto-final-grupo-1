@@ -402,19 +402,5 @@ namespace Project_POO.View
             GetAppointments();
         }
 
-        private void tbc_AT_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void tlp_AT_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }
