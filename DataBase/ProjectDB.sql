@@ -150,51 +150,51 @@ INSERT INTO TYPE_APPOINTMENT VALUES('Segunda cita'); -- ID 2
 -- Cabin Employees in Charge
 INSERT INTO EMPLOYEE VALUES(  -- ID 1
 'Carlos Mercado',
-'CarlosMercado@gmail.com',
-'Merca',
+'carlos@gmail.com',
+'5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5',
 'La Cima 4, Polígono #6, Casa #40, San Salvador',
 2
 );
 INSERT INTO EMPLOYEE VALUES(  -- ID 2
 'Daniel Solis',
 'dsolismarroquin@gmail.com',
-'Daniel',
+'5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5',
 'Urb. Sinaí, Av. 1, Polígono #6, Casa #65, Santa Ana',
 2
 );
 INSERT INTO EMPLOYEE VALUES(  -- ID 3
 'Jose Acosta',
-'JoseAcosta@gmail.com',
-'12345',
+'acosta@gmail.com',
+'5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5',
 'Linda vista, Av. 4, Polígono #3, Casa #5, Santa Tecla',
 2
 );
 INSERT INTO EMPLOYEE VALUES(  -- ID 4
 'Rodrigo Aguirre',
-'RodrigoAguirre@gmail.com',
-'00000',
+'rodrigo@gmail.com',
+'5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5',
 'Urb. Casitas de pollo, Av. 4, Polígono #10, Casa #2, Armenia',
 2
 );
 INSERT INTO EMPLOYEE VALUES(  -- ID 5
 'Paco Flores',
-'Paquito@gmail.com',
-'11111',
+'paquito@gmail.com',
+'5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5',
 'Col. Piedraz Azules, Calle 3, Polígono #2, Casa #1, Candelaria de la Frontera',
 2
 );
 -- Vaccinate_Center Employees in Charge
 INSERT INTO EMPLOYEE VALUES(  -- ID 6
 'Mayra Gonzalez',
-'MayraGonzalez@gmail.com',
-'1314713',
+'mayragonzalez@gmail.com',
+'5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5',
 'Urb. Los Pinos, Av. 2, Polígono #2, Casa #25, Santa Ana',
 4
 );
 INSERT INTO EMPLOYEE VALUES(  -- ID 7
 'Leonardo Torres',
-'LeoTorres@gmail.com',
-'54321',
+'leo@gmail.com',
+'5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5',
 'Urb. Los Flores Blancas, Calle Principal, Polígono #1, Casa #45, Chalatenango',
 4
 );
@@ -203,7 +203,7 @@ INSERT INTO EMPLOYEE VALUES(  -- ID 7
 INSERT INTO EMPLOYEE VALUES(  -- ID 8
 'Cristiano Ronaldo',
 'cr7@gmail.com',
-'elbicho',
+'5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5',
 'Urb. Las abejas, San Salvador',
 1
 );
@@ -212,7 +212,7 @@ INSERT INTO EMPLOYEE VALUES(  -- ID 8
 INSERT INTO EMPLOYEE VALUES(  -- ID 9
 'Sofia Reyes',
 'sofia@gmail.com',
-'12345',
+'5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5',
 'Urb. Las manzanas, Santa Tecla',
 3
 );
@@ -221,7 +221,7 @@ INSERT INTO EMPLOYEE VALUES(  -- ID 9
 INSERT INTO EMPLOYEE VALUES(  -- ID 10
 'Leonel Messi',
 'messi@gmail.com',
-'12345',
+'5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5',
 'Urb. Los aguacates',
 5
 );
@@ -296,6 +296,7 @@ INSERT INTO CENTER VALUES (
 1,
 5
 );
+
 -- INSERT VACCINATION_CENTER
 INSERT INTO CENTER VALUES (
 'La Gran Via - Parqueo Este, Antiguo Cuscatlán',
@@ -313,6 +314,7 @@ INSERT INTO CENTER VALUES (
 );
 
 -- Pruebas
+SELECT * FROM TYPE_EMPLOYEE; 
 SELECT * FROM EMPLOYEE;
 SELECT * FROM CENTER;
 SELECT * FROM CHRONIC_DISEASE;

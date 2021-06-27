@@ -204,9 +204,15 @@ namespace Proyect_POO
         {
             // Pending -> Clean form 
             txt_Name.Clear();
+            txt_Email.Clear();
             txt_Address.Clear();
             txt_DUI.Clear();
             txt_Tel.Clear();
+
+            cmb_TypeDoc.SelectedIndex = 0;
+
+            while (clb_CD.CheckedIndices.Count > 0)
+                clb_CD.SetItemChecked(clb_CD.CheckedIndices[0], false);
         }
 
         private void btn_Create_Appointment_Click(object sender, EventArgs e)

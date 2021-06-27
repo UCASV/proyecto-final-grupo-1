@@ -1,4 +1,5 @@
-﻿using Project_POO.ProjectPOOContext;
+﻿using Microsoft.EntityFrameworkCore;
+using Project_POO.ProjectPOOContext;
 using Project_POO.Repository;
 using System;
 using System.Collections.Generic;
@@ -45,12 +46,14 @@ namespace Project_POO.Services
         public Employee GetEmployee(int id)
         {
             return _context.Employees
+                .Include(x => x.IdTypeEmployeeNavigation)
                 .Where(x => x.Id.Equals(id))
                 .SingleOrDefault();
         }
         public Employee GetEmployeeInLogin(string email, string pass)
         {
             return _context.Employees
+                .Include(x => x.IdTypeEmployeeNavigation)
                 .Where(x => x.Email.Equals(email) && x.Pass.Equals(pass))
                 .SingleOrDefault();
         }

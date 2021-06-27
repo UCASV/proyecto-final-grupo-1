@@ -51,7 +51,10 @@ namespace Project_POO.View
 
             // Footer
             lbl_EmployeeName.Text = LocalEmployee.EName;
-            // lbl_TypeEmployee.Text = LocalEmployee.IdTypeEmployeeNavigation.TeName; // falta un include...
+            lbl_TypeEmployee.Text = LocalEmployee.IdTypeEmployeeNavigation.TeName;
+            lbl_VaccinationEmployeeType.Text = LocalEmployee.IdTypeEmployeeNavigation.TeName;
+            lbl_CabinEmployee_Type.Text = LocalEmployee.IdTypeEmployeeNavigation.TeName;
+
             lbl_VaccinationEmployeeName.Text = LocalEmployee.EName;
             lbl_CabinEmployee_Name.Text = LocalEmployee.EName;
 
@@ -297,6 +300,7 @@ namespace Project_POO.View
                 _appointmentS.Create(tmpAppointment);
 
                 MessageBox.Show("Cita agregada con exito", "Acción exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
             catch (Exception exception)
             {

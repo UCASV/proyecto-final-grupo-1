@@ -14,5 +14,11 @@ namespace Project_POO.ProjectPOOContext
 
         public virtual Center IdCenterNavigation { get; set; }
         public virtual Employee IdEmployeeNavigation { get; set; }
+
+        public Employeexcenter(int idEmployee, int idCenter)
+        {
+            IdEmployee = idEmployee;
+            IdCenter = idCenter;
+        }
     }
 }

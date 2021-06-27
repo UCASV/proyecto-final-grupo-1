@@ -40,6 +40,7 @@ namespace Project_POO.ViewModel
             this.lbl_WelcomeAdmin = new System.Windows.Forms.ToolStripStatusLabel();
             this.lbl_AdminName = new System.Windows.Forms.ToolStripStatusLabel();
             this.lbl_Admin = new System.Windows.Forms.ToolStripStatusLabel();
+            this.btn_Security = new System.Windows.Forms.Button();
             this.tlp_MenuAdmin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_LogoMenuAdmin)).BeginInit();
             this.sts_Employee.SuspendLayout();
@@ -55,6 +56,7 @@ namespace Project_POO.ViewModel
             this.tlp_MenuAdmin.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.375586F));
             this.tlp_MenuAdmin.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.83255F));
             this.tlp_MenuAdmin.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.375586F));
+            this.tlp_MenuAdmin.Controls.Add(this.btn_Security, 3, 5);
             this.tlp_MenuAdmin.Controls.Add(this.btn_RegistEmployee, 1, 3);
             this.tlp_MenuAdmin.Controls.Add(this.btn_RegistCenters, 3, 3);
             this.tlp_MenuAdmin.Controls.Add(this.btn_Statistics, 5, 3);
@@ -73,6 +75,7 @@ namespace Project_POO.ViewModel
             this.tlp_MenuAdmin.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tlp_MenuAdmin.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tlp_MenuAdmin.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tlp_MenuAdmin.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlp_MenuAdmin.Size = new System.Drawing.Size(800, 425);
             this.tlp_MenuAdmin.TabIndex = 0;
             // 
@@ -200,6 +203,24 @@ namespace Project_POO.ViewModel
             this.lbl_Admin.Size = new System.Drawing.Size(130, 23);
             this.lbl_Admin.Text = "-Administrador-";
             // 
+            // btn_Security
+            // 
+            this.btn_Security.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Security.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btn_Security.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Security.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_Security.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_Security.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_Security.Location = new System.Drawing.Point(319, 303);
+            this.btn_Security.Name = "btn_Security";
+            this.btn_Security.Size = new System.Drawing.Size(160, 54);
+            this.btn_Security.TabIndex = 41;
+            this.btn_Security.Text = "Registros de seguridad";
+            this.btn_Security.UseVisualStyleBackColor = false;
+            this.btn_Security.Click += new System.EventHandler(this.btn_Security_Click);
+            // 
             // FrmMenuAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -236,5 +257,6 @@ namespace Project_POO.ViewModel
         private System.Windows.Forms.ToolStripStatusLabel lbl_EmployeeName;
         private System.Windows.Forms.ToolStripStatusLabel lbl_AdminName;
         private System.Windows.Forms.ToolStripStatusLabel lbl_Admin;
+        private System.Windows.Forms.Button btn_Security;
     }
 }

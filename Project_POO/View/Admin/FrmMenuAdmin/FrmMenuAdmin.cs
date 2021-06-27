@@ -11,6 +11,7 @@ using Project_POO.ProjectPOOContext;
 using Project_POO.Services;
 using Project_POO.View;
 using Project_POO.View.Admin.FrmCreateCenter;
+using Project_POO.View.Admin.FrmSecurity;
 
 namespace Project_POO.ViewModel
 {
@@ -63,5 +64,13 @@ namespace Project_POO.ViewModel
             this.Show();
         }
 
+        private void btn_Security_Click(object sender, EventArgs e)
+        {
+            // Admin new window
+            FrmSecurity window = new FrmSecurity(employeeObj);
+            this.Hide();
+            window.ShowDialog();
+            this.Show();
+        }
     }
 }
