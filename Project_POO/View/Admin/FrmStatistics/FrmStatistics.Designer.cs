@@ -29,6 +29,7 @@ namespace Project_POO.View
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmStatistics));
             this.tlp_Stats = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.lbl_SE_Stats = new System.Windows.Forms.Label();
@@ -308,6 +309,7 @@ namespace Project_POO.View
             this.ClientSize = new System.Drawing.Size(866, 515);
             this.Controls.Add(this.tlp_Stats);
             this.ForeColor = System.Drawing.Color.White;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmStatistics";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estadísticas";

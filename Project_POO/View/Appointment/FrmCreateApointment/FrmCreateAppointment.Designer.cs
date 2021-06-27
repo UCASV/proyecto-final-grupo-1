@@ -29,6 +29,7 @@ namespace Proyect_POO
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCreateAppointment));
             this.lbl_TitleCreate = new System.Windows.Forms.Label();
             this.lbl_Name = new System.Windows.Forms.Label();
             this.txt_Name = new System.Windows.Forms.TextBox();
@@ -327,6 +328,7 @@ namespace Proyect_POO
             this.Controls.Add(this.lbl_Name);
             this.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.MaximizeBox = false;
             this.Name = "FrmCreateAppointment";

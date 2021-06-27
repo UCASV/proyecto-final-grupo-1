@@ -29,6 +29,7 @@ namespace Project_POO.ViewModel
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenuAdmin));
             this.tlp_MenuAdmin = new System.Windows.Forms.TableLayoutPanel();
             this.btn_RegistEmployee = new System.Windows.Forms.Button();
             this.btn_RegistCenters = new System.Windows.Forms.Button();
@@ -208,6 +209,7 @@ namespace Project_POO.ViewModel
             this.Controls.Add(this.tlp_MenuAdmin);
             this.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.Color.White;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmMenuAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu de Admin";

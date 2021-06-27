@@ -29,6 +29,7 @@ namespace Project_POO.View.Admin.FrmCreateCenter
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCreateCenter));
             this.tlp_CreateCenter = new System.Windows.Forms.TableLayoutPanel();
             this.txt_TelCenter = new System.Windows.Forms.TextBox();
             this.img_AdminCreateCenter = new System.Windows.Forms.PictureBox();
@@ -344,6 +345,7 @@ namespace Project_POO.View.Admin.FrmCreateCenter
             this.Controls.Add(this.tlp_CreateCenter);
             this.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.Color.White;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmCreateCenter";
             this.Text = "Registrar Centro (Administrador)";
             this.Load += new System.EventHandler(this.FrmCreateCenter_Load);
