@@ -1,7 +1,7 @@
 # MANUAL DE USUARIO
 
 <p align="center">
-   <img src="images/logo.png">
+   <img src="images/logo.PNG">
 </p>
 
 #
