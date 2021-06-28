@@ -10,9 +10,6 @@
     <Compile Update="View\Admin\FrmRegist\FrmRegist.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="View\Admin\FrmSecurity\FrmSecurity.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="View\Admin\FrmStatistics\FrmStatistics.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -23,6 +20,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="View\FrmLogin\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

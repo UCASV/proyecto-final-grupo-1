@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Project_POO.Services
@@ -55,27 +54,6 @@ namespace Project_POO.Services
             return _context.Centers
                 .Where(x => x.Id.Equals(centerId))
                 .SingleOrDefault();
-        }
-        public bool ValidateCenter(Center item)
-        {
-            var telExp = "^[2-9]{1}[0-9]{3}-[0-9]{4}$";
-            var emailExp = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$";
-
-            // Validating data function
-            if (item.CenterAddress.Length > 5 && item.Tel.Length == 9 && item.CenterEmail.Length > 5 )
-            {
-                if (Regex.IsMatch(item.Tel, telExp))
-                {
-                    if (Regex.IsMatch(item.CenterEmail, emailExp))
-                        return true;
-                    else
-                        return false;
-                }
-                else
-                    return false;
-            }
-            else
-                return false;
         }
     }
 }

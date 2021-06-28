@@ -176,11 +176,9 @@ namespace Project_POO
             this.Controls.Add(this.lbl_Pass);
             this.Controls.Add(this.txt_Email);
             this.Controls.Add(this.lbl_Email);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FrmLogin";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio de Sesión";
             this.Load += new System.EventHandler(this.FrmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.img_LogoLogin)).EndInit();

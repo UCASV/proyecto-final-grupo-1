@@ -29,14 +29,13 @@ namespace Proyect_POO
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCreateAppointment));
             this.lbl_TitleCreate = new System.Windows.Forms.Label();
             this.lbl_Name = new System.Windows.Forms.Label();
             this.txt_Name = new System.Windows.Forms.TextBox();
             this.lbl_DUI = new System.Windows.Forms.Label();
             this.txt_DUI = new System.Windows.Forms.TextBox();
             this.lbl_TypeDoc = new System.Windows.Forms.Label();
-            this.cmb_TypeDoc = new System.Windows.Forms.ComboBox();
+            this.txt_TypeDoc = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_Email = new System.Windows.Forms.TextBox();
             this.dtp_BirthDate = new System.Windows.Forms.DateTimePicker();
@@ -61,7 +60,7 @@ namespace Proyect_POO
             this.lbl_TitleCreate.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.lbl_TitleCreate.Location = new System.Drawing.Point(237, 58);
             this.lbl_TitleCreate.Name = "lbl_TitleCreate";
-            this.lbl_TitleCreate.Size = new System.Drawing.Size(591, 40);
+            this.lbl_TitleCreate.Size = new System.Drawing.Size(470, 32);
             this.lbl_TitleCreate.TabIndex = 13;
             this.lbl_TitleCreate.Text = "Creación de cita para vacunacion";
             // 
@@ -72,16 +71,16 @@ namespace Proyect_POO
             this.lbl_Name.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.lbl_Name.Location = new System.Drawing.Point(121, 122);
             this.lbl_Name.Name = "lbl_Name";
-            this.lbl_Name.Size = new System.Drawing.Size(241, 28);
+            this.lbl_Name.Size = new System.Drawing.Size(191, 23);
             this.lbl_Name.TabIndex = 1;
             this.lbl_Name.Text = "Nombre Completo*";
             // 
             // txt_Name
             // 
             this.txt_Name.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_Name.Location = new System.Drawing.Point(121, 153);
+            this.txt_Name.Location = new System.Drawing.Point(121, 147);
             this.txt_Name.Name = "txt_Name";
-            this.txt_Name.Size = new System.Drawing.Size(348, 32);
+            this.txt_Name.Size = new System.Drawing.Size(348, 27);
             this.txt_Name.TabIndex = 2;
             // 
             // lbl_DUI
@@ -89,9 +88,9 @@ namespace Proyect_POO
             this.lbl_DUI.AutoSize = true;
             this.lbl_DUI.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbl_DUI.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lbl_DUI.Location = new System.Drawing.Point(549, 306);
+            this.lbl_DUI.Location = new System.Drawing.Point(549, 312);
             this.lbl_DUI.Name = "lbl_DUI";
-            this.lbl_DUI.Size = new System.Drawing.Size(62, 28);
+            this.lbl_DUI.Size = new System.Drawing.Size(49, 23);
             this.lbl_DUI.TabIndex = 3;
             this.lbl_DUI.Text = "DUI*";
             // 
@@ -102,7 +101,7 @@ namespace Proyect_POO
             this.txt_DUI.MaxLength = 10;
             this.txt_DUI.Name = "txt_DUI";
             this.txt_DUI.PlaceholderText = "########-#";
-            this.txt_DUI.Size = new System.Drawing.Size(348, 32);
+            this.txt_DUI.Size = new System.Drawing.Size(348, 27);
             this.txt_DUI.TabIndex = 4;
             // 
             // lbl_TypeDoc
@@ -112,37 +111,37 @@ namespace Proyect_POO
             this.lbl_TypeDoc.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.lbl_TypeDoc.Location = new System.Drawing.Point(546, 122);
             this.lbl_TypeDoc.Name = "lbl_TypeDoc";
-            this.lbl_TypeDoc.Size = new System.Drawing.Size(249, 28);
+            this.lbl_TypeDoc.Size = new System.Drawing.Size(198, 23);
             this.lbl_TypeDoc.TabIndex = 5;
             this.lbl_TypeDoc.Text = "Tipo de documento*";
             // 
-            // cmb_TypeDoc
+            // txt_TypeDoc
             // 
-            this.cmb_TypeDoc.BackColor = System.Drawing.Color.MintCream;
-            this.cmb_TypeDoc.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmb_TypeDoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmb_TypeDoc.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmb_TypeDoc.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cmb_TypeDoc.FormattingEnabled = true;
-            this.cmb_TypeDoc.Items.AddRange(new object[] {
+            this.txt_TypeDoc.BackColor = System.Drawing.Color.MintCream;
+            this.txt_TypeDoc.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txt_TypeDoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txt_TypeDoc.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.txt_TypeDoc.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txt_TypeDoc.FormattingEnabled = true;
+            this.txt_TypeDoc.Items.AddRange(new object[] {
             "DUI",
             "NIT",
             "Pasaporte",
             "Carnet de Residente",
             "Otro"});
-            this.cmb_TypeDoc.Location = new System.Drawing.Point(546, 153);
-            this.cmb_TypeDoc.Name = "cmb_TypeDoc";
-            this.cmb_TypeDoc.Size = new System.Drawing.Size(348, 31);
-            this.cmb_TypeDoc.TabIndex = 6;
+            this.txt_TypeDoc.Location = new System.Drawing.Point(546, 145);
+            this.txt_TypeDoc.Name = "txt_TypeDoc";
+            this.txt_TypeDoc.Size = new System.Drawing.Size(348, 29);
+            this.txt_TypeDoc.TabIndex = 6;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label4.Location = new System.Drawing.Point(121, 216);
+            this.label4.Location = new System.Drawing.Point(121, 222);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 28);
+            this.label4.Size = new System.Drawing.Size(81, 23);
             this.label4.TabIndex = 7;
             this.label4.Text = "Correo*";
             // 
@@ -151,7 +150,7 @@ namespace Proyect_POO
             this.txt_Email.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txt_Email.Location = new System.Drawing.Point(121, 247);
             this.txt_Email.Name = "txt_Email";
-            this.txt_Email.Size = new System.Drawing.Size(348, 32);
+            this.txt_Email.Size = new System.Drawing.Size(348, 27);
             this.txt_Email.TabIndex = 8;
             // 
             // dtp_BirthDate
@@ -162,7 +161,7 @@ namespace Proyect_POO
             this.dtp_BirthDate.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dtp_BirthDate.Name = "dtp_BirthDate";
             this.dtp_BirthDate.ShowCheckBox = true;
-            this.dtp_BirthDate.Size = new System.Drawing.Size(348, 32);
+            this.dtp_BirthDate.Size = new System.Drawing.Size(348, 27);
             this.dtp_BirthDate.TabIndex = 9;
             // 
             // lbl_BirthDate
@@ -170,9 +169,9 @@ namespace Proyect_POO
             this.lbl_BirthDate.AutoSize = true;
             this.lbl_BirthDate.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbl_BirthDate.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lbl_BirthDate.Location = new System.Drawing.Point(121, 399);
+            this.lbl_BirthDate.Location = new System.Drawing.Point(121, 405);
             this.lbl_BirthDate.Name = "lbl_BirthDate";
-            this.lbl_BirthDate.Size = new System.Drawing.Size(260, 28);
+            this.lbl_BirthDate.Size = new System.Drawing.Size(207, 23);
             this.lbl_BirthDate.TabIndex = 10;
             this.lbl_BirthDate.Text = "Fecha de nacimiento";
             // 
@@ -181,9 +180,9 @@ namespace Proyect_POO
             this.lbl_Address.AutoSize = true;
             this.lbl_Address.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbl_Address.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lbl_Address.Location = new System.Drawing.Point(546, 216);
+            this.lbl_Address.Location = new System.Drawing.Point(546, 222);
             this.lbl_Address.Name = "lbl_Address";
-            this.lbl_Address.Size = new System.Drawing.Size(134, 28);
+            this.lbl_Address.Size = new System.Drawing.Size(106, 23);
             this.lbl_Address.TabIndex = 12;
             this.lbl_Address.Text = "Dirección*";
             // 
@@ -208,10 +207,10 @@ namespace Proyect_POO
             "VIH",
             "Cáncer",
             "Transplante de órganos"});
-            this.clb_CD.Location = new System.Drawing.Point(3, 28);
+            this.clb_CD.Location = new System.Drawing.Point(3, 23);
             this.clb_CD.MultiColumn = true;
             this.clb_CD.Name = "clb_CD";
-            this.clb_CD.Size = new System.Drawing.Size(418, 242);
+            this.clb_CD.Size = new System.Drawing.Size(418, 247);
             this.clb_CD.TabIndex = 3;
             // 
             // btn_Create_Appointment
@@ -230,9 +229,9 @@ namespace Proyect_POO
             // txt_Address
             // 
             this.txt_Address.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_Address.Location = new System.Drawing.Point(546, 247);
+            this.txt_Address.Location = new System.Drawing.Point(549, 247);
             this.txt_Address.Name = "txt_Address";
-            this.txt_Address.Size = new System.Drawing.Size(348, 32);
+            this.txt_Address.Size = new System.Drawing.Size(348, 27);
             this.txt_Address.TabIndex = 20;
             // 
             // lbl_Tel
@@ -240,9 +239,9 @@ namespace Proyect_POO
             this.lbl_Tel.AutoSize = true;
             this.lbl_Tel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbl_Tel.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lbl_Tel.Location = new System.Drawing.Point(121, 306);
+            this.lbl_Tel.Location = new System.Drawing.Point(121, 312);
             this.lbl_Tel.Name = "lbl_Tel";
-            this.lbl_Tel.Size = new System.Drawing.Size(120, 28);
+            this.lbl_Tel.Size = new System.Drawing.Size(95, 23);
             this.lbl_Tel.TabIndex = 21;
             this.lbl_Tel.Text = "Teléfono*";
             // 
@@ -253,7 +252,7 @@ namespace Proyect_POO
             this.txt_Tel.MaxLength = 9;
             this.txt_Tel.Name = "txt_Tel";
             this.txt_Tel.PlaceholderText = "####-####";
-            this.txt_Tel.Size = new System.Drawing.Size(348, 32);
+            this.txt_Tel.Size = new System.Drawing.Size(348, 27);
             this.txt_Tel.TabIndex = 22;
             // 
             // gpb_CD
@@ -303,7 +302,7 @@ namespace Proyect_POO
             // 
             // FrmCreateAppointment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 30F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(1006, 694);
@@ -320,15 +319,14 @@ namespace Proyect_POO
             this.Controls.Add(this.dtp_BirthDate);
             this.Controls.Add(this.txt_Email);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.cmb_TypeDoc);
+            this.Controls.Add(this.txt_TypeDoc);
             this.Controls.Add(this.lbl_TypeDoc);
             this.Controls.Add(this.txt_DUI);
             this.Controls.Add(this.lbl_DUI);
             this.Controls.Add(this.txt_Name);
             this.Controls.Add(this.lbl_Name);
             this.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.MaximizeBox = false;
             this.Name = "FrmCreateAppointment";
@@ -348,7 +346,7 @@ namespace Proyect_POO
         private System.Windows.Forms.TextBox txt_Name;
         private System.Windows.Forms.Label lbl_DUI;
         private System.Windows.Forms.Label lbl_TypeDoc;
-        private System.Windows.Forms.ComboBox cmb_TypeDoc;
+        private System.Windows.Forms.ComboBox txt_TypeDoc;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_Email;
         private System.Windows.Forms.DateTimePicker dtp_BirthDate;

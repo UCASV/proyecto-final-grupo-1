@@ -29,9 +29,6 @@ namespace Project_POO.View
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAppointmentTracking));
             this.tlp_AT = new System.Windows.Forms.TableLayoutPanel();
             this.dgv_Appointments = new System.Windows.Forms.DataGridView();
@@ -80,15 +77,15 @@ namespace Project_POO.View
             this.cbx_Arrived = new System.Windows.Forms.CheckBox();
             this.lbl_Hour = new System.Windows.Forms.Label();
             this.lbl_Appointment_Time = new System.Windows.Forms.Label();
-            this.lbl_Center_N = new System.Windows.Forms.Label();
-            this.lbl_TitleCabin_Name = new System.Windows.Forms.Label();
             this.lbl_Cabin_N = new System.Windows.Forms.Label();
+            this.lbl_TitleCabin_Name = new System.Windows.Forms.Label();
+            this.lbl_Name_Employee = new System.Windows.Forms.Label();
             this.lbl_Cabin_Name = new System.Windows.Forms.Label();
             this.lbl_Title_InfoAppointment = new System.Windows.Forms.Label();
             this.lbl_ReportSE = new System.Windows.Forms.Label();
             this.gpb_ReportSE = new System.Windows.Forms.GroupBox();
             this.tlp_ReportSE = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_Report = new System.Windows.Forms.Button();
+            this.btn_Create_Appointment = new System.Windows.Forms.Button();
             this.lbl_NameSE = new System.Windows.Forms.Label();
             this.lbl_DurationSE = new System.Windows.Forms.Label();
             this.nud_DurationSE = new System.Windows.Forms.NumericUpDown();
@@ -109,7 +106,9 @@ namespace Project_POO.View
             this.lbl_Time_Appointment_Print = new System.Windows.Forms.Label();
             this.lbl_TitleHour = new System.Windows.Forms.Label();
             this.lbl_Cabin_Print = new System.Windows.Forms.Label();
+            this.lbl_Cabin_Name_Print = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.lbl_Title_Cabin = new System.Windows.Forms.Label();
             this.lbl_Employee_Name_Print = new System.Windows.Forms.Label();
             this.lbl_Title_Employee = new System.Windows.Forms.Label();
             this.lbl_InfoAppointment_Print = new System.Windows.Forms.Label();
@@ -203,8 +202,9 @@ namespace Project_POO.View
             this.tlp_AT.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
             this.tlp_AT.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
             this.tlp_AT.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tlp_AT.Size = new System.Drawing.Size(1356, 711);
+            this.tlp_AT.Size = new System.Drawing.Size(1552, 961);
             this.tlp_AT.TabIndex = 0;
+            this.tlp_AT.Paint += new System.Windows.Forms.PaintEventHandler(this.tlp_AT_Paint);
             // 
             // dgv_Appointments
             // 
@@ -217,43 +217,19 @@ namespace Project_POO.View
             this.dgv_Appointments.BackgroundColor = System.Drawing.SystemColors.HotTrack;
             this.dgv_Appointments.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_Appointments.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgv_Appointments.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Appointments.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_Appointments.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgv_Appointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tlp_AT.SetColumnSpan(this.dgv_Appointments, 7);
             this.dgv_Appointments.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dgv_Appointments.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgv_Appointments.GridColor = System.Drawing.Color.LightBlue;
-            this.dgv_Appointments.Location = new System.Drawing.Point(76, 110);
+            this.dgv_Appointments.Location = new System.Drawing.Point(86, 148);
             this.dgv_Appointments.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgv_Appointments.MultiSelect = false;
             this.dgv_Appointments.Name = "dgv_Appointments";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Appointments.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_Appointments.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.PaleTurquoise;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            this.dgv_Appointments.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.tlp_AT.SetRowSpan(this.dgv_Appointments, 5);
             this.dgv_Appointments.RowTemplate.Height = 25;
             this.dgv_Appointments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Appointments.Size = new System.Drawing.Size(1201, 487);
+            this.dgv_Appointments.Size = new System.Drawing.Size(1376, 662);
             this.dgv_Appointments.TabIndex = 0;
             this.dgv_Appointments.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Appointments_CellDoubleClick);
             // 
@@ -267,9 +243,9 @@ namespace Project_POO.View
             this.lbl_Title_Appointment.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lbl_Title_Appointment.Font = new System.Drawing.Font("Century Gothic", 18.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbl_Title_Appointment.ForeColor = System.Drawing.Color.White;
-            this.lbl_Title_Appointment.Location = new System.Drawing.Point(76, 44);
+            this.lbl_Title_Appointment.Location = new System.Drawing.Point(86, 60);
             this.lbl_Title_Appointment.Name = "lbl_Title_Appointment";
-            this.lbl_Title_Appointment.Size = new System.Drawing.Size(167, 62);
+            this.lbl_Title_Appointment.Size = new System.Drawing.Size(192, 84);
             this.lbl_Title_Appointment.TabIndex = 1;
             this.lbl_Title_Appointment.Text = "Citas Realizadas";
             // 
@@ -286,13 +262,10 @@ namespace Project_POO.View
             this.cmb_Method_Search.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cmb_Method_Search.ForeColor = System.Drawing.Color.White;
             this.cmb_Method_Search.FormattingEnabled = true;
-            this.cmb_Method_Search.Items.AddRange(new object[] {
-            "DUI",
-            "Correo"});
-            this.cmb_Method_Search.Location = new System.Drawing.Point(368, 49);
-            this.cmb_Method_Search.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.cmb_Method_Search.Location = new System.Drawing.Point(420, 64);
+            this.cmb_Method_Search.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmb_Method_Search.Name = "cmb_Method_Search";
-            this.cmb_Method_Search.Size = new System.Drawing.Size(392, 31);
+            this.cmb_Method_Search.Size = new System.Drawing.Size(450, 31);
             this.cmb_Method_Search.TabIndex = 2;
             // 
             // lbl_SearchBy
@@ -301,9 +274,9 @@ namespace Project_POO.View
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_SearchBy.AutoSize = true;
-            this.lbl_SearchBy.Location = new System.Drawing.Point(249, 44);
+            this.lbl_SearchBy.Location = new System.Drawing.Point(284, 60);
             this.lbl_SearchBy.Name = "lbl_SearchBy";
-            this.lbl_SearchBy.Size = new System.Drawing.Size(113, 62);
+            this.lbl_SearchBy.Size = new System.Drawing.Size(130, 84);
             this.lbl_SearchBy.TabIndex = 3;
             this.lbl_SearchBy.Text = "Buscar por:";
             this.lbl_SearchBy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -316,20 +289,20 @@ namespace Project_POO.View
             this.txt_Search.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tlp_AT.SetColumnSpan(this.txt_Search, 2);
             this.txt_Search.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_Search.Location = new System.Drawing.Point(766, 48);
+            this.txt_Search.Location = new System.Drawing.Point(876, 64);
             this.txt_Search.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_Search.Name = "txt_Search";
             this.txt_Search.PlaceholderText = "                                              Búsqueda";
-            this.txt_Search.Size = new System.Drawing.Size(445, 32);
+            this.txt_Search.Size = new System.Drawing.Size(510, 32);
             this.txt_Search.TabIndex = 4;
             // 
             // btn_Add
             // 
-            this.btn_Add.BackColor = System.Drawing.Color.SandyBrown;
+            this.btn_Add.BackColor = System.Drawing.Color.LightCyan;
             this.btn_Add.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Add.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Add.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_Add.Location = new System.Drawing.Point(593, 605);
+            this.btn_Add.Location = new System.Drawing.Point(678, 818);
             this.btn_Add.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(166, 53);
@@ -346,13 +319,12 @@ namespace Project_POO.View
             this.btn_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Search.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Search.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_Search.Location = new System.Drawing.Point(1217, 48);
+            this.btn_Search.Location = new System.Drawing.Point(1392, 64);
             this.btn_Search.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_Search.Name = "btn_Search";
-            this.btn_Search.Size = new System.Drawing.Size(59, 54);
+            this.btn_Search.Size = new System.Drawing.Size(59, 76);
             this.btn_Search.TabIndex = 5;
             this.btn_Search.UseVisualStyleBackColor = true;
-            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
             // sts_Employee
             // 
@@ -365,11 +337,11 @@ namespace Project_POO.View
             this.lbl_WelcomeEmployee,
             this.lbl_EmployeeName,
             this.lbl_TypeEmployee});
-            this.sts_Employee.Location = new System.Drawing.Point(0, 675);
+            this.sts_Employee.Location = new System.Drawing.Point(0, 925);
             this.sts_Employee.Name = "sts_Employee";
             this.sts_Employee.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
             this.sts_Employee.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.sts_Employee.Size = new System.Drawing.Size(1356, 36);
+            this.sts_Employee.Size = new System.Drawing.Size(1552, 36);
             this.sts_Employee.TabIndex = 38;
             this.sts_Employee.Text = "Bienvenido:";
             // 
@@ -407,8 +379,9 @@ namespace Project_POO.View
             this.tbc_AT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbc_AT.Name = "tbc_AT";
             this.tbc_AT.SelectedIndex = 0;
-            this.tbc_AT.Size = new System.Drawing.Size(1370, 749);
+            this.tbc_AT.Size = new System.Drawing.Size(1566, 999);
             this.tbc_AT.TabIndex = 1;
+            this.tbc_AT.SelectedIndexChanged += new System.EventHandler(this.tbc_AT_SelectedIndexChanged);
             // 
             // tbp_Appointment
             // 
@@ -418,7 +391,7 @@ namespace Project_POO.View
             this.tbp_Appointment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbp_Appointment.Name = "tbp_Appointment";
             this.tbp_Appointment.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbp_Appointment.Size = new System.Drawing.Size(1362, 719);
+            this.tbp_Appointment.Size = new System.Drawing.Size(1558, 969);
             this.tbp_Appointment.TabIndex = 0;
             this.tbp_Appointment.Text = "Citas";
             this.tbp_Appointment.UseVisualStyleBackColor = true;
@@ -431,7 +404,7 @@ namespace Project_POO.View
             this.tbp_Info.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbp_Info.Name = "tbp_Info";
             this.tbp_Info.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbp_Info.Size = new System.Drawing.Size(1362, 719);
+            this.tbp_Info.Size = new System.Drawing.Size(1558, 969);
             this.tbp_Info.TabIndex = 1;
             this.tbp_Info.Text = "Información de citas";
             this.tbp_Info.UseVisualStyleBackColor = true;
@@ -439,8 +412,8 @@ namespace Project_POO.View
             // tlp_Info
             // 
             this.tlp_Info.ColumnCount = 9;
-            this.tlp_Info.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.64135F));
-            this.tlp_Info.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.81435F));
+            this.tlp_Info.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.170993F));
+            this.tlp_Info.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.37972F));
             this.tlp_Info.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.37972F));
             this.tlp_Info.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.37972F));
             this.tlp_Info.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.37972F));
@@ -459,7 +432,7 @@ namespace Project_POO.View
             this.tlp_Info.Controls.Add(this.lbl_ReportSE, 1, 6);
             this.tlp_Info.Controls.Add(this.gpb_ReportSE, 1, 7);
             this.tlp_Info.Controls.Add(this.lbl_SE, 5, 6);
-            this.tlp_Info.Controls.Add(this.btn_back_1, 0, 1);
+            this.tlp_Info.Controls.Add(this.btn_back_1, 1, 0);
             this.tlp_Info.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlp_Info.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tlp_Info.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -479,7 +452,7 @@ namespace Project_POO.View
             this.tlp_Info.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.314685F));
             this.tlp_Info.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlp_Info.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlp_Info.Size = new System.Drawing.Size(1356, 711);
+            this.tlp_Info.Size = new System.Drawing.Size(1552, 961);
             this.tlp_Info.TabIndex = 1;
             // 
             // sts_WelcomeVaccinationEmployee
@@ -493,11 +466,11 @@ namespace Project_POO.View
             this.lbl_Welcome,
             this.lbl_VaccinationEmployeeName,
             this.lbl_VaccinationEmployeeType});
-            this.sts_WelcomeVaccinationEmployee.Location = new System.Drawing.Point(0, 675);
+            this.sts_WelcomeVaccinationEmployee.Location = new System.Drawing.Point(0, 925);
             this.sts_WelcomeVaccinationEmployee.Name = "sts_WelcomeVaccinationEmployee";
             this.sts_WelcomeVaccinationEmployee.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
             this.sts_WelcomeVaccinationEmployee.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.sts_WelcomeVaccinationEmployee.Size = new System.Drawing.Size(1356, 36);
+            this.sts_WelcomeVaccinationEmployee.Size = new System.Drawing.Size(1552, 36);
             this.sts_WelcomeVaccinationEmployee.TabIndex = 39;
             this.sts_WelcomeVaccinationEmployee.Text = "Bienvenido:";
             // 
@@ -537,16 +510,14 @@ namespace Project_POO.View
             this.dgv_SE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tlp_Info.SetColumnSpan(this.dgv_SE, 3);
             this.dgv_SE.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dgv_SE.Location = new System.Drawing.Point(768, 572);
+            this.dgv_SE.Location = new System.Drawing.Point(880, 771);
             this.dgv_SE.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dgv_SE.MultiSelect = false;
             this.dgv_SE.Name = "dgv_SE";
-            this.dgv_SE.ReadOnly = true;
             this.dgv_SE.RowHeadersWidth = 51;
             this.tlp_Info.SetRowSpan(this.dgv_SE, 2);
             this.dgv_SE.RowTemplate.Height = 25;
             this.dgv_SE.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_SE.Size = new System.Drawing.Size(537, 93);
+            this.dgv_SE.Size = new System.Drawing.Size(615, 129);
             this.dgv_SE.TabIndex = 9;
             // 
             // lbl_Title_InfoUser
@@ -560,10 +531,10 @@ namespace Project_POO.View
             this.lbl_Title_InfoUser.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lbl_Title_InfoUser.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbl_Title_InfoUser.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbl_Title_InfoUser.Location = new System.Drawing.Point(65, 49);
+            this.lbl_Title_InfoUser.Location = new System.Drawing.Point(52, 56);
             this.lbl_Title_InfoUser.Margin = new System.Windows.Forms.Padding(3, 27, 3, 0);
             this.lbl_Title_InfoUser.Name = "lbl_Title_InfoUser";
-            this.lbl_Title_InfoUser.Size = new System.Drawing.Size(697, 29);
+            this.lbl_Title_InfoUser.Size = new System.Drawing.Size(822, 49);
             this.lbl_Title_InfoUser.TabIndex = 0;
             this.lbl_Title_InfoUser.Text = "Información del ciudadano";
             this.lbl_Title_InfoUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -579,10 +550,10 @@ namespace Project_POO.View
             this.lbl_TitleCD.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lbl_TitleCD.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbl_TitleCD.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbl_TitleCD.Location = new System.Drawing.Point(768, 49);
+            this.lbl_TitleCD.Location = new System.Drawing.Point(880, 56);
             this.lbl_TitleCD.Margin = new System.Windows.Forms.Padding(3, 27, 3, 0);
             this.lbl_TitleCD.Name = "lbl_TitleCD";
-            this.lbl_TitleCD.Size = new System.Drawing.Size(537, 29);
+            this.lbl_TitleCD.Size = new System.Drawing.Size(615, 49);
             this.lbl_TitleCD.TabIndex = 1;
             this.lbl_TitleCD.Text = "Enfermedades crónicas";
             this.lbl_TitleCD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -600,16 +571,14 @@ namespace Project_POO.View
             this.dgv_CD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tlp_Info.SetColumnSpan(this.dgv_CD, 3);
             this.dgv_CD.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dgv_CD.Location = new System.Drawing.Point(768, 82);
+            this.dgv_CD.Location = new System.Drawing.Point(880, 109);
             this.dgv_CD.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dgv_CD.MultiSelect = false;
             this.dgv_CD.Name = "dgv_CD";
-            this.dgv_CD.ReadOnly = true;
             this.dgv_CD.RowHeadersWidth = 51;
             this.tlp_Info.SetRowSpan(this.dgv_CD, 2);
             this.dgv_CD.RowTemplate.Height = 25;
             this.dgv_CD.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_CD.Size = new System.Drawing.Size(537, 244);
+            this.dgv_CD.Size = new System.Drawing.Size(615, 332);
             this.dgv_CD.TabIndex = 2;
             // 
             // gpb_CitizenInfo
@@ -622,12 +591,12 @@ namespace Project_POO.View
             this.gpb_CitizenInfo.Controls.Add(this.tableLayoutPanel1);
             this.gpb_CitizenInfo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.gpb_CitizenInfo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.gpb_CitizenInfo.Location = new System.Drawing.Point(65, 82);
+            this.gpb_CitizenInfo.Location = new System.Drawing.Point(52, 109);
             this.gpb_CitizenInfo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gpb_CitizenInfo.Name = "gpb_CitizenInfo";
             this.gpb_CitizenInfo.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tlp_Info.SetRowSpan(this.gpb_CitizenInfo, 2);
-            this.gpb_CitizenInfo.Size = new System.Drawing.Size(697, 244);
+            this.gpb_CitizenInfo.Size = new System.Drawing.Size(822, 332);
             this.gpb_CitizenInfo.TabIndex = 3;
             this.gpb_CitizenInfo.TabStop = false;
             // 
@@ -665,8 +634,9 @@ namespace Project_POO.View
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(691, 211);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(816, 299);
             this.tableLayoutPanel1.TabIndex = 0;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // lbl_CitizenInstitution
             // 
@@ -675,9 +645,9 @@ namespace Project_POO.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_CitizenInstitution.AutoSize = true;
             this.lbl_CitizenInstitution.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lbl_CitizenInstitution.Location = new System.Drawing.Point(173, 150);
+            this.lbl_CitizenInstitution.Location = new System.Drawing.Point(204, 210);
             this.lbl_CitizenInstitution.Name = "lbl_CitizenInstitution";
-            this.lbl_CitizenInstitution.Size = new System.Drawing.Size(515, 30);
+            this.lbl_CitizenInstitution.Size = new System.Drawing.Size(609, 42);
             this.lbl_CitizenInstitution.TabIndex = 13;
             this.lbl_CitizenInstitution.Text = "Institución";
             this.lbl_CitizenInstitution.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -689,9 +659,9 @@ namespace Project_POO.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_CitizenTel.AutoSize = true;
             this.lbl_CitizenTel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lbl_CitizenTel.Location = new System.Drawing.Point(173, 120);
+            this.lbl_CitizenTel.Location = new System.Drawing.Point(204, 168);
             this.lbl_CitizenTel.Name = "lbl_CitizenTel";
-            this.lbl_CitizenTel.Size = new System.Drawing.Size(515, 30);
+            this.lbl_CitizenTel.Size = new System.Drawing.Size(609, 42);
             this.lbl_CitizenTel.TabIndex = 12;
             this.lbl_CitizenTel.Text = "Tel";
             this.lbl_CitizenTel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -703,9 +673,9 @@ namespace Project_POO.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_CitizenEmail.AutoSize = true;
             this.lbl_CitizenEmail.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lbl_CitizenEmail.Location = new System.Drawing.Point(173, 90);
+            this.lbl_CitizenEmail.Location = new System.Drawing.Point(204, 126);
             this.lbl_CitizenEmail.Name = "lbl_CitizenEmail";
-            this.lbl_CitizenEmail.Size = new System.Drawing.Size(515, 30);
+            this.lbl_CitizenEmail.Size = new System.Drawing.Size(609, 42);
             this.lbl_CitizenEmail.TabIndex = 11;
             this.lbl_CitizenEmail.Text = "Correo";
             this.lbl_CitizenEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -717,9 +687,9 @@ namespace Project_POO.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_CitizenAge.AutoSize = true;
             this.lbl_CitizenAge.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lbl_CitizenAge.Location = new System.Drawing.Point(173, 60);
+            this.lbl_CitizenAge.Location = new System.Drawing.Point(204, 84);
             this.lbl_CitizenAge.Name = "lbl_CitizenAge";
-            this.lbl_CitizenAge.Size = new System.Drawing.Size(515, 30);
+            this.lbl_CitizenAge.Size = new System.Drawing.Size(609, 42);
             this.lbl_CitizenAge.TabIndex = 10;
             this.lbl_CitizenAge.Text = "Edad";
             this.lbl_CitizenAge.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -731,9 +701,9 @@ namespace Project_POO.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_CitizenDUI.AutoSize = true;
             this.lbl_CitizenDUI.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lbl_CitizenDUI.Location = new System.Drawing.Point(173, 30);
+            this.lbl_CitizenDUI.Location = new System.Drawing.Point(204, 42);
             this.lbl_CitizenDUI.Name = "lbl_CitizenDUI";
-            this.lbl_CitizenDUI.Size = new System.Drawing.Size(515, 30);
+            this.lbl_CitizenDUI.Size = new System.Drawing.Size(609, 42);
             this.lbl_CitizenDUI.TabIndex = 9;
             this.lbl_CitizenDUI.Text = "DUI";
             this.lbl_CitizenDUI.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -745,9 +715,9 @@ namespace Project_POO.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Title_CitizenDUI.AutoSize = true;
             this.lbl_Title_CitizenDUI.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbl_Title_CitizenDUI.Location = new System.Drawing.Point(3, 30);
+            this.lbl_Title_CitizenDUI.Location = new System.Drawing.Point(3, 42);
             this.lbl_Title_CitizenDUI.Name = "lbl_Title_CitizenDUI";
-            this.lbl_Title_CitizenDUI.Size = new System.Drawing.Size(164, 30);
+            this.lbl_Title_CitizenDUI.Size = new System.Drawing.Size(195, 42);
             this.lbl_Title_CitizenDUI.TabIndex = 2;
             this.lbl_Title_CitizenDUI.Text = "DUI";
             this.lbl_Title_CitizenDUI.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -759,9 +729,9 @@ namespace Project_POO.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Citizen_Name.AutoSize = true;
             this.lbl_Citizen_Name.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lbl_Citizen_Name.Location = new System.Drawing.Point(173, 0);
+            this.lbl_Citizen_Name.Location = new System.Drawing.Point(204, 0);
             this.lbl_Citizen_Name.Name = "lbl_Citizen_Name";
-            this.lbl_Citizen_Name.Size = new System.Drawing.Size(515, 30);
+            this.lbl_Citizen_Name.Size = new System.Drawing.Size(609, 42);
             this.lbl_Citizen_Name.TabIndex = 1;
             this.lbl_Citizen_Name.Text = "Nombre";
             this.lbl_Citizen_Name.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -775,7 +745,7 @@ namespace Project_POO.View
             this.lbl_Title_Citizen_Name.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.lbl_Title_Citizen_Name.Location = new System.Drawing.Point(3, 0);
             this.lbl_Title_Citizen_Name.Name = "lbl_Title_Citizen_Name";
-            this.lbl_Title_Citizen_Name.Size = new System.Drawing.Size(164, 30);
+            this.lbl_Title_Citizen_Name.Size = new System.Drawing.Size(195, 42);
             this.lbl_Title_Citizen_Name.TabIndex = 0;
             this.lbl_Title_Citizen_Name.Text = "Nombre";
             this.lbl_Title_Citizen_Name.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -787,9 +757,9 @@ namespace Project_POO.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Title_CitizenTel.AutoSize = true;
             this.lbl_Title_CitizenTel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbl_Title_CitizenTel.Location = new System.Drawing.Point(3, 120);
+            this.lbl_Title_CitizenTel.Location = new System.Drawing.Point(3, 168);
             this.lbl_Title_CitizenTel.Name = "lbl_Title_CitizenTel";
-            this.lbl_Title_CitizenTel.Size = new System.Drawing.Size(164, 30);
+            this.lbl_Title_CitizenTel.Size = new System.Drawing.Size(195, 42);
             this.lbl_Title_CitizenTel.TabIndex = 5;
             this.lbl_Title_CitizenTel.Text = "Teléfono";
             this.lbl_Title_CitizenTel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -801,9 +771,9 @@ namespace Project_POO.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Title_CitizenAge.AutoSize = true;
             this.lbl_Title_CitizenAge.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbl_Title_CitizenAge.Location = new System.Drawing.Point(3, 60);
+            this.lbl_Title_CitizenAge.Location = new System.Drawing.Point(3, 84);
             this.lbl_Title_CitizenAge.Name = "lbl_Title_CitizenAge";
-            this.lbl_Title_CitizenAge.Size = new System.Drawing.Size(164, 30);
+            this.lbl_Title_CitizenAge.Size = new System.Drawing.Size(195, 42);
             this.lbl_Title_CitizenAge.TabIndex = 4;
             this.lbl_Title_CitizenAge.Text = "Edad";
             this.lbl_Title_CitizenAge.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -815,9 +785,9 @@ namespace Project_POO.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_TitleEmail.AutoSize = true;
             this.lbl_TitleEmail.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbl_TitleEmail.Location = new System.Drawing.Point(3, 90);
+            this.lbl_TitleEmail.Location = new System.Drawing.Point(3, 126);
             this.lbl_TitleEmail.Name = "lbl_TitleEmail";
-            this.lbl_TitleEmail.Size = new System.Drawing.Size(164, 30);
+            this.lbl_TitleEmail.Size = new System.Drawing.Size(195, 42);
             this.lbl_TitleEmail.TabIndex = 3;
             this.lbl_TitleEmail.Text = "Correo";
             this.lbl_TitleEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -829,9 +799,9 @@ namespace Project_POO.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Title_CitizenInstitution.AutoSize = true;
             this.lbl_Title_CitizenInstitution.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbl_Title_CitizenInstitution.Location = new System.Drawing.Point(3, 150);
+            this.lbl_Title_CitizenInstitution.Location = new System.Drawing.Point(3, 210);
             this.lbl_Title_CitizenInstitution.Name = "lbl_Title_CitizenInstitution";
-            this.lbl_Title_CitizenInstitution.Size = new System.Drawing.Size(164, 30);
+            this.lbl_Title_CitizenInstitution.Size = new System.Drawing.Size(195, 42);
             this.lbl_Title_CitizenInstitution.TabIndex = 6;
             this.lbl_Title_CitizenInstitution.Text = "Institución";
             this.lbl_Title_CitizenInstitution.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -843,9 +813,9 @@ namespace Project_POO.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_CitizenAddress.AutoSize = true;
             this.lbl_CitizenAddress.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lbl_CitizenAddress.Location = new System.Drawing.Point(173, 180);
+            this.lbl_CitizenAddress.Location = new System.Drawing.Point(204, 252);
             this.lbl_CitizenAddress.Name = "lbl_CitizenAddress";
-            this.lbl_CitizenAddress.Size = new System.Drawing.Size(515, 31);
+            this.lbl_CitizenAddress.Size = new System.Drawing.Size(609, 47);
             this.lbl_CitizenAddress.TabIndex = 8;
             this.lbl_CitizenAddress.Text = "Dirección";
             this.lbl_CitizenAddress.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -857,9 +827,9 @@ namespace Project_POO.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Title_CitizenAddress.AutoSize = true;
             this.lbl_Title_CitizenAddress.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbl_Title_CitizenAddress.Location = new System.Drawing.Point(3, 180);
+            this.lbl_Title_CitizenAddress.Location = new System.Drawing.Point(3, 252);
             this.lbl_Title_CitizenAddress.Name = "lbl_Title_CitizenAddress";
-            this.lbl_Title_CitizenAddress.Size = new System.Drawing.Size(164, 31);
+            this.lbl_Title_CitizenAddress.Size = new System.Drawing.Size(195, 47);
             this.lbl_Title_CitizenAddress.TabIndex = 7;
             this.lbl_Title_CitizenAddress.Text = "Dirección";
             this.lbl_Title_CitizenAddress.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -877,24 +847,24 @@ namespace Project_POO.View
             this.gpb_InfoAppointment.Controls.Add(this.cbx_Arrived);
             this.gpb_InfoAppointment.Controls.Add(this.lbl_Hour);
             this.gpb_InfoAppointment.Controls.Add(this.lbl_Appointment_Time);
-            this.gpb_InfoAppointment.Controls.Add(this.lbl_Center_N);
-            this.gpb_InfoAppointment.Controls.Add(this.lbl_TitleCabin_Name);
             this.gpb_InfoAppointment.Controls.Add(this.lbl_Cabin_N);
+            this.gpb_InfoAppointment.Controls.Add(this.lbl_TitleCabin_Name);
+            this.gpb_InfoAppointment.Controls.Add(this.lbl_Name_Employee);
             this.gpb_InfoAppointment.Controls.Add(this.lbl_Cabin_Name);
             this.gpb_InfoAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.gpb_InfoAppointment.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.gpb_InfoAppointment.Location = new System.Drawing.Point(65, 390);
+            this.gpb_InfoAppointment.Location = new System.Drawing.Point(52, 525);
             this.gpb_InfoAppointment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gpb_InfoAppointment.Name = "gpb_InfoAppointment";
             this.gpb_InfoAppointment.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gpb_InfoAppointment.Size = new System.Drawing.Size(1240, 118);
+            this.gpb_InfoAppointment.Size = new System.Drawing.Size(1443, 162);
             this.gpb_InfoAppointment.TabIndex = 5;
             this.gpb_InfoAppointment.TabStop = false;
             // 
             // lbl_status
             // 
             this.lbl_status.AutoSize = true;
-            this.lbl_status.Location = new System.Drawing.Point(243, 33);
+            this.lbl_status.Location = new System.Drawing.Point(187, 33);
             this.lbl_status.Name = "lbl_status";
             this.lbl_status.Size = new System.Drawing.Size(77, 23);
             this.lbl_status.TabIndex = 9;
@@ -904,7 +874,7 @@ namespace Project_POO.View
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label3.Location = new System.Drawing.Point(118, 33);
+            this.label3.Location = new System.Drawing.Point(89, 33);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 23);
             this.label3.TabIndex = 8;
@@ -940,7 +910,7 @@ namespace Project_POO.View
             // lbl_Hour
             // 
             this.lbl_Hour.AutoSize = true;
-            this.lbl_Hour.Location = new System.Drawing.Point(814, 33);
+            this.lbl_Hour.Location = new System.Drawing.Point(827, 45);
             this.lbl_Hour.Name = "lbl_Hour";
             this.lbl_Hour.Size = new System.Drawing.Size(72, 23);
             this.lbl_Hour.TabIndex = 5;
@@ -950,49 +920,49 @@ namespace Project_POO.View
             // 
             this.lbl_Appointment_Time.AutoSize = true;
             this.lbl_Appointment_Time.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbl_Appointment_Time.Location = new System.Drawing.Point(637, 33);
+            this.lbl_Appointment_Time.Location = new System.Drawing.Point(655, 45);
             this.lbl_Appointment_Time.Name = "lbl_Appointment_Time";
-            this.lbl_Appointment_Time.Size = new System.Drawing.Size(166, 23);
+            this.lbl_Appointment_Time.Size = new System.Drawing.Size(161, 23);
             this.lbl_Appointment_Time.TabIndex = 4;
-            this.lbl_Appointment_Time.Text = "Hora de la Cita:";
+            this.lbl_Appointment_Time.Text = "Hora de la Cita";
             // 
-            // lbl_Center_N
+            // lbl_Cabin_N
             // 
-            this.lbl_Center_N.AutoSize = true;
-            this.lbl_Center_N.Location = new System.Drawing.Point(243, 115);
-            this.lbl_Center_N.Name = "lbl_Center_N";
-            this.lbl_Center_N.Size = new System.Drawing.Size(92, 23);
-            this.lbl_Center_N.TabIndex = 3;
-            this.lbl_Center_N.Text = "Centro...";
+            this.lbl_Cabin_N.AutoSize = true;
+            this.lbl_Cabin_N.Location = new System.Drawing.Point(187, 124);
+            this.lbl_Cabin_N.Name = "lbl_Cabin_N";
+            this.lbl_Cabin_N.Size = new System.Drawing.Size(98, 23);
+            this.lbl_Cabin_N.TabIndex = 3;
+            this.lbl_Cabin_N.Text = "Cabina...";
             // 
             // lbl_TitleCabin_Name
             // 
             this.lbl_TitleCabin_Name.AutoSize = true;
             this.lbl_TitleCabin_Name.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbl_TitleCabin_Name.Location = new System.Drawing.Point(6, 115);
+            this.lbl_TitleCabin_Name.Location = new System.Drawing.Point(22, 124);
             this.lbl_TitleCabin_Name.Name = "lbl_TitleCabin_Name";
-            this.lbl_TitleCabin_Name.Size = new System.Drawing.Size(194, 23);
+            this.lbl_TitleCabin_Name.Size = new System.Drawing.Size(149, 23);
             this.lbl_TitleCabin_Name.TabIndex = 2;
-            this.lbl_TitleCabin_Name.Text = "C. de vacunación:";
+            this.lbl_TitleCabin_Name.Text = "Registrado en:";
             // 
-            // lbl_Cabin_N
+            // lbl_Name_Employee
             // 
-            this.lbl_Cabin_N.AutoSize = true;
-            this.lbl_Cabin_N.Location = new System.Drawing.Point(243, 75);
-            this.lbl_Cabin_N.Name = "lbl_Cabin_N";
-            this.lbl_Cabin_N.Size = new System.Drawing.Size(98, 23);
-            this.lbl_Cabin_N.TabIndex = 1;
-            this.lbl_Cabin_N.Text = "Cabina...";
+            this.lbl_Name_Employee.AutoSize = true;
+            this.lbl_Name_Employee.Location = new System.Drawing.Point(187, 76);
+            this.lbl_Name_Employee.Name = "lbl_Name_Employee";
+            this.lbl_Name_Employee.Size = new System.Drawing.Size(113, 23);
+            this.lbl_Name_Employee.TabIndex = 1;
+            this.lbl_Name_Employee.Text = "Empleado";
             // 
             // lbl_Cabin_Name
             // 
             this.lbl_Cabin_Name.AutoSize = true;
             this.lbl_Cabin_Name.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbl_Cabin_Name.Location = new System.Drawing.Point(50, 75);
+            this.lbl_Cabin_Name.Location = new System.Drawing.Point(13, 76);
             this.lbl_Cabin_Name.Name = "lbl_Cabin_Name";
-            this.lbl_Cabin_Name.Size = new System.Drawing.Size(150, 23);
+            this.lbl_Cabin_Name.Size = new System.Drawing.Size(158, 23);
             this.lbl_Cabin_Name.TabIndex = 0;
-            this.lbl_Cabin_Name.Text = "Registrada en:";
+            this.lbl_Cabin_Name.Text = "Registrada por:";
             // 
             // lbl_Title_InfoAppointment
             // 
@@ -1005,10 +975,10 @@ namespace Project_POO.View
             this.lbl_Title_InfoAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lbl_Title_InfoAppointment.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbl_Title_InfoAppointment.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbl_Title_InfoAppointment.Location = new System.Drawing.Point(62, 357);
+            this.lbl_Title_InfoAppointment.Location = new System.Drawing.Point(49, 472);
             this.lbl_Title_InfoAppointment.Margin = new System.Windows.Forms.Padding(0, 27, 0, 0);
             this.lbl_Title_InfoAppointment.Name = "lbl_Title_InfoAppointment";
-            this.lbl_Title_InfoAppointment.Size = new System.Drawing.Size(1246, 29);
+            this.lbl_Title_InfoAppointment.Size = new System.Drawing.Size(1449, 49);
             this.lbl_Title_InfoAppointment.TabIndex = 4;
             this.lbl_Title_InfoAppointment.Text = "Información de la cita";
             this.lbl_Title_InfoAppointment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1024,10 +994,10 @@ namespace Project_POO.View
             this.lbl_ReportSE.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lbl_ReportSE.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbl_ReportSE.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbl_ReportSE.Location = new System.Drawing.Point(65, 539);
+            this.lbl_ReportSE.Location = new System.Drawing.Point(52, 718);
             this.lbl_ReportSE.Margin = new System.Windows.Forms.Padding(3, 27, 3, 0);
             this.lbl_ReportSE.Name = "lbl_ReportSE";
-            this.lbl_ReportSE.Size = new System.Drawing.Size(697, 29);
+            this.lbl_ReportSE.Size = new System.Drawing.Size(822, 49);
             this.lbl_ReportSE.TabIndex = 6;
             this.lbl_ReportSE.Text = "Reportar efecto secundario";
             this.lbl_ReportSE.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1042,12 +1012,12 @@ namespace Project_POO.View
             this.gpb_ReportSE.Controls.Add(this.tlp_ReportSE);
             this.gpb_ReportSE.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.gpb_ReportSE.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.gpb_ReportSE.Location = new System.Drawing.Point(65, 572);
+            this.gpb_ReportSE.Location = new System.Drawing.Point(52, 771);
             this.gpb_ReportSE.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gpb_ReportSE.Name = "gpb_ReportSE";
             this.gpb_ReportSE.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tlp_Info.SetRowSpan(this.gpb_ReportSE, 2);
-            this.gpb_ReportSE.Size = new System.Drawing.Size(697, 93);
+            this.gpb_ReportSE.Size = new System.Drawing.Size(822, 129);
             this.gpb_ReportSE.TabIndex = 7;
             this.gpb_ReportSE.TabStop = false;
             // 
@@ -1056,9 +1026,8 @@ namespace Project_POO.View
             this.tlp_ReportSE.ColumnCount = 3;
             this.tlp_ReportSE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.26177F));
             this.tlp_ReportSE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 68.73823F));
-            this.tlp_ReportSE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 285F));
-            this.tlp_ReportSE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 306F));
-            this.tlp_ReportSE.Controls.Add(this.btn_Report, 2, 0);
+            this.tlp_ReportSE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 243F));
+            this.tlp_ReportSE.Controls.Add(this.btn_Create_Appointment, 2, 0);
             this.tlp_ReportSE.Controls.Add(this.lbl_NameSE, 0, 0);
             this.tlp_ReportSE.Controls.Add(this.lbl_DurationSE, 0, 1);
             this.tlp_ReportSE.Controls.Add(this.nud_DurationSE, 1, 1);
@@ -1071,27 +1040,27 @@ namespace Project_POO.View
             this.tlp_ReportSE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlp_ReportSE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlp_ReportSE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tlp_ReportSE.Size = new System.Drawing.Size(691, 60);
+            this.tlp_ReportSE.Size = new System.Drawing.Size(816, 96);
             this.tlp_ReportSE.TabIndex = 1;
             // 
-            // btn_Report
+            // btn_Create_Appointment
             // 
-            this.btn_Report.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btn_Create_Appointment.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Report.BackColor = System.Drawing.Color.SandyBrown;
-            this.btn_Report.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Report.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_Report.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_Report.Location = new System.Drawing.Point(408, 5);
-            this.btn_Report.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btn_Report.Name = "btn_Report";
-            this.tlp_ReportSE.SetRowSpan(this.btn_Report, 2);
-            this.btn_Report.Size = new System.Drawing.Size(280, 50);
-            this.btn_Report.TabIndex = 17;
-            this.btn_Report.Text = "Reportar";
-            this.btn_Report.UseVisualStyleBackColor = false;
-            this.btn_Report.Click += new System.EventHandler(this.btn_Report_Click);
+            this.btn_Create_Appointment.BackColor = System.Drawing.Color.SandyBrown;
+            this.btn_Create_Appointment.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Create_Appointment.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_Create_Appointment.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_Create_Appointment.Location = new System.Drawing.Point(575, 4);
+            this.btn_Create_Appointment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_Create_Appointment.Name = "btn_Create_Appointment";
+            this.tlp_ReportSE.SetRowSpan(this.btn_Create_Appointment, 2);
+            this.btn_Create_Appointment.Size = new System.Drawing.Size(238, 88);
+            this.btn_Create_Appointment.TabIndex = 17;
+            this.btn_Create_Appointment.Text = "Reportar";
+            this.btn_Create_Appointment.UseVisualStyleBackColor = false;
+            this.btn_Create_Appointment.Click += new System.EventHandler(this.btn_Create_Appointment_Click);
             // 
             // lbl_NameSE
             // 
@@ -1102,7 +1071,7 @@ namespace Project_POO.View
             this.lbl_NameSE.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.lbl_NameSE.Location = new System.Drawing.Point(3, 0);
             this.lbl_NameSE.Name = "lbl_NameSE";
-            this.lbl_NameSE.Size = new System.Drawing.Size(120, 30);
+            this.lbl_NameSE.Size = new System.Drawing.Size(173, 48);
             this.lbl_NameSE.TabIndex = 0;
             this.lbl_NameSE.Text = "Efecto generado";
             this.lbl_NameSE.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1114,9 +1083,9 @@ namespace Project_POO.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_DurationSE.AutoSize = true;
             this.lbl_DurationSE.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbl_DurationSE.Location = new System.Drawing.Point(3, 30);
+            this.lbl_DurationSE.Location = new System.Drawing.Point(3, 48);
             this.lbl_DurationSE.Name = "lbl_DurationSE";
-            this.lbl_DurationSE.Size = new System.Drawing.Size(120, 30);
+            this.lbl_DurationSE.Size = new System.Drawing.Size(173, 48);
             this.lbl_DurationSE.TabIndex = 1;
             this.lbl_DurationSE.Text = "Duración";
             this.lbl_DurationSE.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1128,10 +1097,10 @@ namespace Project_POO.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.nud_DurationSE.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nud_DurationSE.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.nud_DurationSE.Location = new System.Drawing.Point(129, 35);
-            this.nud_DurationSE.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.nud_DurationSE.Location = new System.Drawing.Point(182, 52);
+            this.nud_DurationSE.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.nud_DurationSE.Name = "nud_DurationSE";
-            this.nud_DurationSE.Size = new System.Drawing.Size(273, 32);
+            this.nud_DurationSE.Size = new System.Drawing.Size(387, 32);
             this.nud_DurationSE.TabIndex = 3;
             // 
             // cmb_NameSE
@@ -1140,9 +1109,9 @@ namespace Project_POO.View
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmb_NameSE.FormattingEnabled = true;
-            this.cmb_NameSE.Location = new System.Drawing.Point(129, 3);
+            this.cmb_NameSE.Location = new System.Drawing.Point(182, 3);
             this.cmb_NameSE.Name = "cmb_NameSE";
-            this.cmb_NameSE.Size = new System.Drawing.Size(273, 31);
+            this.cmb_NameSE.Size = new System.Drawing.Size(387, 31);
             this.cmb_NameSE.TabIndex = 18;
             // 
             // lbl_SE
@@ -1156,10 +1125,10 @@ namespace Project_POO.View
             this.lbl_SE.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lbl_SE.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbl_SE.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbl_SE.Location = new System.Drawing.Point(768, 539);
+            this.lbl_SE.Location = new System.Drawing.Point(880, 718);
             this.lbl_SE.Margin = new System.Windows.Forms.Padding(3, 27, 3, 0);
             this.lbl_SE.Name = "lbl_SE";
-            this.lbl_SE.Size = new System.Drawing.Size(537, 29);
+            this.lbl_SE.Size = new System.Drawing.Size(615, 49);
             this.lbl_SE.TabIndex = 8;
             this.lbl_SE.Text = "Efectos secundarios reportados";
             this.lbl_SE.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1172,11 +1141,11 @@ namespace Project_POO.View
             this.btn_back_1.BackColor = System.Drawing.Color.SandyBrown;
             this.btn_back_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_back_1.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_back_1.Location = new System.Drawing.Point(3, 25);
+            this.btn_back_1.Location = new System.Drawing.Point(52, 3);
             this.btn_back_1.Name = "btn_back_1";
-            this.btn_back_1.Size = new System.Drawing.Size(56, 50);
+            this.btn_back_1.Size = new System.Drawing.Size(201, 23);
             this.btn_back_1.TabIndex = 40;
-            this.btn_back_1.Text = "<-";
+            this.btn_back_1.Text = "Regresar";
             this.btn_back_1.UseVisualStyleBackColor = false;
             this.btn_back_1.Click += new System.EventHandler(this.btn_back_1_Click);
             // 
@@ -1186,7 +1155,7 @@ namespace Project_POO.View
             this.tbp_InfoForPrint.Location = new System.Drawing.Point(4, 26);
             this.tbp_InfoForPrint.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbp_InfoForPrint.Name = "tbp_InfoForPrint";
-            this.tbp_InfoForPrint.Size = new System.Drawing.Size(1362, 719);
+            this.tbp_InfoForPrint.Size = new System.Drawing.Size(1558, 969);
             this.tbp_InfoForPrint.TabIndex = 2;
             this.tbp_InfoForPrint.Text = "Imprimir Información";
             this.tbp_InfoForPrint.UseVisualStyleBackColor = true;
@@ -1194,8 +1163,8 @@ namespace Project_POO.View
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 9;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.205709F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.25105F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.170993F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.37972F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.37972F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.37972F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.37972F));
@@ -1211,7 +1180,7 @@ namespace Project_POO.View
             this.tableLayoutPanel2.Controls.Add(this.btn_Print, 4, 7);
             this.tableLayoutPanel2.Controls.Add(this.lbl_InfoCitizenPrint, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.gpb_InfoAppointment_Print, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.btn_back2, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.btn_back2, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tableLayoutPanel2.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -1230,7 +1199,7 @@ namespace Project_POO.View
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.03609F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.115149F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1362, 719);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1558, 969);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
             // sts_WelcomeCabinEmployee
@@ -1244,11 +1213,11 @@ namespace Project_POO.View
             this.lbl_WelcomeCabinEmployee,
             this.lbl_CabinEmployee_Name,
             this.lbl_CabinEmployee_Type});
-            this.sts_WelcomeCabinEmployee.Location = new System.Drawing.Point(0, 691);
+            this.sts_WelcomeCabinEmployee.Location = new System.Drawing.Point(0, 934);
             this.sts_WelcomeCabinEmployee.Name = "sts_WelcomeCabinEmployee";
             this.sts_WelcomeCabinEmployee.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
             this.sts_WelcomeCabinEmployee.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.sts_WelcomeCabinEmployee.Size = new System.Drawing.Size(1362, 28);
+            this.sts_WelcomeCabinEmployee.Size = new System.Drawing.Size(1558, 35);
             this.sts_WelcomeCabinEmployee.TabIndex = 40;
             this.sts_WelcomeCabinEmployee.Text = "Bienvenido:";
             // 
@@ -1257,14 +1226,14 @@ namespace Project_POO.View
             this.lbl_WelcomeCabinEmployee.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbl_WelcomeCabinEmployee.ForeColor = System.Drawing.Color.White;
             this.lbl_WelcomeCabinEmployee.Name = "lbl_WelcomeCabinEmployee";
-            this.lbl_WelcomeCabinEmployee.Size = new System.Drawing.Size(154, 22);
+            this.lbl_WelcomeCabinEmployee.Size = new System.Drawing.Size(154, 29);
             this.lbl_WelcomeCabinEmployee.Text = "Bienvenido: ";
             // 
             // lbl_CabinEmployee_Name
             // 
             this.lbl_CabinEmployee_Name.ForeColor = System.Drawing.Color.White;
             this.lbl_CabinEmployee_Name.Name = "lbl_CabinEmployee_Name";
-            this.lbl_CabinEmployee_Name.Size = new System.Drawing.Size(288, 22);
+            this.lbl_CabinEmployee_Name.Size = new System.Drawing.Size(288, 29);
             this.lbl_CabinEmployee_Name.Text = "Nombre del empleado";
             // 
             // lbl_CabinEmployee_Type
@@ -1272,7 +1241,7 @@ namespace Project_POO.View
             this.lbl_CabinEmployee_Type.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbl_CabinEmployee_Type.ForeColor = System.Drawing.Color.White;
             this.lbl_CabinEmployee_Type.Name = "lbl_CabinEmployee_Type";
-            this.lbl_CabinEmployee_Type.Size = new System.Drawing.Size(205, 22);
+            this.lbl_CabinEmployee_Type.Size = new System.Drawing.Size(205, 29);
             this.lbl_CabinEmployee_Type.Text = "-Usuario de Cabina-";
             // 
             // lbl_TitleCD_Print
@@ -1286,10 +1255,10 @@ namespace Project_POO.View
             this.lbl_TitleCD_Print.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lbl_TitleCD_Print.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbl_TitleCD_Print.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbl_TitleCD_Print.Location = new System.Drawing.Point(772, 49);
+            this.lbl_TitleCD_Print.Location = new System.Drawing.Point(884, 57);
             this.lbl_TitleCD_Print.Margin = new System.Windows.Forms.Padding(3, 27, 3, 0);
             this.lbl_TitleCD_Print.Name = "lbl_TitleCD_Print";
-            this.lbl_TitleCD_Print.Size = new System.Drawing.Size(540, 30);
+            this.lbl_TitleCD_Print.Size = new System.Drawing.Size(618, 50);
             this.lbl_TitleCD_Print.TabIndex = 1;
             this.lbl_TitleCD_Print.Text = "Enfermedades crónicas";
             this.lbl_TitleCD_Print.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1307,16 +1276,14 @@ namespace Project_POO.View
             this.dgv_.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tableLayoutPanel2.SetColumnSpan(this.dgv_, 3);
             this.dgv_.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dgv_.Location = new System.Drawing.Point(772, 83);
+            this.dgv_.Location = new System.Drawing.Point(884, 111);
             this.dgv_.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dgv_.MultiSelect = false;
             this.dgv_.Name = "dgv_";
-            this.dgv_.ReadOnly = true;
             this.dgv_.RowHeadersWidth = 51;
             this.tableLayoutPanel2.SetRowSpan(this.dgv_, 2);
             this.dgv_.RowTemplate.Height = 25;
             this.dgv_.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_.Size = new System.Drawing.Size(540, 248);
+            this.dgv_.Size = new System.Drawing.Size(618, 338);
             this.dgv_.TabIndex = 2;
             // 
             // gpb_InfoPrintAppointment
@@ -1331,23 +1298,25 @@ namespace Project_POO.View
             this.gpb_InfoPrintAppointment.Controls.Add(this.lbl_Time_Appointment_Print);
             this.gpb_InfoPrintAppointment.Controls.Add(this.lbl_TitleHour);
             this.gpb_InfoPrintAppointment.Controls.Add(this.lbl_Cabin_Print);
+            this.gpb_InfoPrintAppointment.Controls.Add(this.lbl_Cabin_Name_Print);
             this.gpb_InfoPrintAppointment.Controls.Add(this.label4);
+            this.gpb_InfoPrintAppointment.Controls.Add(this.lbl_Title_Cabin);
             this.gpb_InfoPrintAppointment.Controls.Add(this.lbl_Employee_Name_Print);
             this.gpb_InfoPrintAppointment.Controls.Add(this.lbl_Title_Employee);
             this.gpb_InfoPrintAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.gpb_InfoPrintAppointment.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.gpb_InfoPrintAppointment.Location = new System.Drawing.Point(73, 396);
+            this.gpb_InfoPrintAppointment.Location = new System.Drawing.Point(52, 534);
             this.gpb_InfoPrintAppointment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gpb_InfoPrintAppointment.Name = "gpb_InfoPrintAppointment";
             this.gpb_InfoPrintAppointment.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gpb_InfoPrintAppointment.Size = new System.Drawing.Size(1239, 120);
+            this.gpb_InfoPrintAppointment.Size = new System.Drawing.Size(1450, 165);
             this.gpb_InfoPrintAppointment.TabIndex = 5;
             this.gpb_InfoPrintAppointment.TabStop = false;
             // 
             // lbl_CenterAsigned
             // 
             this.lbl_CenterAsigned.AutoSize = true;
-            this.lbl_CenterAsigned.Location = new System.Drawing.Point(1155, 115);
+            this.lbl_CenterAsigned.Location = new System.Drawing.Point(985, 92);
             this.lbl_CenterAsigned.Name = "lbl_CenterAsigned";
             this.lbl_CenterAsigned.Size = new System.Drawing.Size(92, 23);
             this.lbl_CenterAsigned.TabIndex = 11;
@@ -1357,7 +1326,7 @@ namespace Project_POO.View
             // 
             this.lbl_Title_CenterAsigned.AutoSize = true;
             this.lbl_Title_CenterAsigned.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbl_Title_CenterAsigned.Location = new System.Drawing.Point(670, 80);
+            this.lbl_Title_CenterAsigned.Location = new System.Drawing.Point(670, 92);
             this.lbl_Title_CenterAsigned.Name = "lbl_Title_CenterAsigned";
             this.lbl_Title_CenterAsigned.Size = new System.Drawing.Size(337, 23);
             this.lbl_Title_CenterAsigned.TabIndex = 10;
@@ -1366,7 +1335,7 @@ namespace Project_POO.View
             // lbl_Time_Appointment_Print
             // 
             this.lbl_Time_Appointment_Print.AutoSize = true;
-            this.lbl_Time_Appointment_Print.Location = new System.Drawing.Point(1175, 41);
+            this.lbl_Time_Appointment_Print.Location = new System.Drawing.Point(985, 31);
             this.lbl_Time_Appointment_Print.Name = "lbl_Time_Appointment_Print";
             this.lbl_Time_Appointment_Print.Size = new System.Drawing.Size(72, 23);
             this.lbl_Time_Appointment_Print.TabIndex = 9;
@@ -1385,26 +1354,45 @@ namespace Project_POO.View
             // lbl_Cabin_Print
             // 
             this.lbl_Cabin_Print.AutoSize = true;
-            this.lbl_Cabin_Print.Location = new System.Drawing.Point(261, 115);
+            this.lbl_Cabin_Print.Location = new System.Drawing.Point(289, 92);
             this.lbl_Cabin_Print.Name = "lbl_Cabin_Print";
             this.lbl_Cabin_Print.Size = new System.Drawing.Size(98, 23);
             this.lbl_Cabin_Print.TabIndex = 7;
             this.lbl_Cabin_Print.Text = "Cabina...";
             // 
+            // lbl_Cabin_Name_Print
+            // 
+            this.lbl_Cabin_Name_Print.AutoSize = true;
+            this.lbl_Cabin_Name_Print.Location = new System.Drawing.Point(289, 92);
+            this.lbl_Cabin_Name_Print.Name = "lbl_Cabin_Name_Print";
+            this.lbl_Cabin_Name_Print.Size = new System.Drawing.Size(98, 23);
+            this.lbl_Cabin_Name_Print.TabIndex = 7;
+            this.lbl_Cabin_Name_Print.Text = "Cabina...";
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label4.Location = new System.Drawing.Point(6, 80);
+            this.label4.Location = new System.Drawing.Point(54, 92);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(250, 23);
             this.label4.TabIndex = 6;
             this.label4.Text = "Registrado en la cabina:";
             // 
+            // lbl_Title_Cabin
+            // 
+            this.lbl_Title_Cabin.AutoSize = true;
+            this.lbl_Title_Cabin.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lbl_Title_Cabin.Location = new System.Drawing.Point(54, 92);
+            this.lbl_Title_Cabin.Name = "lbl_Title_Cabin";
+            this.lbl_Title_Cabin.Size = new System.Drawing.Size(250, 23);
+            this.lbl_Title_Cabin.TabIndex = 6;
+            this.lbl_Title_Cabin.Text = "Registrado en la cabina:";
+            // 
             // lbl_Employee_Name_Print
             // 
             this.lbl_Employee_Name_Print.AutoSize = true;
-            this.lbl_Employee_Name_Print.Location = new System.Drawing.Point(261, 31);
+            this.lbl_Employee_Name_Print.Location = new System.Drawing.Point(208, 31);
             this.lbl_Employee_Name_Print.Name = "lbl_Employee_Name_Print";
             this.lbl_Employee_Name_Print.Size = new System.Drawing.Size(113, 23);
             this.lbl_Employee_Name_Print.TabIndex = 5;
@@ -1414,7 +1402,7 @@ namespace Project_POO.View
             // 
             this.lbl_Title_Employee.AutoSize = true;
             this.lbl_Title_Employee.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbl_Title_Employee.Location = new System.Drawing.Point(98, 31);
+            this.lbl_Title_Employee.Location = new System.Drawing.Point(54, 31);
             this.lbl_Title_Employee.Name = "lbl_Title_Employee";
             this.lbl_Title_Employee.Size = new System.Drawing.Size(158, 23);
             this.lbl_Title_Employee.TabIndex = 4;
@@ -1431,21 +1419,21 @@ namespace Project_POO.View
             this.lbl_InfoAppointment_Print.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lbl_InfoAppointment_Print.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbl_InfoAppointment_Print.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbl_InfoAppointment_Print.Location = new System.Drawing.Point(70, 362);
+            this.lbl_InfoAppointment_Print.Location = new System.Drawing.Point(49, 480);
             this.lbl_InfoAppointment_Print.Margin = new System.Windows.Forms.Padding(0, 27, 0, 0);
             this.lbl_InfoAppointment_Print.Name = "lbl_InfoAppointment_Print";
-            this.lbl_InfoAppointment_Print.Size = new System.Drawing.Size(1245, 30);
+            this.lbl_InfoAppointment_Print.Size = new System.Drawing.Size(1456, 50);
             this.lbl_InfoAppointment_Print.TabIndex = 4;
             this.lbl_InfoAppointment_Print.Text = "Información de la cita";
             this.lbl_InfoAppointment_Print.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btn_Print
             // 
-            this.btn_Print.BackColor = System.Drawing.Color.SandyBrown;
+            this.btn_Print.BackColor = System.Drawing.Color.LightCyan;
             this.btn_Print.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Print.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Print.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_Print.Location = new System.Drawing.Point(590, 581);
+            this.btn_Print.Location = new System.Drawing.Point(676, 784);
             this.btn_Print.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_Print.Name = "btn_Print";
             this.btn_Print.Size = new System.Drawing.Size(175, 48);
@@ -1465,10 +1453,10 @@ namespace Project_POO.View
             this.lbl_InfoCitizenPrint.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lbl_InfoCitizenPrint.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbl_InfoCitizenPrint.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbl_InfoCitizenPrint.Location = new System.Drawing.Point(73, 49);
+            this.lbl_InfoCitizenPrint.Location = new System.Drawing.Point(52, 57);
             this.lbl_InfoCitizenPrint.Margin = new System.Windows.Forms.Padding(3, 27, 3, 0);
             this.lbl_InfoCitizenPrint.Name = "lbl_InfoCitizenPrint";
-            this.lbl_InfoCitizenPrint.Size = new System.Drawing.Size(693, 30);
+            this.lbl_InfoCitizenPrint.Size = new System.Drawing.Size(826, 50);
             this.lbl_InfoCitizenPrint.TabIndex = 0;
             this.lbl_InfoCitizenPrint.Text = "Información del ciudadano";
             this.lbl_InfoCitizenPrint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1483,12 +1471,12 @@ namespace Project_POO.View
             this.gpb_InfoAppointment_Print.Controls.Add(this.tableLayoutPanel4);
             this.gpb_InfoAppointment_Print.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.gpb_InfoAppointment_Print.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.gpb_InfoAppointment_Print.Location = new System.Drawing.Point(73, 83);
+            this.gpb_InfoAppointment_Print.Location = new System.Drawing.Point(52, 111);
             this.gpb_InfoAppointment_Print.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gpb_InfoAppointment_Print.Name = "gpb_InfoAppointment_Print";
             this.gpb_InfoAppointment_Print.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel2.SetRowSpan(this.gpb_InfoAppointment_Print, 2);
-            this.gpb_InfoAppointment_Print.Size = new System.Drawing.Size(693, 248);
+            this.gpb_InfoAppointment_Print.Size = new System.Drawing.Size(826, 338);
             this.gpb_InfoAppointment_Print.TabIndex = 4;
             this.gpb_InfoAppointment_Print.TabStop = false;
             // 
@@ -1526,7 +1514,7 @@ namespace Project_POO.View
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(687, 215);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(820, 305);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // lbl_CInstitution
@@ -1536,9 +1524,9 @@ namespace Project_POO.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_CInstitution.AutoSize = true;
             this.lbl_CInstitution.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lbl_CInstitution.Location = new System.Drawing.Point(172, 150);
+            this.lbl_CInstitution.Location = new System.Drawing.Point(205, 215);
             this.lbl_CInstitution.Name = "lbl_CInstitution";
-            this.lbl_CInstitution.Size = new System.Drawing.Size(512, 30);
+            this.lbl_CInstitution.Size = new System.Drawing.Size(612, 43);
             this.lbl_CInstitution.TabIndex = 13;
             this.lbl_CInstitution.Text = "Institución";
             this.lbl_CInstitution.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1550,9 +1538,9 @@ namespace Project_POO.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_CTel.AutoSize = true;
             this.lbl_CTel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lbl_CTel.Location = new System.Drawing.Point(172, 120);
+            this.lbl_CTel.Location = new System.Drawing.Point(205, 172);
             this.lbl_CTel.Name = "lbl_CTel";
-            this.lbl_CTel.Size = new System.Drawing.Size(512, 30);
+            this.lbl_CTel.Size = new System.Drawing.Size(612, 43);
             this.lbl_CTel.TabIndex = 12;
             this.lbl_CTel.Text = "Tel";
             this.lbl_CTel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1564,9 +1552,9 @@ namespace Project_POO.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_CEmail.AutoSize = true;
             this.lbl_CEmail.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lbl_CEmail.Location = new System.Drawing.Point(172, 90);
+            this.lbl_CEmail.Location = new System.Drawing.Point(205, 129);
             this.lbl_CEmail.Name = "lbl_CEmail";
-            this.lbl_CEmail.Size = new System.Drawing.Size(512, 30);
+            this.lbl_CEmail.Size = new System.Drawing.Size(612, 43);
             this.lbl_CEmail.TabIndex = 11;
             this.lbl_CEmail.Text = "Correo";
             this.lbl_CEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1578,9 +1566,9 @@ namespace Project_POO.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_CAge.AutoSize = true;
             this.lbl_CAge.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lbl_CAge.Location = new System.Drawing.Point(172, 60);
+            this.lbl_CAge.Location = new System.Drawing.Point(205, 86);
             this.lbl_CAge.Name = "lbl_CAge";
-            this.lbl_CAge.Size = new System.Drawing.Size(512, 30);
+            this.lbl_CAge.Size = new System.Drawing.Size(612, 43);
             this.lbl_CAge.TabIndex = 10;
             this.lbl_CAge.Text = "Edad";
             this.lbl_CAge.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1592,9 +1580,9 @@ namespace Project_POO.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_CDUI.AutoSize = true;
             this.lbl_CDUI.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lbl_CDUI.Location = new System.Drawing.Point(172, 30);
+            this.lbl_CDUI.Location = new System.Drawing.Point(205, 43);
             this.lbl_CDUI.Name = "lbl_CDUI";
-            this.lbl_CDUI.Size = new System.Drawing.Size(512, 30);
+            this.lbl_CDUI.Size = new System.Drawing.Size(612, 43);
             this.lbl_CDUI.TabIndex = 9;
             this.lbl_CDUI.Text = "DUI";
             this.lbl_CDUI.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1606,9 +1594,9 @@ namespace Project_POO.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Title_DUI.AutoSize = true;
             this.lbl_Title_DUI.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbl_Title_DUI.Location = new System.Drawing.Point(3, 30);
+            this.lbl_Title_DUI.Location = new System.Drawing.Point(3, 43);
             this.lbl_Title_DUI.Name = "lbl_Title_DUI";
-            this.lbl_Title_DUI.Size = new System.Drawing.Size(163, 30);
+            this.lbl_Title_DUI.Size = new System.Drawing.Size(196, 43);
             this.lbl_Title_DUI.TabIndex = 2;
             this.lbl_Title_DUI.Text = "DUI";
             this.lbl_Title_DUI.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1620,9 +1608,9 @@ namespace Project_POO.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_CName.AutoSize = true;
             this.lbl_CName.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lbl_CName.Location = new System.Drawing.Point(172, 0);
+            this.lbl_CName.Location = new System.Drawing.Point(205, 0);
             this.lbl_CName.Name = "lbl_CName";
-            this.lbl_CName.Size = new System.Drawing.Size(512, 30);
+            this.lbl_CName.Size = new System.Drawing.Size(612, 43);
             this.lbl_CName.TabIndex = 1;
             this.lbl_CName.Text = "Nombre";
             this.lbl_CName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1636,7 +1624,7 @@ namespace Project_POO.View
             this.lbl_Title_CitizenName.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.lbl_Title_CitizenName.Location = new System.Drawing.Point(3, 0);
             this.lbl_Title_CitizenName.Name = "lbl_Title_CitizenName";
-            this.lbl_Title_CitizenName.Size = new System.Drawing.Size(163, 30);
+            this.lbl_Title_CitizenName.Size = new System.Drawing.Size(196, 43);
             this.lbl_Title_CitizenName.TabIndex = 0;
             this.lbl_Title_CitizenName.Text = "Nombre";
             this.lbl_Title_CitizenName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1648,9 +1636,9 @@ namespace Project_POO.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Title_Tel.AutoSize = true;
             this.lbl_Title_Tel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbl_Title_Tel.Location = new System.Drawing.Point(3, 120);
+            this.lbl_Title_Tel.Location = new System.Drawing.Point(3, 172);
             this.lbl_Title_Tel.Name = "lbl_Title_Tel";
-            this.lbl_Title_Tel.Size = new System.Drawing.Size(163, 30);
+            this.lbl_Title_Tel.Size = new System.Drawing.Size(196, 43);
             this.lbl_Title_Tel.TabIndex = 5;
             this.lbl_Title_Tel.Text = "Teléfono";
             this.lbl_Title_Tel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1662,9 +1650,9 @@ namespace Project_POO.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Title_Age.AutoSize = true;
             this.lbl_Title_Age.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbl_Title_Age.Location = new System.Drawing.Point(3, 60);
+            this.lbl_Title_Age.Location = new System.Drawing.Point(3, 86);
             this.lbl_Title_Age.Name = "lbl_Title_Age";
-            this.lbl_Title_Age.Size = new System.Drawing.Size(163, 30);
+            this.lbl_Title_Age.Size = new System.Drawing.Size(196, 43);
             this.lbl_Title_Age.TabIndex = 4;
             this.lbl_Title_Age.Text = "Edad";
             this.lbl_Title_Age.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1676,9 +1664,9 @@ namespace Project_POO.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Title_Email.AutoSize = true;
             this.lbl_Title_Email.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbl_Title_Email.Location = new System.Drawing.Point(3, 90);
+            this.lbl_Title_Email.Location = new System.Drawing.Point(3, 129);
             this.lbl_Title_Email.Name = "lbl_Title_Email";
-            this.lbl_Title_Email.Size = new System.Drawing.Size(163, 30);
+            this.lbl_Title_Email.Size = new System.Drawing.Size(196, 43);
             this.lbl_Title_Email.TabIndex = 3;
             this.lbl_Title_Email.Text = "Correo";
             this.lbl_Title_Email.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1690,9 +1678,9 @@ namespace Project_POO.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Title_Institution.AutoSize = true;
             this.lbl_Title_Institution.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbl_Title_Institution.Location = new System.Drawing.Point(3, 150);
+            this.lbl_Title_Institution.Location = new System.Drawing.Point(3, 215);
             this.lbl_Title_Institution.Name = "lbl_Title_Institution";
-            this.lbl_Title_Institution.Size = new System.Drawing.Size(163, 30);
+            this.lbl_Title_Institution.Size = new System.Drawing.Size(196, 43);
             this.lbl_Title_Institution.TabIndex = 6;
             this.lbl_Title_Institution.Text = "Institución";
             this.lbl_Title_Institution.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1704,9 +1692,9 @@ namespace Project_POO.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_CAddress.AutoSize = true;
             this.lbl_CAddress.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lbl_CAddress.Location = new System.Drawing.Point(172, 180);
+            this.lbl_CAddress.Location = new System.Drawing.Point(205, 258);
             this.lbl_CAddress.Name = "lbl_CAddress";
-            this.lbl_CAddress.Size = new System.Drawing.Size(512, 35);
+            this.lbl_CAddress.Size = new System.Drawing.Size(612, 47);
             this.lbl_CAddress.TabIndex = 8;
             this.lbl_CAddress.Text = "Dirección";
             this.lbl_CAddress.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1718,9 +1706,9 @@ namespace Project_POO.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Title_Address.AutoSize = true;
             this.lbl_Title_Address.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbl_Title_Address.Location = new System.Drawing.Point(3, 180);
+            this.lbl_Title_Address.Location = new System.Drawing.Point(3, 258);
             this.lbl_Title_Address.Name = "lbl_Title_Address";
-            this.lbl_Title_Address.Size = new System.Drawing.Size(163, 35);
+            this.lbl_Title_Address.Size = new System.Drawing.Size(196, 47);
             this.lbl_Title_Address.TabIndex = 7;
             this.lbl_Title_Address.Text = "Dirección";
             this.lbl_Title_Address.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1733,11 +1721,11 @@ namespace Project_POO.View
             this.btn_back2.BackColor = System.Drawing.Color.SandyBrown;
             this.btn_back2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_back2.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_back2.Location = new System.Drawing.Point(3, 25);
+            this.btn_back2.Location = new System.Drawing.Point(52, 3);
             this.btn_back2.Name = "btn_back2";
-            this.btn_back2.Size = new System.Drawing.Size(64, 51);
+            this.btn_back2.Size = new System.Drawing.Size(202, 24);
             this.btn_back2.TabIndex = 41;
-            this.btn_back2.Text = "<-";
+            this.btn_back2.Text = "Regresar";
             this.btn_back2.UseVisualStyleBackColor = false;
             this.btn_back2.Click += new System.EventHandler(this.btn_back2_Click);
             // 
@@ -1813,10 +1801,8 @@ namespace Project_POO.View
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1566, 999);
             this.Controls.Add(this.tbc_AT);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "FrmAppointmentTracking";
@@ -1866,7 +1852,6 @@ namespace Project_POO.View
 
         #endregion
 
-        private System.Windows.Forms.Label lbl_Cabin_Name_Print;
         private System.Windows.Forms.TableLayoutPanel tlp_AT;
         private System.Windows.Forms.TabControl tbc_AT;
         private System.Windows.Forms.TabPage tbp_Appointment;
@@ -1936,12 +1921,14 @@ namespace Project_POO.View
         private System.Windows.Forms.Label lbl_CAddress;
         private System.Windows.Forms.Label lbl_Title_Address;
         private System.Windows.Forms.GroupBox gpb_InfoAppointment_Print;
-        private System.Windows.Forms.Button btn_Report;
+        private System.Windows.Forms.Button btn_Create_Appointment;
         private System.Windows.Forms.Label lbl_Title_Employee;
-        private System.Windows.Forms.Label lbl_Cabin_N;
+        private System.Windows.Forms.Label lbl_Name_Employee;
         private System.Windows.Forms.Label lbl_TitleCabin_Name;
-        private System.Windows.Forms.Label lbl_Center_N;
+        private System.Windows.Forms.Label lbl_Cabin_N;
         private System.Windows.Forms.Label lbl_Cabin_Name;
+        private System.Windows.Forms.Label lbl_Cabin_Name_Print;
+        private System.Windows.Forms.Label lbl_Title_Cabin;
         private System.Windows.Forms.Label lbl_Employee_Name_Print;
         private System.Windows.Forms.Label lbl_Title_CenterAsigned;
         private System.Windows.Forms.Label lbl_Appointment_Time;
@@ -1972,6 +1959,5 @@ namespace Project_POO.View
         private System.Windows.Forms.Button btn_back2;
         private System.Windows.Forms.Label lbl_status;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lbl_Name_Employee;
     }
 }

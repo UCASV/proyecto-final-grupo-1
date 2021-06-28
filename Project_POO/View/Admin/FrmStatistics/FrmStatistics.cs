@@ -1,6 +1,5 @@
 ﻿using LiveCharts;
 using LiveCharts.Wpf;
-using Project_POO.ProjectPOOContext;
 using Project_POO.Services;
 using System;
 using System.Collections.Generic;
@@ -16,24 +15,18 @@ namespace Project_POO.View
 {
     public partial class FrmStatistics : Form
     {
-        private Employee employeeObj;
-
         private AppointmentServices _appointmentS;
         private SecondaryEffectServices _secondaryEffectS;
 
-        public FrmStatistics(Employee employee)
+        public FrmStatistics()
         {
             InitializeComponent();
-            employeeObj = employee;
         }
 
         private void FrmStatistics_Load(object sender, EventArgs e)
         {
             _appointmentS = new AppointmentServices();
             _secondaryEffectS = new SecondaryEffectServices();
-
-            // Set user info
-            lbl_AdminName.Text = employeeObj.EName;
 
             GetTotals();
             GenerateEfficiencyChart();

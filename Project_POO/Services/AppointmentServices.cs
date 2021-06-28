@@ -29,18 +29,6 @@ namespace Project_POO.Services
                 .Include(x => x.IdCitizenNavigation)
                 .Include(x => x.IdTypeAppointmentNavigation)
                 .Include(x => x.IdVaccinationCenterNavigation)
-                .OrderBy(x => x.ADatetime)
-                .ToList();
-        }
-
-        public List<Appointment> GetAllByCenter(int tmpCenterId)
-        {
-            return _context.Appointments
-                .Include(x => x.IdCitizenNavigation)
-                .Include(x => x.IdTypeAppointmentNavigation)
-                .Include(x => x.IdVaccinationCenterNavigation)
-                .Where(x => x.IdVaccinationCenter.Equals(tmpCenterId))
-                .OrderBy(x => x.ADatetime)
                 .ToList();
         }
 
@@ -78,10 +66,10 @@ namespace Project_POO.Services
                 .ToList();
         }
 
-        public int CountAppointmentsByDate(int centerId, DateTime datetime)
+        public int CountAppointmentsByDate(DateTime datetime)
         {
             return _context.Appointments
-                .Where(x => x.IdVaccinationCenter.Equals(centerId) && x.ADatetime.Equals(datetime))
+                .Where(x => x.ADatetime.Equals(datetime))
                 .Count();
         }
 
@@ -91,53 +79,12 @@ namespace Project_POO.Services
             _context.SaveChanges();
         }
 
-        public DateTime ChangeTime(DateTime dateTime, int hours, int minutes = 0, int seconds = 0, int milliseconds = 0)
-        {
-            return new DateTime(
-                dateTime.Year,
-                dateTime.Month,
-                dateTime.Day,
-                hours,
-                minutes,
-                seconds,
-                milliseconds,
-                dateTime.Kind);
-        }
-
-        // Seach functions
-
-        public List<Appointment> GetSearch(bool flag, string search)
-        {
-            if (flag)
-            {
-                // Search by DUI
-                return _context.Appointments
-                    .Include(x => x.IdCitizenNavigation)
-                    .Include(x => x.IdTypeAppointmentNavigation)
-                    .Include(x => x.IdVaccinationCenterNavigation)
-                    .Where(x => x.IdCitizenNavigation.Dui.Equals(search))
-                    .OrderBy(x => x.ADatetime)
-                    .ToList();
-            }
-            else 
-            {
-                // Search by Email
-                return _context.Appointments
-                    .Include(x => x.IdCitizenNavigation)
-                    .Include(x => x.IdTypeAppointmentNavigation)
-                    .Include(x => x.IdVaccinationCenterNavigation)
-                    .Where(x => x.IdCitizenNavigation.Email.Equals(search))
-                    .OrderBy(x => x.ADatetime)
-                    .ToList();
-            }
-        }
-
         // Extra functions for stadistics module
 
         public int TotalVaccinatedUsers(int type = 1)
         {
             return _context.Appointments
-                .Where(x => x.IdTypeAppointment.Equals(type) && x.AStatus.Equals(true))
+                .Where(x => x.IdTypeAppointment.Equals(type) && x.AStatus.Equals(1))
                 .Count();
         }
 
