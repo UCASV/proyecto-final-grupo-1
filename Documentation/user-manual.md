@@ -120,3 +120,12 @@
 - **Personas vacunadas según el numero de Dosis:** Campo que muestra la cantidad de pacientes que poseen su primera dosis, su segunda dosis, y la dosis total de vacunas puestas.
 - **Efectos secundarios:** Grafico con información acerca de los efectos segundarios que las vacunas puedan causar.
 - **Eficiencia del proceso de vacunación:** Grafica con información acerca de la eficiencia en el proceso de vacunación, mostrando tiempo y cantidad de dosis.
+</br>
+</br>
+#
+
+## Seguridad
+
+![](images/10.jpeg)
+
+- **Registros de seguridad:** Campo que muestra los registros de seguridad basados en nombre, centro de vacunacion y fecha y hora de acceso del empleado.
