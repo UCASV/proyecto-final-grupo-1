@@ -25,8 +25,5 @@
     <Compile Update="View\FrmLogin\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
 </Project>

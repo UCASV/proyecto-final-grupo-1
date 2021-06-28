@@ -300,7 +300,6 @@ namespace Project_POO.View
                 _appointmentS.Create(tmpAppointment);
 
                 MessageBox.Show("Cita agregada con exito", "Acción exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
             }
             catch (Exception exception)
             {
@@ -320,7 +319,7 @@ namespace Project_POO.View
             do
             {
                 // If selected date alredy has an appointment it changes to the next one
-                if (_appointmentS.CountAppointmentsByDate(appointmentDate) >= 1)
+                if (_appointmentS.CountAppointmentsByDate(tmpAppointmentObj.IdVaccinationCenter, appointmentDate) >= 1)
                 {
                     appointmentDate = appointmentDate.AddDays(1);
                 }

@@ -101,6 +101,7 @@ namespace Project_POO.View.Admin.FrmCreateCenter
             this.txt_TelCenter.Location = new System.Drawing.Point(243, 224);
             this.txt_TelCenter.MaxLength = 9;
             this.txt_TelCenter.Name = "txt_TelCenter";
+            this.txt_TelCenter.PlaceholderText = "####-####";
             this.txt_TelCenter.Size = new System.Drawing.Size(354, 33);
             this.txt_TelCenter.TabIndex = 29;
             this.txt_TelCenter.TextChanged += new System.EventHandler(this.txt_TelCenter_TextChanged);
@@ -175,6 +176,7 @@ namespace Project_POO.View.Admin.FrmCreateCenter
             this.txt_EmailCenter.Location = new System.Drawing.Point(784, 224);
             this.txt_EmailCenter.MaxLength = 100;
             this.txt_EmailCenter.Name = "txt_EmailCenter";
+            this.txt_EmailCenter.PlaceholderText = "email@ejemplo.com";
             this.txt_EmailCenter.Size = new System.Drawing.Size(345, 33);
             this.txt_EmailCenter.TabIndex = 27;
             this.txt_EmailCenter.TextChanged += new System.EventHandler(this.txt_EmailCenter_TextChanged);

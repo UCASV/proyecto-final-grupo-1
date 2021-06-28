@@ -54,5 +54,15 @@ namespace Project_POO.ViewModel
                 Duracion = a.Duration
             };
         }
+
+        public static EmployeexcenterVm MapEmployeexcenterToVm(Employeexcenter x)
+        {
+            return new EmployeexcenterVm
+            {
+                Empleado = x.IdEmployeeNavigation.EName,
+                Centro = x.IdCenterNavigation.CenterAddress,
+                Fecha_Hora = x.EXcDatetime.ToString()
+            };
+        }
     }
 }

@@ -143,16 +143,22 @@ namespace Project_POO
             var tmpType = (int) cmb_Type.SelectedValue;
             int TypeEmployee = (tmpType);
 
-            // Creating new employee
-            Employee employee1 = new Employee(txt_Name.Text, txt_Email.Text, encryptPass, txt_Address.Text, TypeEmployee);
-            employeenew.Create(employee1);
+            try
+            {
+                // Creating new employee
+                Employee employee1 = new Employee(txt_Name.Text, txt_Email.Text, encryptPass, txt_Address.Text, TypeEmployee);
+                employeenew.Create(employee1);
 
-            // Success message
-            MessageBox.Show("Empleado registrado exitosamente", "Acción exitosa", MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
-            this.Close();
-
+                // Success message
+                MessageBox.Show("Empleado registrado exitosamente", "Acción exitosa", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                this.Close();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw;
+            }
         }
-
     }
 }

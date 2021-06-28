@@ -61,13 +61,13 @@ namespace Proyect_POO
                 {
                     if (tmpDUI != "not-elegible")
                     {
-                        // Get DateTime -> temp function
-                        var appointmentDate = GetAppointmentDate();
-
                         try
                         {
                             // Select next vaccination center
                             DefineVaccinationCenter();
+
+                            // Get DateTime -> temp function
+                            var appointmentDate = GetAppointmentDate();
 
                             var tmpAppointment = new Appointment(tmpDUI, LocalEmployee.Id, LocalCenter.Id,
                                 VaccinationCenter, appointmentDate, 1);
@@ -104,7 +104,7 @@ namespace Proyect_POO
             do
             {
                 // If selected date alredy has an appointment it changes to the next one
-                if (_appointmentS.CountAppointmentsByDate(appointmentDate) >= 1)
+                if (_appointmentS.CountAppointmentsByDate(VaccinationCenter, appointmentDate) >= 1)
                 {
                     appointmentDate = appointmentDate.AddDays(1);
                 }

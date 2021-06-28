@@ -75,7 +75,7 @@ namespace Project_POO
             this.label7.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label7.Location = new System.Drawing.Point(110, 141);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(595, 32);
+            this.label7.Size = new System.Drawing.Size(748, 40);
             this.label7.TabIndex = 34;
             this.label7.Text = "Registro de empleados para uso del sistema";
             // 
@@ -84,9 +84,9 @@ namespace Project_POO
             this.lbl_Type.AutoSize = true;
             this.lbl_Type.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbl_Type.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lbl_Type.Location = new System.Drawing.Point(461, 390);
+            this.lbl_Type.Location = new System.Drawing.Point(461, 382);
             this.lbl_Type.Name = "lbl_Type";
-            this.lbl_Type.Size = new System.Drawing.Size(155, 22);
+            this.lbl_Type.Size = new System.Drawing.Size(203, 30);
             this.lbl_Type.TabIndex = 33;
             this.lbl_Type.Text = "Tipo de usuario*";
             // 
@@ -104,7 +104,7 @@ namespace Project_POO
             "vacunador"});
             this.cmb_Type.Location = new System.Drawing.Point(461, 415);
             this.cmb_Type.Name = "cmb_Type";
-            this.cmb_Type.Size = new System.Drawing.Size(317, 30);
+            this.cmb_Type.Size = new System.Drawing.Size(317, 38);
             this.cmb_Type.TabIndex = 32;
             this.cmb_Type.SelectedIndexChanged += new System.EventHandler(this.cmb_Type_SelectedIndexChanged);
             // 
@@ -113,9 +113,9 @@ namespace Project_POO
             this.lbl_Email.AutoSize = true;
             this.lbl_Email.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbl_Email.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lbl_Email.Location = new System.Drawing.Point(461, 223);
+            this.lbl_Email.Location = new System.Drawing.Point(461, 215);
             this.lbl_Email.Name = "lbl_Email";
-            this.lbl_Email.Size = new System.Drawing.Size(195, 22);
+            this.lbl_Email.Size = new System.Drawing.Size(255, 30);
             this.lbl_Email.TabIndex = 28;
             this.lbl_Email.Text = "Correo Institucional*";
             // 
@@ -123,7 +123,7 @@ namespace Project_POO
             // 
             this.txt_Email.Location = new System.Drawing.Point(461, 248);
             this.txt_Email.Name = "txt_Email";
-            this.txt_Email.Size = new System.Drawing.Size(317, 31);
+            this.txt_Email.Size = new System.Drawing.Size(317, 37);
             this.txt_Email.TabIndex = 25;
             this.txt_Email.TextChanged += new System.EventHandler(this.txt_Email_TextChanged);
             // 
@@ -131,7 +131,7 @@ namespace Project_POO
             // 
             this.txt_Name.Location = new System.Drawing.Point(67, 248);
             this.txt_Name.Name = "txt_Name";
-            this.txt_Name.Size = new System.Drawing.Size(317, 31);
+            this.txt_Name.Size = new System.Drawing.Size(317, 37);
             this.txt_Name.TabIndex = 22;
             this.txt_Name.TextChanged += new System.EventHandler(this.txt_Name_TextChanged);
             // 
@@ -140,9 +140,9 @@ namespace Project_POO
             this.lbl_Name.AutoSize = true;
             this.lbl_Name.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbl_Name.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lbl_Name.Location = new System.Drawing.Point(67, 223);
+            this.lbl_Name.Location = new System.Drawing.Point(67, 215);
             this.lbl_Name.Name = "lbl_Name";
-            this.lbl_Name.Size = new System.Drawing.Size(189, 22);
+            this.lbl_Name.Size = new System.Drawing.Size(249, 30);
             this.lbl_Name.TabIndex = 21;
             this.lbl_Name.Text = "Nombre Completo*";
             // 
@@ -165,9 +165,9 @@ namespace Project_POO
             this.lbl_Pass.AutoSize = true;
             this.lbl_Pass.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbl_Pass.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lbl_Pass.Location = new System.Drawing.Point(67, 308);
+            this.lbl_Pass.Location = new System.Drawing.Point(67, 300);
             this.lbl_Pass.Name = "lbl_Pass";
-            this.lbl_Pass.Size = new System.Drawing.Size(128, 22);
+            this.lbl_Pass.Size = new System.Drawing.Size(162, 30);
             this.lbl_Pass.TabIndex = 40;
             this.lbl_Pass.Text = "Contraseña*";
             // 
@@ -176,9 +176,9 @@ namespace Project_POO
             this.lbl_Conf_Pass.AutoSize = true;
             this.lbl_Conf_Pass.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbl_Conf_Pass.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lbl_Conf_Pass.Location = new System.Drawing.Point(67, 390);
+            this.lbl_Conf_Pass.Location = new System.Drawing.Point(67, 382);
             this.lbl_Conf_Pass.Name = "lbl_Conf_Pass";
-            this.lbl_Conf_Pass.Size = new System.Drawing.Size(220, 22);
+            this.lbl_Conf_Pass.Size = new System.Drawing.Size(284, 30);
             this.lbl_Conf_Pass.TabIndex = 41;
             this.lbl_Conf_Pass.Text = "Confirmar contraseña*";
             // 
@@ -186,7 +186,7 @@ namespace Project_POO
             // 
             this.txt_Pass.Location = new System.Drawing.Point(67, 333);
             this.txt_Pass.Name = "txt_Pass";
-            this.txt_Pass.Size = new System.Drawing.Size(317, 31);
+            this.txt_Pass.Size = new System.Drawing.Size(317, 37);
             this.txt_Pass.TabIndex = 42;
             this.txt_Pass.UseSystemPasswordChar = true;
             this.txt_Pass.TextChanged += new System.EventHandler(this.txt_Pass_TextChanged);
@@ -195,7 +195,7 @@ namespace Project_POO
             // 
             this.txt_Conf_Pass.Location = new System.Drawing.Point(67, 415);
             this.txt_Conf_Pass.Name = "txt_Conf_Pass";
-            this.txt_Conf_Pass.Size = new System.Drawing.Size(317, 31);
+            this.txt_Conf_Pass.Size = new System.Drawing.Size(317, 37);
             this.txt_Conf_Pass.TabIndex = 43;
             this.txt_Conf_Pass.UseSystemPasswordChar = true;
             this.txt_Conf_Pass.TextChanged += new System.EventHandler(this.txt_Conf_Pass_TextChanged);
@@ -205,9 +205,9 @@ namespace Project_POO
             this.lbl_Address.AutoSize = true;
             this.lbl_Address.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbl_Address.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lbl_Address.Location = new System.Drawing.Point(461, 308);
+            this.lbl_Address.Location = new System.Drawing.Point(461, 300);
             this.lbl_Address.Name = "lbl_Address";
-            this.lbl_Address.Size = new System.Drawing.Size(105, 22);
+            this.lbl_Address.Size = new System.Drawing.Size(139, 30);
             this.lbl_Address.TabIndex = 23;
             this.lbl_Address.Text = "Dirección*";
             // 
@@ -216,7 +216,7 @@ namespace Project_POO
             this.txt_Address.Location = new System.Drawing.Point(461, 333);
             this.txt_Address.MaxLength = 100;
             this.txt_Address.Name = "txt_Address";
-            this.txt_Address.Size = new System.Drawing.Size(317, 31);
+            this.txt_Address.Size = new System.Drawing.Size(317, 37);
             this.txt_Address.TabIndex = 29;
             this.txt_Address.TextChanged += new System.EventHandler(this.txt_Address_TextChanged);
             // 
@@ -244,10 +244,10 @@ namespace Project_POO
             this.sts_Admin.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lbl_AdminName,
             this.lbl_Admin});
-            this.sts_Admin.Location = new System.Drawing.Point(0, 557);
+            this.sts_Admin.Location = new System.Drawing.Point(0, 548);
             this.sts_Admin.Name = "sts_Admin";
             this.sts_Admin.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.sts_Admin.Size = new System.Drawing.Size(872, 27);
+            this.sts_Admin.Size = new System.Drawing.Size(872, 36);
             this.sts_Admin.TabIndex = 45;
             this.sts_Admin.Text = "Bienvenido:";
             // 
@@ -255,7 +255,7 @@ namespace Project_POO
             // 
             this.lbl_AdminName.ForeColor = System.Drawing.Color.White;
             this.lbl_AdminName.Name = "lbl_AdminName";
-            this.lbl_AdminName.Size = new System.Drawing.Size(182, 22);
+            this.lbl_AdminName.Size = new System.Drawing.Size(240, 30);
             this.lbl_AdminName.Text = "Nombre del Admin";
             // 
             // lbl_Admin
@@ -263,12 +263,12 @@ namespace Project_POO
             this.lbl_Admin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbl_Admin.ForeColor = System.Drawing.Color.White;
             this.lbl_Admin.Name = "lbl_Admin";
-            this.lbl_Admin.Size = new System.Drawing.Size(130, 22);
+            this.lbl_Admin.Size = new System.Drawing.Size(158, 30);
             this.lbl_Admin.Text = "-Administrador-";
             // 
             // FrmRegist
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(872, 584);

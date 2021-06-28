@@ -1,7 +1,3 @@
--- Connection string
-/* 
-dotnet ef dbcontext scaffold "Server=localhost\SQLEXPRESS;Database=GestorVaccination;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -o ProjectPOOContext -f
-*/
 -- Creating DATABASE
 CREATE DATABASE GestorVaccination;
 SET LANGUAGE 'us_english';
@@ -313,6 +309,52 @@ INSERT INTO CENTER VALUES (
 7
 );
 
+-- INSERT USERS AND APPOINTMETNS
+-- Citizen
+INSERT INTO CITIZEN VALUES (
+	'12345678-9',
+	'Miguel Angel',
+	'Casa del maestro splinter',
+	'2287-4555',
+	'miguelangel@gmail.com',
+	35,
+	1
+);
+
+-- Citizen diseases
+INSERT INTO CITIZENXCHRONIC_DISEASE VALUES ('12345678-9', 4);
+
+-- Citizen first date
+INSERT INTO APPOINTMENT VALUES (
+	'2021-07-02 07:00:00.000',
+	1,
+	'07:15:00',
+	'08:30:00',
+	1,
+	'12345678-9',
+	1,
+	5,
+	6
+);
+
+-- Citizen first date secondary effects
+INSERT INTO APPOINTMENTXSECONDARY_EFFECT VALUES (1, 1, 10);
+INSERT INTO APPOINTMENTXSECONDARY_EFFECT VALUES (1, 2, 45);
+
+-- Citizen second date pending
+INSERT INTO APPOINTMENT VALUES (
+	'2021-08-13 07:00:00.000',
+	0,
+	null,
+	null,
+	2,
+	'12345678-9',
+	1,
+	6,
+	6
+);
+
+
 -- Pruebas
 SELECT * FROM TYPE_EMPLOYEE; 
 SELECT * FROM EMPLOYEE;
@@ -332,3 +374,8 @@ SELECT C.c_name, D.ch_name
 FROM CITIZEN c, CITIZENXCHRONIC_DISEASE CD, CHRONIC_DISEASE D
 WHERE C.DUI = CD.id_citizen 
 	AND CD.id_chronic_disease = D.id;
+
+-- Connection string
+/* 
+dotnet ef dbcontext scaffold "Server=localhost\SQLEXPRESS;Database=GestorVaccination;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -o ProjectPOOContext -f
+*/

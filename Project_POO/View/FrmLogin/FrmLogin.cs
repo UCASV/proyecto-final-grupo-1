@@ -19,6 +19,8 @@ namespace Project_POO
     {
         private EmployeeServices employeeServices;
         private CenterServices centerServices;
+        private EmployeexcenterServices employexCenterServices;
+
         public FrmLogin()
         {
             InitializeComponent();
@@ -27,6 +29,7 @@ namespace Project_POO
         {
             employeeServices = new EmployeeServices();
             centerServices = new CenterServices();
+            employexCenterServices = new EmployeexcenterServices();
         }
 
         // This function resets the entire form
@@ -64,6 +67,7 @@ namespace Project_POO
                     // Success
                     MessageBox.Show("Bienvenido Administrador", "Inicio de Sesión exitoso",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     // Next Form
                     FrmMenuAdmin window = new FrmMenuAdmin(employeeToLogin.Id);
                     this.Hide();
@@ -80,6 +84,10 @@ namespace Project_POO
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     // Selection
                     var selection = (Center)cmb_Center.SelectedItem;
+
+                    // Security
+                    SaveSecurityRegister(employeeToLogin.Id, selection.Id);
+
                     // Next Form
                     FrmAppointmentTracking window = new FrmAppointmentTracking(employeeToLogin.Id, selection.Id);
                     this.Hide();
@@ -93,6 +101,7 @@ namespace Project_POO
                 { 
                     MessageBox.Show("Usuario encontrado, selecciona el centro en que estas iniciando sesión",
                         "Elige un centro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     // cmb_Center now is available
                     int type = employeeToLogin.IdTypeEmployee;
 
@@ -132,6 +141,12 @@ namespace Project_POO
                     "Inicio de Sesión falló", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 resetForm();
             }
+        }
+
+        private void SaveSecurityRegister(int employeeId, int centerId)
+        {
+            var register = new Employeexcenter(employeeId, centerId);
+            employexCenterServices.Create(register);
         }
 
     }

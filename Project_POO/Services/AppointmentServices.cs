@@ -78,10 +78,10 @@ namespace Project_POO.Services
                 .ToList();
         }
 
-        public int CountAppointmentsByDate(DateTime datetime)
+        public int CountAppointmentsByDate(int centerId, DateTime datetime)
         {
             return _context.Appointments
-                .Where(x => x.ADatetime.Equals(datetime))
+                .Where(x => x.IdVaccinationCenter.Equals(centerId) && x.ADatetime.Equals(datetime))
                 .Count();
         }
 
