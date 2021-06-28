@@ -8,11 +8,25 @@
 
 ## Inicio de sesión  
 
+![](images/1.jpeg)
+
 - **Correo institucional:** Campo para correo institucional del empleado.
 - **Contraseña:** Campo para contraseña del empleado.
 - **Centro de vacunación:** Campo para centro de vacunación asignado.
 - **Botón Limpiar:** Botón encargado de limpiar los campos de correo, contraseña y centro de vacunación (puntos 1, 2 y 3).
 - **Botón Iniciar sesión:** Botón encargado de iniciar sesión como empleado.
+</br>
+</br>
+#
+
+## Menu de Administrador
+
+![](images/11.jpeg)
+
+- **Registrar empleado:** Botón encargado de abrir el form registrar empleado.
+- **Registrar centros:** Botón encargado de abrir el form registrar centros.
+- **Datos estadísticos:** Botón encargado de abrir el form estadísticas.
+- **Registros de seguridad:** Botón encargado de abrir el form registros de seguridad.
 </br>
 </br>
 #
