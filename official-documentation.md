@@ -24,6 +24,6 @@
 - Utilizado principalmente en los "data grid view" del proyecto, facilitan dar un formato de salida estandar para los datos que provienen de la base de datos.
 
 ## Instalación
-- A definir...
-- Framework a utilizar
-- Gestor de BD utilizado
+- Instalador .exe pendiente...
+- Para ejecutar la socucion es necesario correr el script projectDB.sql para tener en nuestro sistema la base de datos GestorVaccination
+- Se recomienda instalacion en SQLEXPRESS
