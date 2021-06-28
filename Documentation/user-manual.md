@@ -19,18 +19,6 @@
 </br>
 #
 
-## Menu de Administrador
-
-![](images/11.jpeg)
-
-- **Registrar empleado:** Botón encargado de abrir el form registrar empleado.
-- **Registrar centros:** Botón encargado de abrir el form registrar centros.
-- **Datos estadísticos:** Botón encargado de abrir el form estadísticas.
-- **Registros de seguridad:** Botón encargado de abrir el form registros de seguridad.
-</br>
-</br>
-#
-
 ## Creación de cita
 
 ![](images/2.jpeg)
@@ -92,6 +80,18 @@
 ![](images/6.jpeg)
 
 - **Ejemplo PDF:** Muestra el nombre, DUI, fecha y hora en que se programo la cita y el centro de vacunación asignado.
+</br>
+</br>
+#
+
+## Menu de Administrador
+
+![](images/11.jpeg)
+
+- **Registrar empleado:** Botón encargado de abrir el form registrar empleado.
+- **Registrar centros:** Botón encargado de abrir el form registrar centros.
+- **Datos estadísticos:** Botón encargado de abrir el form estadísticas.
+- **Registros de seguridad:** Botón encargado de abrir el form registros de seguridad.
 </br>
 </br>
 #
