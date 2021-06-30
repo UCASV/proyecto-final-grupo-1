@@ -169,7 +169,9 @@ namespace Proyect_POO
                 tmpCxD.Add(new CitizenxchronicDisease(tmpCitizen.Dui, tmpItem.Id));
             }
 
-            if (_citzenS.ValidateCitizen(tmpCitizen))
+            var response = _citzenS.ValidateCitizen(tmpCitizen);
+
+            if (response.Ok)
             {
                 if (_citzenS.ValidateElegibleCitizen(tmpCitizen, tmpCxD))
                 {
@@ -181,7 +183,10 @@ namespace Proyect_POO
                     return "not-elegible";
             }
             else
+            {
+                MessageBox.Show(response.Msg, "Información incorrecta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return "error";
+            }
         }
 
         private void LoadDocumentsInfo()

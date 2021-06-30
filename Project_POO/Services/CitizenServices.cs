@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
+using Project_POO.Tools;
 
 namespace Project_POO.Services
 {
@@ -76,7 +77,7 @@ namespace Project_POO.Services
                 .ToList();
         }
 
-        public bool ValidateCitizen(Citizen item)
+        public Response ValidateCitizen(Citizen item)
         {
             var telExp = "^[2-9]{1}[0-9]{3}-[0-9]{4}$";
             var emailExp = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$";
@@ -91,20 +92,18 @@ namespace Project_POO.Services
                     if (Regex.IsMatch(item.Email, emailExp))
                     {
                         if (Regex.IsMatch(item.Dui, duiExp))
-                        {
-                            return true;
-                        }
+                            return new Response("Informacion valida", true);
                         else
-                            return false;
+                            return new Response("Formato de DUI no valido", false);
                     }
                     else
-                        return false;
+                        return new Response("Formato de correo electrónico no valido", false);
                 }
                 else
-                    return false;
+                    return new Response("Formato de teléfono no valido", false);
             }
             else
-                return false;
+                return new Response("Longuitud de caracteres en un campo de texto o edad no valida", false);
         }
 
         public bool ValidateElegibleCitizen(Citizen item, List<CitizenxchronicDisease> TmpCxD)
