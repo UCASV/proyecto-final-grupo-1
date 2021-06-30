@@ -24,6 +24,8 @@
 - Utilizado principalmente en los "data grid view" del proyecto, facilitan dar un formato de salida estándar para los datos que provienen de la base de datos.
 
 ## Instalación
-- Instalador .exe pendiente...
 - Para ejecutar la solución es necesario correr el script projectDB.sql para tener en nuestro sistema la base de datos GestorVaccination
 - Se recomienda instalación en SQLEXPRESS
+- Correr el programa setup.exe
+- Dar siguiente a todo
+- Abrir el programa Project_Poo
