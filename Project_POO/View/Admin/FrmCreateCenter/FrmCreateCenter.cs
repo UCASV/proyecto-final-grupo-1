@@ -65,7 +65,9 @@ namespace Project_POO.View.Admin.FrmCreateCenter
                 var tmpCenter = new Center(txt_AddressCenter.Text, txt_TelCenter.Text, txt_EmailCenter.Text,
                     TypeCenter, ID_EmpInCharge);
 
-                if (_centerS.ValidateCenter(tmpCenter))
+                var response = _centerS.ValidateCenter(tmpCenter);
+
+                if (response.Ok)
                 {
                     _centerS.Create(tmpCenter);
 
@@ -75,8 +77,8 @@ namespace Project_POO.View.Admin.FrmCreateCenter
                     this.Close();
                 }
                 else
-                    MessageBox.Show("Error al añadir el centro", "Hubo un error", MessageBoxButtons.OK,
-                        MessageBoxIcon.Error);
+                    MessageBox.Show(response.Msg, "Hubo un error", MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
             }
             catch (Exception exception)
             {

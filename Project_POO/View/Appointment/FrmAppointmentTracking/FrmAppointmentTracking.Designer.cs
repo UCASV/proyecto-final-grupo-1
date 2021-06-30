@@ -29,9 +29,9 @@ namespace Project_POO.View
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAppointmentTracking));
             this.tlp_AT = new System.Windows.Forms.TableLayoutPanel();
             this.dgv_Appointments = new System.Windows.Forms.DataGridView();
@@ -218,14 +218,14 @@ namespace Project_POO.View
             this.dgv_Appointments.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_Appointments.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgv_Appointments.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Appointments.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Appointments.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Appointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tlp_AT.SetColumnSpan(this.dgv_Appointments, 7);
             this.dgv_Appointments.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -235,21 +235,21 @@ namespace Project_POO.View
             this.dgv_Appointments.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgv_Appointments.MultiSelect = false;
             this.dgv_Appointments.Name = "dgv_Appointments";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Appointments.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Appointments.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_Appointments.RowHeadersWidth = 51;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.PaleTurquoise;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            this.dgv_Appointments.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.PaleTurquoise;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            this.dgv_Appointments.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.tlp_AT.SetRowSpan(this.dgv_Appointments, 5);
             this.dgv_Appointments.RowTemplate.Height = 25;
             this.dgv_Appointments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -1056,7 +1056,7 @@ namespace Project_POO.View
             this.tlp_ReportSE.ColumnCount = 3;
             this.tlp_ReportSE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.26177F));
             this.tlp_ReportSE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 68.73823F));
-            this.tlp_ReportSE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 286F));
+            this.tlp_ReportSE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 287F));
             this.tlp_ReportSE.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 306F));
             this.tlp_ReportSE.Controls.Add(this.btn_Report, 2, 0);
             this.tlp_ReportSE.Controls.Add(this.lbl_NameSE, 0, 0);
@@ -1083,11 +1083,11 @@ namespace Project_POO.View
             this.btn_Report.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Report.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Report.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_Report.Location = new System.Drawing.Point(407, 5);
+            this.btn_Report.Location = new System.Drawing.Point(406, 5);
             this.btn_Report.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btn_Report.Name = "btn_Report";
             this.tlp_ReportSE.SetRowSpan(this.btn_Report, 2);
-            this.btn_Report.Size = new System.Drawing.Size(281, 50);
+            this.btn_Report.Size = new System.Drawing.Size(282, 50);
             this.btn_Report.TabIndex = 17;
             this.btn_Report.Text = "Reportar";
             this.btn_Report.UseVisualStyleBackColor = false;
@@ -1131,7 +1131,7 @@ namespace Project_POO.View
             this.nud_DurationSE.Location = new System.Drawing.Point(129, 35);
             this.nud_DurationSE.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.nud_DurationSE.Name = "nud_DurationSE";
-            this.nud_DurationSE.Size = new System.Drawing.Size(272, 32);
+            this.nud_DurationSE.Size = new System.Drawing.Size(271, 32);
             this.nud_DurationSE.TabIndex = 3;
             // 
             // cmb_NameSE
@@ -1142,7 +1142,7 @@ namespace Project_POO.View
             this.cmb_NameSE.FormattingEnabled = true;
             this.cmb_NameSE.Location = new System.Drawing.Point(129, 3);
             this.cmb_NameSE.Name = "cmb_NameSE";
-            this.cmb_NameSE.Size = new System.Drawing.Size(272, 31);
+            this.cmb_NameSE.Size = new System.Drawing.Size(271, 31);
             this.cmb_NameSE.TabIndex = 18;
             // 
             // lbl_SE

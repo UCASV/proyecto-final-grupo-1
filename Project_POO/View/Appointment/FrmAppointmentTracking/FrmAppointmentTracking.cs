@@ -352,10 +352,10 @@ namespace Project_POO.View
                     // Refresh appointment secondary effects
                     LoadCxASecondaryEffects();
 
-                    MessageBox.Show("Efecto secundario agregado con exito", "Acción exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Efecto secundario agregado con éxito", "Acción exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
-                    MessageBox.Show("Duracion de efecto secundario no valida", "Error en la duración", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Duración de efecto secundario no valida", "Error en la duración", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
                 MessageBox.Show("Efecto secundario previamente registrado", "Efecto repetido", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -402,7 +402,7 @@ namespace Project_POO.View
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             String text = String.Format("Comrpobante de cita - Vacuna COVID\n" +
-                "Nombre: {0}\nDUI: {1}\nFecha y hora: {2}\nCentro de vacunacion: {3}",
+                "Nombre: {0}\nDUI: {1}\nFecha y hora: {2}\nCentro de vacunación: {3}",
                 lbl_CName.Text, lbl_CDUI.Text, lbl_Time_Appointment_Print.Text, lbl_CenterAsigned.Text);
 
             e.Graphics.DrawImage(Properties.Resources.vaccine, new PointF(100, 100));

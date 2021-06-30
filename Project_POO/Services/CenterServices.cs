@@ -1,5 +1,6 @@
 ﻿using Project_POO.ProjectPOOContext;
 using Project_POO.Repository;
+using Project_POO.Tools;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -56,7 +57,7 @@ namespace Project_POO.Services
                 .Where(x => x.Id.Equals(centerId))
                 .SingleOrDefault();
         }
-        public bool ValidateCenter(Center item)
+        public Response ValidateCenter(Center item)
         {
             var telExp = "^[2-9]{1}[0-9]{3}-[0-9]{4}$";
             var emailExp = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$";
@@ -67,15 +68,15 @@ namespace Project_POO.Services
                 if (Regex.IsMatch(item.Tel, telExp))
                 {
                     if (Regex.IsMatch(item.CenterEmail, emailExp))
-                        return true;
+                        return new Response("Información correcta", true);
                     else
-                        return false;
+                        return new Response("Formato de correo electrónico no valido", false);
                 }
                 else
-                    return false;
+                    return new Response("Formato de teléfono no valido", false);
             }
             else
-                return false;
+                return new Response("Verifica que los campos tengan la cantidad necesaria de caracteres (minimo 5 para los campos abiertos)", false);
         }
     }
 }

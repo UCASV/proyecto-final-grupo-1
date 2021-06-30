@@ -143,3 +143,53 @@
 ![](images/10.jpeg)
 
 - **Registros de seguridad:** Campo que muestra los registros de seguridad basados en nombre, centro de vacunación y fecha y hora de acceso del empleado.
+
+## Errores y advertencias
+
+Los siguientes cuadros resumen los errores o advertencias que el usuario puede encontrar en los diferentes módulos del sistema y como solucionarlos.
+
+#
+
+### Inicio de sesión
+
+| Cuadro de dialogo | Imagen | Descripción | Solución  |
+| ------ | ------ | ------ | ------ |
+| Error | ![](images/errors/err-conexion.jpeg) | Conexión  fallida | Verificar que haya sido instalada la base de datos `GestorVaccination` en SQL EXPRESS. |
+| Advertencia | ![](images/errors/wrn-inicio-sesion.JPG) | Correo o contraseña son incorrectos | Verifica tu correo institucional y contraseña |
+
+### Crear cita
+
+| Cuadro de dialogo | Imagen | Descripción | Solución  |
+| ------ | ------ | ------ | ------ |
+| Advertencia | ![](images/errors/wrn-ca-1.JPG) | Formato de DUI no valido | Verifica que el DUI tenga el formato: `########-#` |
+| Advertencia | ![](images/errors/wrn-ca-2.JPG) | Formato de correo electrónico no valido | Verifica que el correo electronico tenga el formato: `ejemplo@gmail.com` |
+| Advertencia | ![](images/errors/wrn-ca-3.JPG) | Formato de teléfono no valido | Verifica que el teléfono tenga el formato: `####-####` |
+| Advertencia | ![](images/errors/wrn-ca-4.JPG) | Longitud de caracteres en un campo de texto o edad no valida | Verifica que los campos tengan la cantidad necesaria de caracteres (mínimo 6 para los campos abiertos) y que la edad sea válida |
+| Advertencia | ![](images/errors/wrn-ca-5.JPG) | Formato incorrecto | Este mensaje se muestra si uno de los errores anteriores ocurrió, debes de verificar que la información tenga el formato estipulado |
+| Advertencia | ![](images/errors/wrn-ca-6.JPG) | Usuario no elegible para la vacunación | El usuario no cumple los requisitos para vacunarse, por lo que se le debera informar los criterios de selección |
+| Advertencia | ![](images/errors/wrn-ca-7.JPG) | El usuario con este correo ya tiene una cita | No pueden existir citas duplicadas, por lo que el ciudadano deberá brindar otro correo en caso que se compruebe que su DUI no tiene una cita ya registrada |
+| Advertencia | ![](images/errors/wrn-ca-8.JPG) | El usuario con este DUI ya tiene una cita | No pueden existir citas duplicadas, por lo que se le deberá informar al ciudadano que no puede volver a vacunarse |
+
+### Registrar efecto secundario
+
+| Cuadro de dialogo | Imagen | Descripción | Solución  |
+| ------ | ------ | ------ | ------ |
+| Advertencia | ![](images/errors/wrn-duracion-0.JPG) | Duración de efecto secundario no valida | Verifica que la duracion del efecto secundario en minutos sea un entero positivo, por lo tanto `diferente de cero`  |
+| Advertencia | ![](images/errors/wrn-efecto-prev.JPG) | Efecto secundario previamente registrado | Un efecto secundario solo se puede reportar una vez por cita  |
+
+### Registrar empleado
+
+| Cuadro de dialogo | Imagen | Descripción | Solución  |
+| ------ | ------ | ------ | ------ |
+| Advertencia | ![](images/errors/wrn-ce-1.JPG) | La contraseña es muy corta | Asegúrate de que sean más de 5 caracteres  |
+| Advertencia | ![](images/errors/wrn-ce-2.JPG) | Las contraseñas no coinciden | Asegúrate de que las contraseñas sean iguales |
+| Advertencia | ![](images/errors/wrn-ce-3.JPG) | Nombre de usuario muy corto | Asegúrate de que sean más de 5 caracteres |
+| Advertencia | ![](images/errors/wrn-ce-4.JPG) | Email de usuario inválido | Asegúrate que el correo electrónico tenga el formato: `ejemplo@gmail.com` |
+
+### Registrar centro de atención (Cabina o Centro de vacunacion)
+
+| Cuadro de dialogo | Imagen | Descripción | Solución  |
+| ------ | ------ | ------ | ------ |
+| Advertencia | ![](images/errors/wrn-cc-1.JPG) | Formato de correo electrónico no valido | Verifica que el correo electronico tenga el formato: `ejemplo@gmail.com` |
+| Advertencia | ![](images/errors/wrn-cc-2.JPG) | Formato de teléfono no valido | Verifica que el teléfono tenga el formato: `####-####` |
+| Advertencia | ![](images/errors/wrn-cc-3.JPG) | Longitud de caracteres en un campo de texto insuficiente | Verifica que los campos tengan la cantidad necesaria de caracteres (mínimo 5 para los campos abiertos) |

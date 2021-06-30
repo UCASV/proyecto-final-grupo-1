@@ -103,7 +103,7 @@ namespace Project_POO.Services
                     return new Response("Formato de teléfono no valido", false);
             }
             else
-                return new Response("Longuitud de caracteres en un campo de texto o edad no valida", false);
+                return new Response("Longuitud de caracteres en un campo de texto (minimo 6 para los campos abiertos) o edad no valida", false);
         }
 
         public bool ValidateElegibleCitizen(Citizen item, List<CitizenxchronicDisease> TmpCxD)
