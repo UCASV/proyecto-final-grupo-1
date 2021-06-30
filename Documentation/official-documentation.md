@@ -21,9 +21,9 @@
 ### **Repository**
 - La implementación del modelo repositorio facilita la creación de los diferentes servicios que rigen el comportamiento de las principales entidades del proyecto.
 ### **View Model**
-- Utilizado principalmente en los "data grid view" del proyecto, facilitan dar un formato de salida estándar para los datos que provienen de la base de datos.
+- Utilizado principalmente en los "data grid view" del proyecto, facilitan dar un formato de salida estandar para los datos que provienen de la base de datos.
 
 ## Instalación
 - Instalador .exe pendiente...
-- Para ejecutar la solución es necesario correr el script projectDB.sql para tener en nuestro sistema la base de datos GestorVaccination
-- Se recomienda instalación en SQLEXPRESS
+- Para ejecutar la socucion es necesario correr el script projectDB.sql para tener en nuestro sistema la base de datos GestorVaccination
+- Se recomienda instalacion en SQLEXPRESS

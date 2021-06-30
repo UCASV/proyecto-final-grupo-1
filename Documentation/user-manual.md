@@ -41,7 +41,7 @@
 
 ![](images/3.jpeg)
 
-- **Categorías:** Distintas categorías en página principal “Seguimiento de citas”.
+- **Categorías:** Distintas categorías en pagina principal “Seguimiento de citas”.
 - **Buscador:** Campo para buscador de citas (Con búsqueda por tipo de dato).
 - **Botón buscar:** Botón para buscar una cita en base al campo de buscador (Punto 2).
 - **Información mostrada:** DGV enarcado de mostrar la información de las citas almacenadas.
@@ -79,7 +79,7 @@
 
 ![](images/6.jpeg)
 
-- **Ejemplo PDF:** Muestra el nombre, DUI, fecha y hora en que se programó la cita y el centro de vacunación asignado.
+- **Ejemplo PDF:** Muestra el nombre, DUI, fecha y hora en que se programo la cita y el centro de vacunación asignado.
 </br>
 </br>
 #
@@ -131,7 +131,7 @@
 
 ![](images/9.jpeg)
 
-- **Personas vacunadas según el número de dosis:** Campo que muestra la cantidad de pacientes que poseen su primera dosis, su segunda dosis, y la dosis total de vacunas puestas.
+- **Personas vacunadas según el numero de Dosis:** Campo que muestra la cantidad de pacientes que poseen su primera dosis, su segunda dosis, y la dosis total de vacunas puestas.
 - **Efectos secundarios:** Grafico con información acerca de los efectos segundarios que las vacunas puedan causar.
 - **Eficiencia del proceso de vacunación:** Grafica con información acerca de la eficiencia en el proceso de vacunación, mostrando tiempo y cantidad de dosis.
 </br>
@@ -142,4 +142,4 @@
 
 ![](images/10.jpeg)
 
-- **Registros de seguridad:** Campo que muestra los registros de seguridad basados en nombre, centro de vacunación y fecha y hora de acceso del empleado.
+- **Registros de seguridad:** Campo que muestra los registros de seguridad basados en nombre, centro de vacunacion y fecha y hora de acceso del empleado.
