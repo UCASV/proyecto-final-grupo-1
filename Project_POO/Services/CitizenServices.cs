@@ -130,5 +130,17 @@ namespace Project_POO.Services
                 _context.SaveChanges();
             }
         }
+
+        public bool VerifyEmail(string email)
+        {
+            var count = _context.Citizens
+                .Where(x => x.Email.Equals(email))
+                .Count();
+
+            if (count == 0)
+                return false;
+            else
+                return true;
+        }
     }
 }

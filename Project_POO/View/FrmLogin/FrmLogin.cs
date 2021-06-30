@@ -55,91 +55,99 @@ namespace Project_POO
             string email = txt_Email.Text;
             // Encripting pass
             string pass = Encrypt.SHA256(txt_Pass.Text);
-            //string pass = txt_Pass.Text;
-            Employee employeeToLogin = employeeServices.GetEmployeeInLogin(email, pass);
+            //string pass 
 
-            // Show
-            if (employeeToLogin != null)
+            try
             {
-                // Verify if administrator 
-                if (employeeToLogin.IdTypeEmployee.Equals(5))
+                Employee employeeToLogin = employeeServices.GetEmployeeInLogin(email, pass);
+
+                // Show
+                if (employeeToLogin != null)
                 {
-                    // Success
-                    MessageBox.Show("Bienvenido Administrador", "Inicio de Sesión exitoso",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    // Next Form
-                    FrmMenuAdmin window = new FrmMenuAdmin(employeeToLogin.Id);
-                    this.Hide();
-                    window.ShowDialog();
-                    // Reset form
-                    resetForm();
-                    this.Show();
-                }
-
-                if (cmb_Center.SelectedItem != null)
-                {
-                    // Success
-                    MessageBox.Show("Bienvenido ", "Inicio de Sesión exitoso",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    // Selection
-                    var selection = (Center)cmb_Center.SelectedItem;
-
-                    // Security
-                    SaveSecurityRegister(employeeToLogin.Id, selection.Id);
-
-                    // Next Form
-                    FrmAppointmentTracking window = new FrmAppointmentTracking(employeeToLogin.Id, selection.Id);
-                    this.Hide();
-                    window.ShowDialog();
-                    // Reset form
-                    resetForm();
-                    this.Show();
-                }
-                // User found, now will select the center where he is logging in
-                else if (cmb_Center.SelectedItem is null && employeeToLogin.IdTypeEmployee != 5)
-                { 
-                    MessageBox.Show("Usuario encontrado, selecciona el centro en que estas iniciando sesión",
-                        "Elige un centro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    // cmb_Center now is available
-                    int type = employeeToLogin.IdTypeEmployee;
-
-                    List<Center> centerToLogin;
-
-                    if (employeeToLogin.IdTypeEmployee == 1 || employeeToLogin.IdTypeEmployee == 2)
+                    // Verify if administrator 
+                    if (employeeToLogin.IdTypeEmployee.Equals(5))
                     {
-                        centerToLogin = centerServices.GetByType(1);
+                        // Success
+                        MessageBox.Show("Bienvenido Administrador", "Inicio de Sesión exitoso",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        // Next Form
+                        FrmMenuAdmin window = new FrmMenuAdmin(employeeToLogin.Id);
+                        this.Hide();
+                        window.ShowDialog();
+                        // Reset form
+                        resetForm();
+                        this.Show();
+                    }
+
+                    if (cmb_Center.SelectedItem != null)
+                    {
+                        // Success
+                        MessageBox.Show("Bienvenido ", "Inicio de Sesión exitoso",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        // Selection
+                        var selection = (Center)cmb_Center.SelectedItem;
+
+                        // Security
+                        SaveSecurityRegister(employeeToLogin.Id, selection.Id);
+
+                        // Next Form
+                        FrmAppointmentTracking window = new FrmAppointmentTracking(employeeToLogin.Id, selection.Id);
+                        this.Hide();
+                        window.ShowDialog();
+                        // Reset form
+                        resetForm();
+                        this.Show();
+                    }
+                    // User found, now will select the center where he is logging in
+                    else if (cmb_Center.SelectedItem is null && employeeToLogin.IdTypeEmployee != 5)
+                    { 
+                        MessageBox.Show("Usuario encontrado, selecciona el centro en que estas iniciando sesión",
+                            "Elige un centro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        // cmb_Center now is available
+                        int type = employeeToLogin.IdTypeEmployee;
+
+                        List<Center> centerToLogin;
+
+                        if (employeeToLogin.IdTypeEmployee == 1 || employeeToLogin.IdTypeEmployee == 2)
+                        {
+                            centerToLogin = centerServices.GetByType(1);
+                        }
+                        else
+                        {
+                            centerToLogin = centerServices.GetByType(2);
+                        }
+
+                        lbl_Center.Visible = true;
+                        cmb_Center.Visible = true;
+                        cmb_Center.DataSource = centerToLogin;
+                        cmb_Center.DisplayMember = "CenterAddress";
+                        cmb_Center.ValueMember = "Id";
+
+                        // Disabled previous inputs 
+                        txt_Email.Enabled = false;
+                        txt_Pass.Enabled = false;
                     }
                     else
                     {
-                        centerToLogin = centerServices.GetByType(2);
+                        // Log out
+                        MessageBox.Show("Sesion cerrada exitosamente",
+                            "Adios", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        resetForm();
                     }
-
-                    lbl_Center.Visible = true;
-                    cmb_Center.Visible = true;
-                    cmb_Center.DataSource = centerToLogin;
-                    cmb_Center.DisplayMember = "CenterAddress";
-                    cmb_Center.ValueMember = "Id";
-
-                    // Disabled previous inputs 
-                    txt_Email.Enabled = false;
-                    txt_Pass.Enabled = false;
                 }
                 else
                 {
-                    // Log out
-                    MessageBox.Show("Sesion cerrada exitosamente",
-                        "Adios", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // Fail
+                    MessageBox.Show("Correo o contraseña son incorrectos, vuelve a introducir los datos de entrada",
+                        "Inicio de Sesión falló", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     resetForm();
                 }
             }
-            else
+            catch (Exception exception)
             {
-                // Fail
-                MessageBox.Show("Correo o contraseña son incorrectos, vuelve a introducir los datos de entrada",
-                    "Inicio de Sesión falló", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                resetForm();
+                MessageBox.Show("Verifique que haya instalado la base de datos `GestorVaccination` en SQL EXPRESS.", "Error de conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

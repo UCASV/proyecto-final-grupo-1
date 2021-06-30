@@ -55,39 +55,44 @@ namespace Proyect_POO
             // Create a new user ang get its DUI
             var tmpDUI = CreateUser();
 
-            if (tmpDUI != "exists")
+            if (tmpDUI != "exists-dui")
             {
-                if (tmpDUI != "error")
+                if (tmpDUI != "exists-email")
                 {
-                    if (tmpDUI != "not-elegible")
+                    if (tmpDUI != "error")
                     {
-                        try
+                        if (tmpDUI != "not-elegible")
                         {
-                            // Select next vaccination center
-                            DefineVaccinationCenter();
+                            try
+                            {
+                                // Select next vaccination center
+                                DefineVaccinationCenter();
 
-                            // Get DateTime -> temp function
-                            var appointmentDate = GetAppointmentDate();
+                                // Get DateTime -> temp function
+                                var appointmentDate = GetAppointmentDate();
 
-                            var tmpAppointment = new Appointment(tmpDUI, LocalEmployee.Id, LocalCenter.Id,
-                                VaccinationCenter, appointmentDate, 1);
-                            _appointmentS.Create(tmpAppointment);
+                                var tmpAppointment = new Appointment(tmpDUI, LocalEmployee.Id, LocalCenter.Id,
+                                    VaccinationCenter, appointmentDate, 1);
+                                _appointmentS.Create(tmpAppointment);
 
-                            // Success message
-                            MessageBox.Show("Cita agregada con exito", "Acción exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.Close();
+                                // Success message
+                                MessageBox.Show("Cita agregada con exito", "Acción exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Close();
+                            }
+                            catch (Exception exception)
+                            {
+                                MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                throw;
+                            }
                         }
-                        catch (Exception exception)
-                        {
-                            MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            throw;
-                        }
+                        else
+                            MessageBox.Show("Usuario no elegible para la vacunación", "Información incorrecta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                     else
-                        MessageBox.Show("Usuario no elegible para la vacunación", "Información incorrecta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("Verifique que la información tenga el formato estipulado", "Información incorrecta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
-                    MessageBox.Show("Verifique que la información tenga el formato estipulado", "Información incorrecta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("El usuario con este correo ya tiene una cita", "Información incorrecta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
                 MessageBox.Show("El usuario con este DUI ya tiene una cita", "Información incorrecta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -132,7 +137,11 @@ namespace Proyect_POO
         {
             // Verify if user exists
             if (_citzenS.VerifyICitizenExists(txt_DUI.Text))
-                return "exists";
+                return "exists-dui";
+
+            // Verify if email exists
+            if (_citzenS.VerifyEmail(txt_Email.Text))
+                return "exists-email";
 
             // Get citizen institution
             var tmpInstitution = (int)cmb_TypeDoc.SelectedValue;
