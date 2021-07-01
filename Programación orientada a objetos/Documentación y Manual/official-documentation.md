@@ -26,6 +26,6 @@
 ## Instalación
 - Para ejecutar la solución es necesario correr el script projectDB.sql para tener en nuestro sistema la base de datos GestorVaccination
 - Se recomienda instalación en SQLEXPRESS
-- Correr el programa setup.exe
+- Correr el programa asistente de citas.exe
 - Dar siguiente a todo
 - Abrir el programa Project_Poo
