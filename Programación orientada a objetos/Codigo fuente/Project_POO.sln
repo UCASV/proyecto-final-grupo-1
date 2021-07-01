@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Project_POO", "Project_POO.csproj", "{97282A7D-5295-4F22-9C16-81EC44BD028B}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Asistente De Citas", "..\Asistente De Citas\Asistente De Citas.vdproj", "{7B1BB13A-F3FC-41F9-AC26-487343F9CCA3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97282A7D-5295-4F22-9C16-81EC44BD028B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97282A7D-5295-4F22-9C16-81EC44BD028B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97282A7D-5295-4F22-9C16-81EC44BD028B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97282A7D-5295-4F22-9C16-81EC44BD028B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B1BB13A-F3FC-41F9-AC26-487343F9CCA3}.Debug|Any CPU.ActiveCfg = Debug
+		{7B1BB13A-F3FC-41F9-AC26-487343F9CCA3}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5E8181F8-AE30-491B-A9FB-9C8219B32C2B}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>C:\Users\Rodrigo\Desktop\Documentos\U\Programacion orientada a objeto\proyecto-final-grupo-1\Project_POO\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="View\Admin\FrmCreateCenter\FrmCreateCenter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\Admin\FrmMenuAdmin\FrmMenuAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\Admin\FrmRegist\FrmRegist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\Admin\FrmSecurity\FrmSecurity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\Admin\FrmStatistics\FrmStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\Appointment\FrmAppointmentTracking\FrmAppointmentTracking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\Appointment\FrmCreateApointment\FrmCreateAppointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\FrmLogin\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
